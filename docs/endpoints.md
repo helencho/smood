@@ -34,4 +34,4 @@
 - `DELETE /entries/:entryId` - deletes entry
 
 ### Questions
-- Will created tags persist forever? Delete tag from db if tags.count is 0?
+- How will each user customize moods and activities? Separate customizable tables? Add `user_id` column?
