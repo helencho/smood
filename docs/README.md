@@ -18,7 +18,7 @@ MoodDiary is a web application built using Node.js and React/Redux. By the end o
 ## Design Docs
 - [View Wireframes](/docs/wireframes)
 - [React Components](component-hierarchy.md)
-- [Database endpoints](endpoints.md)
+- [Endpoints](endpoints.md)
 - [Database schema](schema.md)
 <!-- - [Sample State](sample-state.md) -->
 
