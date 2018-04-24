@@ -1,6 +1,6 @@
 # MoodDiary
-[Heroku Link](#)
-[Trello Link](#)
+<!-- [Heroku Link](#) -->
+[Trello Link](https://trello.com/b/KheDq8cz/mooddiary)
 
 ## Minimum Viable Product
 
@@ -11,7 +11,7 @@ MoodDiary is a web application built using Node.js and React/Redux. By the end o
 - [ ] Moods / Activities editing 
 - [ ] Visualize mood / activity 
 - [ ] Filter by mood / activity 
-- [ ] Production README
+- [ ] Production README 
 
 ## Design Docs
 - [Wireframes](/docs/wireframes)
