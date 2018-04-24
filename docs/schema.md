@@ -17,6 +17,7 @@ mood_id         | integer   | not null, primary key
 mood_name       | string    | not null
 mood_desc       | string    | not null 
 mood_img        | string    | not null 
+default         | boolean   | not null
 
 ## activities
 column name     | data type | details
@@ -25,6 +26,7 @@ activity_id     | integer   | not null, primary key
 activity_name   | string    | not null
 activity_desc   | string    | not null 
 activity_img    | string    | not null 
+default         | boolean   | not null
 
 ## entries 
 column name     | data type | details
