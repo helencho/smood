@@ -2,21 +2,19 @@
 [Heroku Link](#)
 [Trello Link](#)
 
-
 ## Minimum Viable Product
 
 MoodDiary is a web application built using Node.js and React/Redux. By the end of Week 3, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling: 
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Moods / Mood editing 
-- [ ] Activities / Activities editing 
+- [ ] Moods / Activities editing 
 - [ ] Visualize mood / activity 
 - [ ] Filter by mood / activity 
 - [ ] Production README
 
 ## Design Docs
-- [View Wireframes](/docs/wireframes)
+- [Wireframes](/docs/wireframes)
 - [React Components](component-hierarchy.md)
 - [Endpoints](endpoints.md)
 - [Database schema](schema.md)
@@ -30,7 +28,7 @@ MoodDiary is a web application built using Node.js and React/Redux. By the end o
 
 ### Phase 2: Moods and Activities (3 days)
 
-**Objective:** Activities and Moods that can be created, edited, and destroyed through the API. 
+**Objective:** Activities and Moods that can be created, edited, and destroyed.
 
 ### Phase 3: Visualize Moods and Activities (3 days)
 
