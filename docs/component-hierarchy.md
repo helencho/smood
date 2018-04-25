@@ -1,40 +1,50 @@
 # Component Hierarchy
 
 **SplashContainer**
-- SplashHeader
 - SplashMain
 
 **AuthContainer**
 - AuthForm
 
 **HomeContainer**
-- Home
+- EntryContainer
 - Sidebar
 
-**Sidebar**
-- ProfileContainer
-- CalendarContainer
-- CustomizeContainer
-
 **EntryContainer**
-- MoodContainer
-- ActivityContainer
+- MoodForm
+- ActivityForm
 
-**MoodContainer**
-- Mood
+**Sidebar**
+- TrackMood
+- YearlyMood
+- Customize
+- Profile
 
-**ActivityContainer**
-- Activity 
+**MoodForm**
+- MoodList
 
-**CalendarContainer**
-- Calendar
+**ActivityForm**
+- ActivityList
 
-**ProfileContainer**
+**TrackMood**
+- BarGraph
+
+**YearlyMood**
+- YearGrid
+- PieChart
+
+**Profile**
 - UserInfo
 
-**CustomizeContainer**
+**Customize**
 - NewMood
 - NewActivity
+
+**NewMood**
+- AllMoods
+
+**NewActivity**
+- AllActivities
 
 
 <!-- ## Routes
