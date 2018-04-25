@@ -4,11 +4,12 @@
 
 ## Minimum Viable Product
 
-MoodDiary is a web application built using Node.js and React/Redux. By the end of Week 3, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling: 
+Mood is a web application built using Node.js and React/Redux. By the end of Week 3, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling: 
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Moods / Activities editing 
+- [ ] New entry with moods / activities creation
+- [ ] Moods / activities editing 
 - [ ] Visualize mood / activity 
 - [ ] Filter by mood / activity 
 - [ ] Production README 
@@ -26,13 +27,17 @@ MoodDiary is a web application built using Node.js and React/Redux. By the end o
 
 **Objective:** Functioning Node.js project with front-end authentication
 
+### Phase 2: Entries (2 days) 
+
+**Objective:** Entries with Moods and Activities that can be created and destroyed.
+
 ### Phase 2: Moods and Activities (3 days)
 
-**Objective:** Activities and Moods that can be created, edited, and destroyed.
+**Objective:** Activities and Moods that can be customized - created, edited, and destroyed.
 
-### Phase 3: Visualize Moods and Activities (3 days)
+### Phase 3: Visualize Moods and Activities (2 days)
 
-**Objective:** Allow mood and activity tracking.
+**Objective:** Visualize Mood and Activity data.
 
 ### Phase 4: Filter (1 day)
 
@@ -40,6 +45,4 @@ MoodDiary is a web application built using Node.js and React/Redux. By the end o
 
 
 ### Bonus Features (TBD)
-- [ ] Push notifications 
-- [ ] Customize moods 
-- [ ] Customize activities 
+- [ ] Push notifications
