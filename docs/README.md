@@ -31,15 +31,15 @@ Mood is a web application built using Node.js and React/Redux. By the end of Wee
 
 **Objective:** Entries with Moods and Activities that can be created and destroyed.
 
-### Phase 2: Moods and Activities (3 days)
+### Phase 3: Moods and Activities (3 days)
 
 **Objective:** Activities and Moods that can be customized - created, edited, and destroyed.
 
-### Phase 3: Visualize Moods and Activities (2 days)
+### Phase 4: Visualize Moods and Activities (2 days)
 
 **Objective:** Visualize Mood and Activity data.
 
-### Phase 4: Filter (1 day)
+### Phase 5: Filter (1 day)
 
 **Objective:** Allow filter by Mood or Activity. 
 
