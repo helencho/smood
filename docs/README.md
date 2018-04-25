@@ -1,4 +1,4 @@
-# MoodDiary
+# Mood
 <!-- [Heroku Link](#) -->
 [Trello Link](https://trello.com/b/KheDq8cz/mooddiary)
 
