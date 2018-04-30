@@ -1,4 +1,15 @@
+# dependencies
+/node_modules
+/docs/wireframes/svg
+
+# production 
+/build
+
+# misc
 .DS_Store
 .vscode/
-docs/wireframes/svg/
-node_modules/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
