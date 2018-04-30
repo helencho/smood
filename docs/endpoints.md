@@ -8,7 +8,8 @@
 - `POST /users/new` - creates new user 
 - `POST /users/login` - logs in user / gets user
 - `POST /users/logout` - logs out user
-- `PATCH /users/edit/:userId` - edits user 
+- `PATCH /users/edit` - edits user 
+- `DELETE /users/delete` - deletes user
 
 ### Moods
 
@@ -20,11 +21,11 @@
 
 ### Activities
 
-- `GET /activites` - fetches all activities
-- `GET /activites/:activityId` - fetches activity by id
-- `POST /activites/new` - creates activity
-- `PATCH /activites/:activityId` - edits activity 
-- `DELETE /activites/:activityId` - deletes activity 
+- `GET /activities` - fetches all activities
+- `GET /activities/:activityId` - fetches activity by id
+- `POST /activities/new` - creates activity
+- `PATCH /activities/:activityId` - edits activity 
+- `DELETE /activities/:activityId` - deletes activity 
 
 ### Entries
 
