@@ -1,49 +1,86 @@
-DROP DATA IF EXISTS mood;
+DROP DATABASE IF EXISTS mood;
 CREATE DATABASE mood;
 \c mood;
 
--- Create tables --
+-- Users 
+DROP TABLE users CASCADE;
 CREATE TABLE users (
     id SERIAL UNIQUE, 
     username VARCHAR UNIQUE,
     password_digest VARCHAR NOT NULL,
     first_name VARCHAR NOT NULL,
-    last_name VARCHAR,
-    photo_url VARCHAR,
+    photo_img VARCHAR,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE moods (
-    id SERIAL UNIQUE,
-    mood_name VARCHAR NOT NULL,
-    mood_desc VARCHAR NOT NULL,
-    mood_img VARCHAR NOT NULL,
-    is_default BOOLEAN DEFAULT FALSE,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE activities (
-    id SERIAL UNIQUE,
-    activity_name VARCHAR NOT NULL,
-    activity_desc VARCHAR NOT NULL,
-    activity_img VARCHAR NOT NULL,
-    is_default BOOLEAN DEFAULT FALSE,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE entries (
-    id SERIAL UNIQUE,
-    note_time DATE NOT NULL,
-    note VARCHAR,
-    PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (mood_id) REFERENCES moods(id),
-    FOREIGN KEY (activity_id) REFERENCES activities(id)
-);
-
--- Seed data --
-INSERT INTO users (username, password_digest, first_name, last_name, photo_url)
+-- Users seed data
+INSERT INTO users (username, password_digest, first_name)
 VALUES 
-    ('helen@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Helen', 'C'),
-    ('sarah@gmail.com' '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Sarah', 'C')
+    ('helen@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Helen'),
+    ('michelle@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Michelle'),
+    ('david@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'David')
 ;
+
+
+-- Moods 
+DROP TABLE moods CASCADE;
+CREATE TABLE moods (
+    mood_id SERIAL UNIQUE,
+    mood_name VARCHAR NOT NULL,
+    mood_img VARCHAR NOT NULL,
+    PRIMARY KEY (mood_id)
+);
+
+-- Moods seed data
+INSERT INTO moods (mood_name, mood_img)
+VALUES
+    ('happy', 'happy url'),
+    ('calm', 'calm url'),
+    ('upset', 'upset url'),
+    ('sad', 'sad url'),
+    ('meh', 'meh url')
+;
+
+
+-- Custom moods 
+DROP TABLE custom_moods CASCADE;
+CREATE TABLE custom_moods (
+    mood_id SERIAL UNIQUE,
+    user_id INTEGER,
+    mood_name VARCHAR NOT NULL,
+    mood_img VARCHAR NOT NULL,
+    PRIMARY KEY (mood_id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+-- Custom moods seed data
+INSERT INTO custom_moods (user_id, mood_name, mood_img)
+VALUES
+    (1, 'angry', 'angry url'),
+    (2, 'hyper', 'hyper url'),
+    (3, 'excited', 'excited url')
+;
+
+-- DROP TABLE activities CASCADE;
+-- CREATE TABLE activities (
+--     activity_id SERIAL UNIQUE,
+--     user_id INTEGER,
+--     activity_name VARCHAR NOT NULL,
+--     activity_img VARCHAR NOT NULL,
+--     PRIMARY KEY (activity_id),
+--     FOREIGN KEY (user_id) REFERENCES users(id)
+-- );
+
+-- DROP TABLE entries CASCADE;
+-- CREATE TABLE entries (
+--     entry_id SERIAL UNIQUE,
+--     user_id INTEGER,
+--     mood_id INTEGER,
+--     activity_id INTEGER,
+--     entry_date DATE NOT NULL,
+--     note VARCHAR,
+--     PRIMARY KEY (entry_id),
+--     FOREIGN KEY (user_id) REFERENCES users(id),
+--     FOREIGN KEY (mood_id) REFERENCES moods(mood_id),
+--     FOREIGN KEY (activity_id) REFERENCES activities(activity_id)
+-- );
