@@ -34,8 +34,8 @@ activity_img    | string    | not null
 column name     | data type | details
 ----------------|-----------|-----------------------
 entry_id        | integer   | not null
-user_id         | integer   | not null
-mood_id         | integer   | not null
-activity_id     | integer   | not null
+user_id         | integer   | not null, foreign key
+mood_id         | integer   | not null, foreign key
+activity_id     | integer   | not null, foreign key
 entry_date      | date      | not null 
 note            | string    |
