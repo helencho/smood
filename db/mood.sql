@@ -26,40 +26,44 @@ VALUES
 DROP TABLE moods CASCADE;
 CREATE TABLE moods (
     mood_id SERIAL UNIQUE,
+    user_id INTEGER,
     mood_name VARCHAR NOT NULL,
     mood_img VARCHAR NOT NULL,
     PRIMARY KEY (mood_id)
 );
 
 -- Moods seed data
-INSERT INTO moods (mood_name, mood_img)
+INSERT INTO moods (user_id, mood_name, mood_img)
 VALUES
-    ('happy', 'happy url'),
-    ('calm', 'calm url'),
-    ('upset', 'upset url'),
-    ('sad', 'sad url'),
-    ('meh', 'meh url')
-;
-
-
--- Custom moods 
-DROP TABLE custom_moods CASCADE;
-CREATE TABLE custom_moods (
-    mood_id SERIAL UNIQUE,
-    user_id INTEGER,
-    mood_name VARCHAR NOT NULL,
-    mood_img VARCHAR NOT NULL,
-    PRIMARY KEY (mood_id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
--- Custom moods seed data
-INSERT INTO custom_moods (user_id, mood_name, mood_img)
-VALUES
+    (0, 'happy', 'happy url'),
+    (0, 'calm', 'calm url'),
+    (0, 'upset', 'upset url'),
+    (0, 'sad', 'sad url'),
+    (0, 'meh', 'meh url'),
     (1, 'angry', 'angry url'),
     (2, 'hyper', 'hyper url'),
     (3, 'excited', 'excited url')
 ;
+
+
+-- Custom moods 
+-- DROP TABLE custom_moods CASCADE;
+-- CREATE TABLE custom_moods (
+--     mood_id SERIAL UNIQUE,
+--     user_id INTEGER,
+--     mood_name VARCHAR NOT NULL,
+--     mood_img VARCHAR NOT NULL,
+--     PRIMARY KEY (mood_id),
+--     FOREIGN KEY (user_id) REFERENCES users(id)
+-- );
+
+-- Custom moods seed data
+-- INSERT INTO custom_moods (user_id, mood_name, mood_img)
+-- VALUES
+--     (1, 'angry', 'angry url'),
+--     (2, 'hyper', 'hyper url'),
+--     (3, 'excited', 'excited url')
+-- ;
 
 -- DROP TABLE activities CASCADE;
 -- CREATE TABLE activities (
