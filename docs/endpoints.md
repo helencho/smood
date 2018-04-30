@@ -29,7 +29,7 @@
 ### Entries
 
 - `GET /entries` - fetches all entries for a user
-- `GET /entries/:entryId` - fetches entry
+<!-- - `GET /entries/:entryId` - fetches entry -->
 - `POST /entries/new` - creates entry
 - `DELETE /entries/:entryId` - deletes entry
 
