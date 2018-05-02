@@ -4,11 +4,6 @@ const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
 const passport = require('../auth/local')
 
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
 router.post('/new', db.createUser)
 router.post('/login', passport.authenticate('local'), (req, res) => {
   delete req.user.password_digest
