@@ -6,10 +6,13 @@ const logger = require('morgan')
 const session = require('express-session')
 const passport = require('passport')
 
-var indexRouter = require('./routes/index')
-// var usersRouter = require('./routes/users');
+let indexRouter = require('./routes/index')
+let usersRouter = require('./routes/users')
+let moodsRouter = require('./routes/moods')
+let activitiesRouter = require('./routes/activities')
+let entriesRouter = require('./routes/entries')
 
-var app = express()
+let app = express()
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +34,10 @@ app.use(passport.session())
 app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.use('/', indexRouter)
-// app.use('/users', usersRouter);
+app.use('/users', usersRouter)
+app.use('/moods', moodsRouter)
+app.use('/activities', activitiesRouter)
+app.use('/entries', entriesRouter)
 
 
 // Ensures frontend routes will lead to the right pages
