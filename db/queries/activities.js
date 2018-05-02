@@ -4,7 +4,7 @@ const db = require('../index')
 // /activities
 const getAllActivities = (req, res, next) => {
     db
-        .any('***', {
+        .any('SELECT * FROM activities WHERE user_id=0 OR user_id=${user_id};', {
             user_id: req.user.id
         })
         .then(data => {
@@ -23,7 +23,7 @@ const getAllActivities = (req, res, next) => {
 // /activities/activityId
 const getSingleActivity = (req, res, next) => {
     db
-        .one('***', {
+        .one('SELECT * FROM activities WHERE activity_id=${activity_id};', {
             activity_id: req.params.activityId
         })
         .then(data => {
@@ -42,8 +42,10 @@ const getSingleActivity = (req, res, next) => {
 // /activities/new
 const createActivity = (req, res, next) => {
     db
-        .one('***', {
-            user_id: req.user.id
+        .one('INSERT INTO activities (user_id, activity_name, activity_img) VALUES (${user_id}, ${name}, ${url}) RETURNING activity_id;', {
+            user_id: req.user.id,
+            name: req.body.name,
+            url: req.body.url
         })
         .then(data => {
             res.status(200).json({
@@ -61,7 +63,9 @@ const createActivity = (req, res, next) => {
 // /activities/:activityId
 const updateActivity = (req, res, next) => {
     db
-        .none('***', {
+        .none('UPDATE activities SET activity_name=${name} WHERE user_id=${user_id} AND activity_id=${activity_id};', {
+            name: req.body.name,
+            user_id: req.user.id,
             activity_id: req.params.activityId
         })
         .then(() => {
@@ -79,7 +83,8 @@ const updateActivity = (req, res, next) => {
 // /activities/:activityId
 const deleteActivity = (req, res, next) => {
     db
-        .none('***', {
+        .none('DELETE FROM activities WHERE user_id=${user_id} AND activity_id=${activity_id};', {
+            user_id: req.user.id,
             activity_id: req.params.activityId
         })
         .then(() => {
