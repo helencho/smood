@@ -2,56 +2,61 @@ const createError = require('http-errors')
 const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser')
 const logger = require('morgan')
+
 const session = require('express-session')
 const passport = require('passport')
 
-let indexRouter = require('./routes/index')
-let usersRouter = require('./routes/users')
-let moodsRouter = require('./routes/moods')
-let activitiesRouter = require('./routes/activities')
-let entriesRouter = require('./routes/entries')
+let index = require('./routes/index')
+let users = require('./routes/users')
+let moods = require('./routes/moods')
+let activities = require('./routes/activities')
+let entries = require('./routes/entries')
 
 let app = express()
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(
   session({
-    secret: `breatheofthewild`,
+    secret: `\x02\xf3\xf7r\t\x9f\xee\xbbu\xb1\xe1\x90\xfe'\xab\xa6L6\xdd\x8d[\xccO\xfe`,
     resave: false,
     saveUninitialized: true
   })
 )
 app.use(passport.initialize())
 app.use(passport.session())
-app.use(express.static(path.join(__dirname, 'client/build')))
+// app.use(express.static(path.join(__dirname, 'client/build')))
 
-app.use('/', indexRouter)
-app.use('/users', usersRouter)
-app.use('/moods', moodsRouter)
-app.use('/activities', activitiesRouter)
-app.use('/entries', entriesRouter)
-
+app.use('/', index)
+app.use('/users', users)
+app.use('/moods', moods)
+app.use('/activities', activities)
+app.use('/entries', entries)
 
 // Ensures frontend routes will lead to the right pages
 app.get('*', (req, res) => {
-  res.sendfile(__dirname + '/client/build/index.html')
+  res.sendFile(__dirname + '/client/build/index.html')
 })
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
