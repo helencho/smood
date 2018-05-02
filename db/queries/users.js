@@ -1,18 +1,38 @@
 const db = require('../index')
-// const authHelpers = require('../auth/helpers')
-// const passport = require('../auth/local')
+const authHelpers = require('../../auth/helpers')
+// const passport = require('../../auth/local')
 
 // POST 
 // /users/new
-const createUser = (req, res, next) => { }
+const createUser = (req, res, next) => {
+    const hash = authHelpers.createHash(req.body.password)
+    db
+        .none('INSERT INTO users (username, password_digest, first_name) VALUES (${username}, ${password}, ${name});', {
+            username: req.body.username,
+            password: hash,
+            name: req.body.name
+        })
+        .then(() => {
+            res.status(200).json({
+                status: 'Success',
+                message: 'Created new user'
+            })
+        })
+        .catch(err => {
+            res.status(500).send(`Error creating user: ${err}`)
+        })
+}
 
 // POST 
 // /users/login
-const loginUser = (req, res, next) => { }
+// const loginUser = (req, res, next) => { }
 
 // POST 
 // /users/logout
-const logoutUser = (req, res, next) => { }
+const logoutUser = (req, res, next) => {
+    req.logout()
+    res.status(200).send(`Logout success`)
+}
 
 // PATCH 
 // /users/edit/
@@ -24,8 +44,8 @@ const deleteUser = (req, res, next) => { }
 
 module.exports = {
     createUser,
-    loginUser,
+    // loginUser,
     logoutUser,
-    updateUser,
-    deleteUser
+    // updateUser,
+    // deleteUser
 }

@@ -1,9 +1,19 @@
-var express = require('express');
-var router = express.Router();
+const db = require('../db/queries/users')
+const express = require('express')
+const router = express.Router()
+const { loginRequired } = require('../auth/helpers')
+const passport = require('../auth/local')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
+// });
+
+router.post('/new', db.createUser)
+router.post('/login', passport.authenticate('local'), (req, res) => {
+  delete req.user.password_digest
+  res.json(req.user)
+})
+router.post('/logout', loginRequired, db.logoutUser)
 
 module.exports = router;

@@ -2,7 +2,6 @@ const db = require('../db/queries/moods')
 const express = require('express')
 const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
-// const passport = require('../auth/local')
 
 router.get('/', db.getAllMoods)
 router.get('/:moodId', db.getSingleMood)
