@@ -7,6 +7,7 @@
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "dotenv": "^5.0.1",
@@ -16,6 +17,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "pg-promise": "^8.4.0"
   }
 }
