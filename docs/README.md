@@ -23,26 +23,27 @@ Mood is a web application built using Node.js and React/Redux. By the end of Wee
 
 ## Implementation Timeline
 
-### Phase 1: Backend Setup and Front End User Authentication (2 days)
+### Phase 1: Backend Setup and Front End User Authentication
 
 **Objective:** Functioning Node.js project with front-end authentication
 
-### Phase 2: Entries (2 days) 
+### Phase 2: Entries
 
 **Objective:** Entries with Moods and Activities that can be created and destroyed.
 
-### Phase 3: Moods and Activities (3 days)
+### Phase 3: Moods and Activities
 
 **Objective:** Activities and Moods that can be customized - created, edited, and destroyed.
 
-### Phase 4: Visualize Moods and Activities (2 days)
+### Phase 4: Visualize Moods and Activities
 
 **Objective:** Visualize Mood and Activity data.
 
-### Phase 5: Filter (1 day)
+### Phase 5: Filter
 
 **Objective:** Allow filter by Mood or Activity. 
 
 
 ### Bonus Features (TBD)
 - [ ] Push notifications
+- [ ] Native version 
