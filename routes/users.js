@@ -10,7 +10,6 @@ router.post('/new', db.createUser)
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
   delete req.user.password_digest
-  // console.log(req.user)
   res.json(req.user)
 })
 
