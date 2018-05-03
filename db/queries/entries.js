@@ -19,6 +19,25 @@ const getEntries = (req, res, next) => {
         })
 }
 
+// GET
+// /entries/:entryId
+const getSingleEntry = (req, res, next) => {
+    db
+        .one('SELECT entries.entry_id, entries.user_id, entries.mood_id, entries.activity_id, entries.entry_date, entries.note, moods.mood_name, moods.mood_img, activities.activity_name, activities.activity_img FROM entries JOIN moods ON moods.mood_id = entries.mood_id JOIN activities ON activities.activity_id = entries.activity_id WHERE entries.entry_id=${entry_id};', {
+            entry_id: req.params.entryId
+        })
+        .then(data => {
+            res.status(200).json({
+                status: 'Success',
+                data: data,
+                message: 'Fetched single entry'
+            })
+        })
+        .catch(err => {
+            res.status(500).send(`Error fetching single entry: ${err}`)
+        })
+}
+
 // POST
 // /entries/new
 const createEntry = (req, res, next) => {
@@ -64,6 +83,7 @@ const deleteEntry = (req, res, next) => {
 
 module.exports = {
     getEntries,
+    getSingleEntry,
     createEntry,
     deleteEntry
 }
