@@ -1,16 +1,12 @@
-const dbActivities = require('../db/queries/activities')
-const dbEntries = require('../db/queries/entries')
-const dbMoods = require('../db/queries/moods')
-const dbUsers = require('../db/queries/users')
+const db = require('../db/queries/activities')
 const express = require('express')
 const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
-const passport = require('../auth/local')
 
-router.get('/')
-router.get('/:activityId')
-router.post('/new')
-router.patch('/:activityId')
-router.delete('/:activityId')
+router.get('/', loginRequired, db.getAllActivities)
+router.get('/:activityId', loginRequired, db.getSingleActivity)
+router.post('/new', loginRequired, db.createActivity)
+router.patch('/:activityId', loginRequired, db.updateActivity)
+router.delete('/:activityId', loginRequired, db.deleteActivity)
 
 module.exports = router;

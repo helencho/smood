@@ -4,9 +4,9 @@ const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
 
 router.get('/', loginRequired, db.getAllMoods)
-router.get('/:moodId', db.getSingleMood)
-router.post('/new', db.createMood)
-router.patch('/:moodId', db.updateMood)
-router.delete('/:moodId', db.deleteMood)
+router.get('/:moodId', loginRequired, db.getSingleMood)
+router.post('/new', loginRequired, db.createMood)
+router.patch('/:moodId', loginRequired, db.updateMood)
+router.delete('/:moodId', loginRequired, db.deleteMood)
 
 module.exports = router;
