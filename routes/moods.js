@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
 
-router.get('/', db.getAllMoods)
+router.get('/', loginRequired, db.getAllMoods)
 router.get('/:moodId', db.getSingleMood)
 router.post('/new', db.createMood)
 router.patch('/:moodId', db.updateMood)

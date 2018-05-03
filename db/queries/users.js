@@ -22,7 +22,7 @@ const createUser = (req, res, next) => {
         })
 }
 
-// POST 
+// GET 
 // /users/logout
 const logoutUser = (req, res, next) => {
     req.logout()

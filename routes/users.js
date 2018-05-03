@@ -4,11 +4,14 @@ const router = express.Router()
 const { loginRequired } = require('../auth/helpers')
 const passport = require('../auth/local')
 
+router.get('/logout', loginRequired, db.logoutUser)
+
 router.post('/new', db.createUser)
+
 router.post('/login', passport.authenticate('local'), (req, res) => {
   delete req.user.password_digest
+  // console.log(req.user)
   res.json(req.user)
 })
-router.post('/logout', loginRequired, db.logoutUser)
 
 module.exports = router;
