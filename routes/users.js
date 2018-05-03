@@ -13,4 +13,6 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
   res.json(req.user)
 })
 
+router.patch('/edit', loginRequired, db.updateUser)
+
 module.exports = router;
