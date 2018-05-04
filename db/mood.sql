@@ -1,6 +1,6 @@
--- DROP DATABASE IF EXISTS mood;
--- CREATE DATABASE mood;
--- \c mood;
+DROP DATABASE IF EXISTS mood;
+CREATE DATABASE mood;
+\c mood;
 
 DROP TABLE users CASCADE;
 CREATE TABLE users (
