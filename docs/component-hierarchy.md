@@ -1,71 +1,50 @@
 # Component Hierarchy
 
-**SplashContainer**
-- SplashMain
+**Splash**
+- Splash 
+- SplashNav
+- SplashGreeting
 
-**AuthContainer**
+**Session**
 - AuthForm
 
-**HomeContainer**
-- EntryContainer
-- Sidebar
-
-**EntryContainer**
+**Home**
+- Home
 - MoodForm
-- ActivityForm
+- ActivityForm 
 
-**Sidebar**
-- TrackMood
-- YearlyMood
-- Customize
-- Profile
+**Dashboard**
+- Dashboard
+- Legend
+- Monthly
+- Yearly
 
-**MoodForm**
-- MoodList
-
-**ActivityForm**
-- ActivityList
-
-**TrackMood**
-- BarGraph
-
-**YearlyMood**
-- YearGrid
-- PieChart
+**Note**
+- Note
+- NoteModal
 
 **Profile**
-- UserInfo
+- Profile
+- ProfileModal
 
 **Customize**
-- NewMood
-- NewActivity
-
-**NewMood**
-- AllMoods
-
-**NewActivity**
-- AllActivities
+- Customize
+- CustomizeMood
+- CustomizeActivity
 
 
-<!-- ## Routes
+## Routes
 
-|Path   | Component   |
-|-------|-------------|
-| "/join" | "SplashContainer" |
-| "/signin" | "AuthFormContainer" |
-| "/login" | "AuthFormContainer" |
-| "/home" | "HomeContainer" |
-| "/home/note/:noteId" | "NotesContainer" |
-| "/home/notebook" | "NotebookIndexContainer" |
-| "/home/notebook/:notebookId" | "NotebookShowContainer" |
-| "/home/notebook/:notebookId/note/:noteId" | "NotebookShowContainer" |
-| "/home/tag | "TagIndexContainer" |
-| "/home/tag/:tagId" | "TagShowContainer" |
-| "/home/tag/:tagId/note/:notedId" | "TagShowContainer" |
-| "/home/search-results" | "SearchResultsContainer"
-| "/new-note" | "NewNoteContainer" |
-| "/search" | "Search" |
-| "/new-notebook" | "NewNotebook" |
-| "/new-tag" | "NewTag" |
-| "/tag-search" | "TagSearch" |
-| "/notebook-search" | "NotebookSearch" | -->
+|Path              | Component         |
+|------------------|-------------------|
+| /                | Splash            |
+| /signup          | AuthForm          |
+| /login           | AuthForm          |
+| /home            | Home              |
+| /dashboard       | Dashboard         |
+| /new             | Dashboard         |
+| /note/:id        | Note              |
+| /profile/        | Profile           |
+| /custom          | Customize         |
+| /custom/mood     | CustomizeMood     |
+| /custom/activity | CustomizeActivity |
