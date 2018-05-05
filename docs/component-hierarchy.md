@@ -1,33 +1,33 @@
 # Component Hierarchy
 
-**Splash**
+**Splash** :sweat_drops:
 - Splash 
 - SplashNav
 - SplashGreeting
 
-**Session**
+**Session** :closed_lock_with_key:
 - AuthForm
 
-**Home**
+**Home** :house:
 - Home
 - MoodForm
 - ActivityForm 
 
-**Dashboard**
+**Dashboard** :date:
 - Dashboard
 - Legend
 - Monthly
 - Yearly
 
-**Note**
+**Note** :notebook_with_decorative_cover:
 - Note
 - NoteModal
 
-**Profile**
+**Profile** :name_badge:
 - Profile
 - ProfileModal
 
-**Customize**
+**Customize** :pencil2:
 - Customize
 - CustomizeMood
 - CustomizeActivity
