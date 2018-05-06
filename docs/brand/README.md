@@ -2,11 +2,11 @@
 
 **Primary Color**
 
-![Peach](./color-main-peach.png)
+![Peach](./color-main-peach.png | height=620)
 
 **Secondary Color**
 
-![Pink](./color-main-pink.png)
+![Pink](./color-main-pink.png | height=620)
 
 **Mood Colors**
 
