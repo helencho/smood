@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Splash extends Component {
+class AuthLogin extends Component {
     render() {
         return (
             <div>
-                <h1>Splash Page</h1>
+                <h1>Log In</h1>
             </div>
         )
     }
 }
 
-export default Splash
+export default AuthLogin
