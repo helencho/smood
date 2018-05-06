@@ -3,7 +3,6 @@
 **Primary Color**
 
 ![Peach](./color-main-peach.png)
-<img src="./color-main-peach.png" height="620" />
 
 **Secondary Color**
 
