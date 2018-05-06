@@ -6,7 +6,7 @@
 
 Mood is a web application built using Node.js and React/Redux. By the end of Week 3, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling: 
 
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] New entry with moods / activities creation
 - [ ] Moods / activities editing 
@@ -16,6 +16,7 @@ Mood is a web application built using Node.js and React/Redux. By the end of Wee
 
 ## Design Docs
 - [Wireframes](/docs/wireframes)
+- [Brand & Color Schemes](/docs/brand)
 - [React Components](component-hierarchy.md)
 - [Endpoints](endpoints.md)
 - [Database schema](schema.md)
