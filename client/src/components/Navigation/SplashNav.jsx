@@ -4,7 +4,7 @@ class SplashNav extends Component {
     render() {
         return (
             <div>
-                <h3>Splash Navigation</h3>
+                <h3>Splash Navigation | mood | Signup</h3>
             </div>
         )
     }

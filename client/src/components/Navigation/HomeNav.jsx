@@ -4,7 +4,7 @@ class HomeNav extends Component {
     render() {
         return (
             <div>
-                <h3>Home Navigation</h3>
+                <h3>Home Navigation | mood | Dashboard | Customize | Profile</h3>
             </div>
         )
     }
