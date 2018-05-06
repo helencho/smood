@@ -12,14 +12,6 @@
 
 ![sampletext](auth-signup.png)
 
-**Customize Mood**
-
-![sampletext](customize-mood.png)
-
-**Customize Activity**
-
-![sampletext](customize-activity.png)
-
 **Mood Entry**
 
 ![sampletext](entry-mood.png)
@@ -40,5 +32,10 @@
 
 ![sampletext](profile-yearly.png)
 
+**Customize Mood**
 
+![sampletext](customize-mood.png)
 
+**Customize Activity**
+
+![sampletext](customize-activity.png)
