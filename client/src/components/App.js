@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import HomeNav from './Navigation/HomeNav'
-import SplashNav from './Navigation/SplashNav'
+// import SplashNav from './Navigation/SplashNav'
 import Splash from './Splash/Splash'
 import AuthLogin from './Session/AuthLogin'
 import AuthSignup from './Session/AuthSignup'
@@ -18,7 +18,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <SplashNav /> */}
         <HomeNav />
         <Switch>
           <Route exact path="/" component={Splash} />

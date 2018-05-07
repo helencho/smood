@@ -6,9 +6,8 @@ class Splash extends Component {
         return (
             <div>
                 <h1>mood</h1>
-                {/* <p>How are you today?</p> */}
-                <Link to="/signup"><button>Create an account</button></Link>
-                <Link to="/login">Login</Link>
+                <Link to="/signup"><button>Signup</button></Link>
+                <Link to="/login"><button>Login</button></Link>
             </div>
         )
     }
