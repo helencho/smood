@@ -1,5 +1,6 @@
 import axios from 'axios'
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
+// Handle errors
 
 const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
