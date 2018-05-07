@@ -65,7 +65,14 @@ export const getUser = () => (dispatch) => {
 
 // Log out
 export const logout = () => (dispatch) => {
-    // Logout user to backend
-    // Then call dispatch method receiveCurrentUser
-    // Then log errors
+    axios
+        .get('/users/logout')
+        .then((data) => {
+            console.log(data)
+            let user = null
+            dispatch(receiveCurrentUser(user))
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 }
