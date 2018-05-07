@@ -8,9 +8,29 @@ const receiveCurrentUser = (user) => ({
 
 // Sign up 
 export const signup = (user) => (dispatch) => {
-    // Signup user to backend
-    // Then call dispatch method receiveCurrentUser
-    // Then log errors
+    axios
+        .post('/users/new', {
+            name: user.name,
+            username: user.username,
+            password: user.password
+        })
+        .then((data) => {
+            axios
+                .post('/users/login', {
+                    username: user.username,
+                    password: user.password
+                })
+                .then((data) => {
+                    let user = data.data
+                    dispatch(receiveCurrentUser(user))
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 }
 
 // Log in 

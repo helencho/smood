@@ -32,7 +32,7 @@ class AuthLogin extends Component {
 
         // Once user hits login, direct user to home page
         if (this.props.currentUser) {
-            return <Redirect to="/home" />
+            return <Redirect to="/" />
         }
 
         return (

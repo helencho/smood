@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { signup } from '../../actions/session_actions'
 
 class AuthSignup extends Component {
     constructor() {
@@ -19,12 +21,20 @@ class AuthSignup extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        console.log(`Submit`)
+        let user = {
+            name: this.state.name,
+            username: this.state.email,
+            password: this.state.password
+        }
+        this.props.processForm(user)
     }
 
     render() {
         const { name, email, password } = this.state
-        // console.log(this.state)
+        
+        if (this.props.currentUser) {
+            return <Redirect to="/" />
+        }
 
         return (
             <div>
@@ -40,4 +50,16 @@ class AuthSignup extends Component {
     }
 }
 
-export default AuthSignup
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.session.currentUser
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        processForm: (user) => dispatch(signup(user))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthSignup)
