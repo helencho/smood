@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { login } from '../../actions/session_actions'
 
 class AuthLogin extends Component {
     constructor() {
@@ -23,7 +25,7 @@ class AuthLogin extends Component {
 
     render() {
         const { email, password } = this.state
-        // console.log(this.state)
+        console.log(this.state)
 
         return (
             <div>
@@ -38,4 +40,10 @@ class AuthLogin extends Component {
     }
 }
 
-export default AuthLogin
+const mapDispatchToProps = (dispatch) => {
+    return {
+        processForm: (user) => dispatch(login(user))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AuthLogin)
