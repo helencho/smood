@@ -1,10 +1,18 @@
 import { combineReducers } from 'redux'
 // Import reducers 
+import sessionReducer from './session_reducer'
+import userReducer from './session_reducer'
+import noteReducer from './note_reducer'
+import moodReducer from './mood_reducer'
+import activityReducer from './activity_reducer'
 
 const rootReducer = combineReducers(
     {
-        // This is where I use imported reducers and combine them all here 
-        // session: sessionReducer
+        session: sessionReducer,
+        users: userReducer,
+        notes: noteReducer,
+        moods: moodReducer,
+        activities: activityReducer
     }
 )
 
