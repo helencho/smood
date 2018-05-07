@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Note extends Component {
+class Entry extends Component {
     render() {
         return (
             <div>
-                <h1>Single Note Page</h1>
+                <h1>Single Entry Page</h1>
             </div>
         )
     }
 }
 
-export default Note
+export default Entry

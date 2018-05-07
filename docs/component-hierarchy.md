@@ -19,9 +19,9 @@
 - Monthly
 - Yearly
 
-**Note** :notebook_with_decorative_cover:
-- Note
-- NoteModal
+**Entry** :notebook_with_decorative_cover:
+- Entry
+- EntryModal
 
 **Profile** :name_badge:
 - Profile
@@ -43,7 +43,7 @@
 | /home            | Home              |
 | /dashboard       | Dashboard         |
 | /new             | Dashboard         |
-| /note/:id        | Note              |
+| /entry/:id       | Entry             |
 | /profile/        | Profile           |
 | /custom          | Customize         |
 | /custom/mood     | CustomizeMood     |

@@ -8,7 +8,7 @@ import AuthSignup from './Session/AuthSignup'
 import Profile from './Profile/Profile'
 import Home from './Home/Home'
 import Dashboard from './Dashboard/Dashboard'
-import Note from './Note/Note'
+import Entry from './Entry/Entry'
 import Customize from './Customize/Customize'
 import CustomizeMood from './Customize/CustomizeMood'
 import CustomizeActivity from './Customize/CustomizeActivity'
@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/home" component={Home} />
           <Route path="/new" component={Home} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/note/:id" component={Note} />
+          <Route path="/entry/:id" component={Entry} />
           <Route path="/profile" component={Profile} />
           <Route exact path="/custom" component={Customize} />
           <Route path="/custom/mood" component={CustomizeMood} />
