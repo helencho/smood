@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SplashNav />
+        {/* <SplashNav /> */}
         <HomeNav />
         <Switch>
           <Route exact path="/" component={Splash} />

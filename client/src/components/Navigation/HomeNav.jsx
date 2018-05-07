@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class HomeNav extends Component {
     render() {
         return (
             <div>
-                <h3>Home Navigation | mood | Dashboard | Customize | Profile</h3>
+                <Link to="/home">mood</Link>
+                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/custom">Customize</Link>
+                <Link to="/profile">Profile</Link>
             </div>
         )
     }
