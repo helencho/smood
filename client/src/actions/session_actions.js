@@ -25,7 +25,21 @@ export const login = (user) => (dispatch) => {
         })
         .then((data) => {
             let user = data.data
-            console.log(user)
+            // console.log(user)
+            dispatch(receiveCurrentUser(user))
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+}
+
+// Get logged in user 
+export const getUser = () => (dispatch) => {
+    axios
+        .get('/users/getUser')
+        .then((data) => {
+            let user = data.data.data
+            // console.log(user)
             dispatch(receiveCurrentUser(user))
         })
         .catch((err) => {

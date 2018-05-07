@@ -17,15 +17,16 @@ import CustomizeActivity from './Customize/CustomizeActivity'
 class App extends Component {
   constructor() {
     super()
-    this.state = {
-      loggedIn: false
-    }
+    // this.state = {
+    //   loggedIn: false
+    // }
   }
 
   render() {
     return (
       <div>
-        {this.state.loggedIn ? <HomeNav /> : null}
+        {/* {this.state.loggedIn ? <HomeNav /> : null} */}
+        <HomeNav />
         <Switch>
           <Route exact path="/" component={Splash} />
           <Route path="/signup" component={AuthSignup} />

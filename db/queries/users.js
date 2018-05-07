@@ -22,6 +22,26 @@ const createUser = (req, res, next) => {
         })
 }
 
+// GET
+// /users/getUser
+const getUser = (req, res, next) => {
+    db
+        .one('SELECT * FROM users WHERE id=${id}', {
+            id: req.user.id
+        })
+        .then(data => {
+            res.status(200).json({
+                status: 'success',
+                data: data,
+                message: 'Retrieved logged in user'
+            })
+        })
+        .catch(err => {
+            res.status(500).send(`error getting user: ${err}`)
+            // return next(err);
+        })
+}
+
 // GET 
 // /users/logout
 const logoutUser = (req, res, next) => {
@@ -68,6 +88,7 @@ const deleteUser = (req, res, next) => {
 
 module.exports = {
     createUser,
+    getUser,
     logoutUser,
     updateUser,
     // deleteUser

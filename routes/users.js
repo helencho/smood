@@ -6,6 +6,8 @@ const passport = require('../auth/local')
 
 router.get('/logout', loginRequired, db.logoutUser)
 
+router.get('/getUser', loginRequired, db.getUser)
+
 router.post('/new', db.createUser)
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
