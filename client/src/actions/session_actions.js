@@ -19,12 +19,12 @@ export const login = (user) => (dispatch) => {
     // Then call dispatch method receiveCurrentUser
     // Then log errors 
     axios
-        .post('/login', {
+        .post('/users/login', {
             username: user.username,
             password: user.password
         })
         .then((data) => {
-            let user = data.user
+            let user = data.data
             console.log(user)
             dispatch(receiveCurrentUser(user))
         })
