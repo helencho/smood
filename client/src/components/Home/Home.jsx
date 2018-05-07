@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import MoodForm from './MoodForm'
+import ActivityForm from './ActivityForm'
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Home Page</h1>
+                <p>How are you today?</p>
+                <MoodForm />
+                <ActivityForm />
             </div>
         )
     }
