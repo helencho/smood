@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
 import HomeNav from './Navigation/HomeNav'
 // import SplashNav from './Navigation/SplashNav'
 import Splash from './Splash/Splash'
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* {this.state.loggedIn ? <HomeNav /> : null} */}
+        {/* {this.props.currentUser ? <HomeNav /> : null} */}
         <HomeNav />
         <Switch>
           <Route exact path="/" component={Splash} />
@@ -45,4 +46,12 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
+
+// const mapStateToProps = (state) => {
+//   return {
+//     currentUser: state.session.currentUser
+//   }
+// }
+
+// export default connect(mapStateToProps)(App);
