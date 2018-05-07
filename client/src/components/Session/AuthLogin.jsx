@@ -21,6 +21,11 @@ class AuthLogin extends Component {
     handleSubmit = e => {
         e.preventDefault()
         console.log(`Submit`)
+        let user = {
+            username: this.state.email,
+            password: this.state.password
+        }
+        this.props.processForm(user)
     }
 
     render() {
