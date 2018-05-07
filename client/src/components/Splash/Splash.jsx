@@ -7,9 +7,9 @@ import { getUser } from '../../actions/session_actions'
 class Splash extends Component {
     constructor() {
         super()
-        this.state = {
-            currentUser: null
-        }
+        // this.state = {
+        //     currentUser: null
+        // }
     }
 
     componentDidMount() {

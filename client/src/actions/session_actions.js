@@ -15,9 +15,6 @@ export const signup = (user) => (dispatch) => {
 
 // Log in 
 export const login = (user) => (dispatch) => {
-    // Login the user to backend 
-    // Then call dispatch method receiveCurrentUser
-    // Then log errors 
     axios
         .post('/users/login', {
             username: user.username,
@@ -25,7 +22,6 @@ export const login = (user) => (dispatch) => {
         })
         .then((data) => {
             let user = data.data
-            // console.log(user)
             dispatch(receiveCurrentUser(user))
         })
         .catch((err) => {
@@ -39,7 +35,7 @@ export const getUser = () => (dispatch) => {
         .get('/users/getUser')
         .then((data) => {
             let user = data.data.data
-            // console.log(user)
+            delete user.password_digest
             dispatch(receiveCurrentUser(user))
         })
         .catch((err) => {
