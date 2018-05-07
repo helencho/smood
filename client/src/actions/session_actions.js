@@ -68,7 +68,6 @@ export const logout = () => (dispatch) => {
     axios
         .get('/users/logout')
         .then((data) => {
-            console.log(data)
             let user = null
             dispatch(receiveCurrentUser(user))
         })
