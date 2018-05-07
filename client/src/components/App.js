@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
 import HomeNav from './Navigation/HomeNav'
-// import SplashNav from './Navigation/SplashNav'
 import Splash from './Splash/Splash'
 import AuthLogin from './Session/AuthLogin'
 import AuthSignup from './Session/AuthSignup'
@@ -16,23 +14,15 @@ import CustomizeActivity from './Customize/CustomizeActivity'
 
 
 class App extends Component {
-  constructor() {
-    super()
-    // this.state = {
-    //   loggedIn: false
-    // }
-  }
-
   render() {
     return (
       <div>
-        {/* {this.props.currentUser ? <HomeNav /> : null} */}
         <HomeNav />
         <Switch>
-          <Route exact path="/" component={Splash} />
+          <Route exact path="/" component={Home} />
+          <Route path="/splash" component={Splash} />
           <Route path="/signup" component={AuthSignup} />
           <Route path="/login" component={AuthLogin} />
-          <Route path="/home" component={Home} />
           <Route path="/new" component={Home} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/entry/:id" component={Entry} />
@@ -47,11 +37,3 @@ class App extends Component {
 }
 
 export default App
-
-// const mapStateToProps = (state) => {
-//   return {
-//     currentUser: state.session.currentUser
-//   }
-// }
-
-// export default connect(mapStateToProps)(App);

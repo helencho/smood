@@ -15,9 +15,8 @@ class Splash extends Component {
 
     render() {
         // If user is logged in to session, redirect to home
-        console.log(this.props.currentUser)
         if (this.props.currentUser) {
-            return <Redirect to="/home" />
+            return <Redirect to="/" />
         }
 
         return (
