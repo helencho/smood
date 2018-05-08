@@ -8,11 +8,6 @@ class MoodForm extends Component {
         this.props.getMoods()
     }
 
-    handleButton = (id) => {
-        console.log(id)
-        // Set entry's mood to id 
-    }
-
     render() {
         const { moods } = this.props
 
@@ -20,7 +15,7 @@ class MoodForm extends Component {
             <div>
                 <h1>MoodForm Page</h1>
                 {moods.map((mood) =>
-                    <MoodButton mood={mood} key={mood.mood_id} handleButton={this.handleButton} />
+                    <MoodButton mood={mood} key={mood.mood_id} handleButton={this.props.handleButton} />
                 )}
                 <button>Next</button>
             </div>

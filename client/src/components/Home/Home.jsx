@@ -14,6 +14,12 @@ class Home extends Component {
         }
     }
 
+    handleButton = (name, id) => {
+        this.setState({
+            [name]: id
+        })
+    }
+
     setPage = page => {
         // Increment page (redux) 
         // this.setState({
@@ -22,6 +28,7 @@ class Home extends Component {
     }
 
     render() {
+        console.log(this.state)
         // If no user is logged in, redirect to splash page 
         if (!this.props.currentUser) {
             return <Redirect to="/splash" />
@@ -30,7 +37,7 @@ class Home extends Component {
         return (
             <div>
                 <p>How are you today?</p>
-                <MoodForm />
+                <MoodForm handleButton={this.handleButton} />
                 <ActivityForm />
             </div>
         )
