@@ -2,12 +2,21 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import MoodForm from './MoodForm'
 import ActivityForm from './ActivityForm'
-import HomeNav from '../Navigation/HomeNav'
 import { connect } from 'react-redux'
 
 class Home extends Component {
+    constructor() {
+        super()
+        this.state = {
+            page: '0'
+        }
+    }
+
+    setPage = e => {
+        // Increment page (redux) 
+    }
+
     render() {
-        
         // If no user is logged in, redirect to splash page 
         if (!this.props.currentUser) {
             return <Redirect to="/splash" />
