@@ -10,10 +10,14 @@ class MoodForm extends Component {
     }
 
     render() {
+        const { moods } = this.state
+
         return (
             <div>
                 <h1>MoodForm Page</h1>
-                {this.state.moods.map(mood => <MoodButton mood={mood} />)}
+                {moods.map((mood, idx) =>
+                    <MoodButton mood={mood} key={idx} />
+                )}
                 <button>Next</button>
             </div>
         )

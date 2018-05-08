@@ -24,11 +24,15 @@ class ActivityForm extends Component {
     }
 
     render() {
+        const { activities } = this.state
+
         return (
             <div>
                 <h1>ActivityForm Page</h1>
                 <form onSubmit={this.handleSubmit}>
-                    {this.state.activities.map(activity => <ActivityButton activity={activity} />)}
+                    {activities.map((activity, idx) =>
+                        <ActivityButton activity={activity} key={idx} />
+                    )}
                     <input type="submit" value="Submit" />
                 </form>
             </div>

@@ -12,8 +12,11 @@ class Home extends Component {
         }
     }
 
-    setPage = e => {
+    setPage = page => {
         // Increment page (redux) 
+        // this.setState({
+        //     page
+        // })
     }
 
     render() {
