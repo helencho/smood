@@ -21,13 +21,13 @@ class Home extends Component {
     }
 
     setPage = (page) => {
-        // Increment page (redux) 
         this.setState({
             page
         })
     }
 
     render() {
+        const { mood } = this.state
         console.log(this.state)
         // If no user is logged in, redirect to splash page 
         if (!this.props.currentUser) {
@@ -37,7 +37,7 @@ class Home extends Component {
         return (
             <div>
                 <p>How are you today?</p>
-                <MoodForm handleButton={this.handleButton} setPage={this.setPage} />
+                <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
                 <ActivityForm />
             </div>
         )
