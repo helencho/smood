@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getMoods } from '../../actions/mood_actions'
 import MoodButton from './MoodButton'
 
 class MoodForm extends Component {
@@ -8,9 +10,14 @@ class MoodForm extends Component {
             moods: ['happy', 'calm', 'meh', 'upset', 'sad']
         }
     }
+    
+    componentDidMount() {
+        this.props.getMoods()
+    }
 
     render() {
         const { moods } = this.state
+        console.log(this.props)
 
         return (
             <div>
@@ -24,4 +31,17 @@ class MoodForm extends Component {
     }
 }
 
-export default MoodForm
+const mapStateToProps = (state) => {
+    return {
+        moods: state.moods.moods,
+        error: state.moods.error
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMoods: () => dispatch(getMoods())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MoodForm)
