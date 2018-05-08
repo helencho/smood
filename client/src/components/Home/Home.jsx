@@ -8,7 +8,9 @@ class Home extends Component {
     constructor() {
         super()
         this.state = {
-            page: '0'
+            page: '0',
+            mood: null,
+            activity: null
         }
     }
 

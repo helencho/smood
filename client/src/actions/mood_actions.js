@@ -17,13 +17,13 @@ export const getMoods = () => (dispatch) => {
     axios
         .get(`/moods`)
         .then((data) => {
-            // console.log(data)
             const moods = data.data.data
             dispatch(receiveMoods(moods))
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error getting all moods`
+            dispatch(receiveError(error))
         })
 }
 

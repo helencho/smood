@@ -4,26 +4,23 @@ import { getMoods } from '../../actions/mood_actions'
 import MoodButton from './MoodButton'
 
 class MoodForm extends Component {
-    constructor() {
-        super()
-        this.state = {
-            moods: ['happy', 'calm', 'meh', 'upset', 'sad']
-        }
-    }
-    
     componentDidMount() {
         this.props.getMoods()
     }
 
+    handleButton = (id) => {
+        console.log(id)
+        // Set entry's mood to id 
+    }
+
     render() {
-        const { moods } = this.state
-        console.log(this.props)
+        const { moods } = this.props
 
         return (
             <div>
                 <h1>MoodForm Page</h1>
-                {moods.map((mood, idx) =>
-                    <MoodButton mood={mood} key={idx} />
+                {moods.map((mood) =>
+                    <MoodButton mood={mood} key={mood.mood_id} handleButton={this.handleButton} />
                 )}
                 <button>Next</button>
             </div>
