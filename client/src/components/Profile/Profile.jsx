@@ -9,11 +9,6 @@ class Profile extends Component {
     }
 
     render() {
-        // Redirect user to home page after logging out 
-        if (!this.props.currentUser) {
-            return <Redirect to="/splash" />
-        }
-
         return (
             <div>
                 <h1>User Profile Page</h1>

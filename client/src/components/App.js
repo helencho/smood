@@ -32,22 +32,17 @@ class App extends Component {
       <div>
         <HomeNav />
         <Switch>
-          {/* <Route exact path="/" component={Home} /> */}
           <AuthRoute exact path="/" component={Home} />
-          {/* <Route exact path="/" render={(props) => this.props.loggedIn ? <Route component={Home} /> : <Redirect to="/splash" />} /> */}
           <Route path="/splash" component={Splash} />
           <Route path="/signup" component={AuthSignup} />
           <Route path="/login" component={AuthLogin} />
-
-          {/* <AuthRoute exact path='/users' component={ UsersIndexContainer } /> */}
-
-          <Route path="/new" component={Home} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/entry/:id" component={Entry} />
-          <Route path="/profile" component={Profile} />
-          <Route exact path="/custom" component={Customize} />
-          <Route path="/custom/mood" component={CustomizeMood} />
-          <Route path="/custom/activity" component={CustomizeActivity} />
+          <AuthRoute exact path="/new" component={Home} />
+          <AuthRoute exact path="/dashboard" component={Dashboard} />
+          <AuthRoute exact path="/entry/:id" component={Entry} />
+          <AuthRoute exact path="/profile" component={Profile} />
+          <AuthRoute exact path="/custom" component={Customize} />
+          <AuthRoute path="/custom/mood" component={CustomizeMood} />
+          <AuthRoute path="/custom/activity" component={CustomizeActivity} />
         </Switch>
       </div>
     );

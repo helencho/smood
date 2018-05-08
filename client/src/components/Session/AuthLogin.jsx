@@ -30,7 +30,6 @@ class AuthLogin extends Component {
     render() {
         const { email, password } = this.state
 
-        // Once user hits login, direct user to home page
         if (this.props.currentUser) {
             return <Redirect to="/" />
         }
