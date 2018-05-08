@@ -3,7 +3,6 @@
 **Splash** :sweat_drops:
 - Splash 
 - SplashNav
-- SplashGreeting
 
 **Session** :closed_lock_with_key:
 - AuthForm
@@ -37,12 +36,12 @@
 
 |Path              | Component         |
 |------------------|-------------------|
-| /                | Splash            |
+| /                | Home              |
 | /signup          | AuthForm          |
 | /login           | AuthForm          |
-| /home            | Home              |
+| /splash          | Splash            |
 | /dashboard       | Dashboard         |
-| /new             | Dashboard         |
+| /new             | Home              |
 | /entry/:id       | Entry             |
 | /profile/        | Profile           |
 | /custom          | Customize         |
