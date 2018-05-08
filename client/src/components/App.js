@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import HomeNav from './Navigation/HomeNav'
 import Splash from './Splash/Splash'
 import AuthLogin from './Session/AuthLogin'
@@ -12,20 +11,12 @@ import Entry from './Entry/Entry'
 import Customize from './Customize/Customize'
 import CustomizeMood from './Customize/CustomizeMood'
 import CustomizeActivity from './Customize/CustomizeActivity'
-import { getUser } from '../actions/session_actions'
 import AuthRoute from '../utils/auth_utils'
 
 class App extends Component {
   constructor() {
     super()
-    this.state = {
-      loggedIn: false
-    }
   }
-
-  // componentDidMount() {
-  //   this.props.getUser()
-  // }
 
   render() {
     return (
@@ -49,16 +40,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    loggedIn: Boolean(state.session.currentUser)
-  }
-}
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     getUser: () => dispatch(getUser())
-//   }
-// }
-
-export default withRouter(connect(mapStateToProps, null)(App))
+export default App
