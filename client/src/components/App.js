@@ -14,10 +14,6 @@ import CustomizeActivity from './Customize/CustomizeActivity'
 import AuthRoute from '../utils/auth_utils'
 
 class App extends Component {
-  constructor() {
-    super()
-  }
-
   render() {
     return (
       <div>

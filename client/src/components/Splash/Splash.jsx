@@ -5,10 +5,6 @@ import { connect } from 'react-redux'
 import { getUser } from '../../actions/session_actions'
 
 class Splash extends Component {
-    constructor() {
-        super()
-    }
-
     componentDidMount() {
         this.props.getUser()
     }
