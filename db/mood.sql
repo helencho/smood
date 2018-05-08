@@ -55,14 +55,15 @@ VALUES
 
 INSERT INTO moods (user_id, mood_name, mood_img)
 VALUES
-    (0, 'happy', 'happy url'),
-    (0, 'calm', 'calm url'),
-    (0, 'upset', 'upset url'),
-    (0, 'sad', 'sad url'),
-    (0, 'meh', 'meh url'),
-    (1, 'angry', 'angry url'),
-    (2, 'hyper', 'hyper url'),
-    (3, 'excited', 'excited url')
+    (0, 'happy', 'https://i.imgur.com/YamOYXt.png'),
+    (0, 'calm', 'https://i.imgur.com/qzkkCbf.png'),
+    (0, 'upset', 'https://i.imgur.com/U4dsaLs.png'),
+    (0, 'sad', 'https://i.imgur.com/87QoEYl.png'),
+    (0, 'meh', 'https://i.imgur.com/IHblVsA.png'),
+    (1, 'silly', 'https://i.imgur.com/cedkuiq.png'),
+    (1, 'angry', 'https://i.imgur.com/MB7SuaO.png'),
+    (2, 'hyper', 'https://i.imgur.com/LXYQOAH.png'),
+    (3, 'excited', 'https://i.imgur.com/i4RbQU9.png')
 ;
 
 INSERT INTO activities (user_id, activity_name, activity_img)
@@ -79,7 +80,7 @@ VALUES
 
 INSERT INTO entries (user_id, mood_id, activity_id, entry_date, note)
 VALUES 
-    (1, 1, 1, '2018-04-30', 'Running makes me feel so happy!'),
-    (2, 2, 4, '2018-04-30', 'I had too much cake...'),
-    (3, 3, 8, '2018-04-30', 'Got rejected from Google')
+    (1, 1, 1, '2018-04-30', 'Running makes me feel so good.'),
+    (2, 2, 4, '2018-05-05', 'I love ube cake!'),
+    (3, 3, 8, '2018-05-08', 'Got rejected from Google today.')
 ;
