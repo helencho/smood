@@ -26,6 +26,11 @@ class Home extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        console.log('Submit entry')
+    }
+
     render() {
         const { mood } = this.state
         console.log(this.state)
@@ -38,7 +43,7 @@ class Home extends Component {
             <div>
                 <p>How are you today?</p>
                 <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
-                <ActivityForm />
+                <ActivityForm handleSubmit={this.handleSubmit} />
             </div>
         )
     }

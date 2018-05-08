@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import { connect } from 'redux'
 import ActivityButton from './ActivityButton'
 
 class ActivityForm extends Component {
@@ -18,18 +19,13 @@ class ActivityForm extends Component {
         }
     }
 
-    handleSubmit = e => {
-        e.preventDefault()
-        console.log('Submitting entry')
-    }
-
     render() {
         const { activities } = this.state
 
         return (
             <div>
                 <h1>ActivityForm Page</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.props.handleSubmit}>
                     {activities.map((activity, idx) =>
                         <ActivityButton activity={activity} key={idx} />
                     )}
@@ -39,5 +35,7 @@ class ActivityForm extends Component {
         )
     }
 }
+
+// Connect state to props 
 
 export default ActivityForm
