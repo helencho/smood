@@ -20,11 +20,11 @@ class Home extends Component {
         })
     }
 
-    setPage = page => {
+    setPage = (page) => {
         // Increment page (redux) 
-        // this.setState({
-        //     page
-        // })
+        this.setState({
+            page
+        })
     }
 
     render() {
@@ -37,7 +37,7 @@ class Home extends Component {
         return (
             <div>
                 <p>How are you today?</p>
-                <MoodForm handleButton={this.handleButton} />
+                <MoodForm handleButton={this.handleButton} setPage={this.setPage} />
                 <ActivityForm />
             </div>
         )
