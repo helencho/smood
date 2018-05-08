@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import HomeNav from './Navigation/HomeNav'
 import Splash from './Splash/Splash'
 import AuthLogin from './Session/AuthLogin'
