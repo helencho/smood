@@ -1,7 +1,5 @@
 # dependencies
 /node_modules
-/docs/wireframes/svg
-/docs/brand/svg
 
 # production 
 /build
@@ -14,3 +12,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/docs/wireframes/svg
+/docs/brand/svg
+/client/public/assets/mood_images
