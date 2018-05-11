@@ -3,6 +3,7 @@ import MoodsByYear from './MoodsByYear'
 import ActivitiesByMood from './ActivitiesByMood'
 import MoodPerMonth from './MoodPerMonth'
 import PopularActivities from './PopularActivities'
+import MonthInMoods from './MonthInMoods'
 
 class Dashboard extends Component {
     render() {
@@ -12,11 +13,13 @@ class Dashboard extends Component {
 
                 <MoodsByYear />
 
-                <ActivitiesByMood/>
+                <ActivitiesByMood />
 
-                <MoodPerMonth/>
+                <MoodPerMonth />
 
                 <PopularActivities />
+
+                <MonthInMoods />
 
             </div>
         )
