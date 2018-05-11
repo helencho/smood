@@ -16,6 +16,11 @@ class Home extends Component {
         }
     }
 
+    // When user clicks on "Log entry" again
+    componentWillReceiveProps() {
+        this.setPage('mood')
+    }
+
     // Whenever user chooses a mood or activity, update state 
     handleButton = (name, id) => {
         this.setState({
@@ -52,7 +57,7 @@ class Home extends Component {
             case 'activity':
                 return <ActivityForm handleButton={this.handleButton} handleSubmit={this.handleSubmit} activity={activity} />
             case 'submit':
-                return <EntrySubmission />
+                return <EntrySubmission moodId={mood} />
             default:
                 return <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
         }

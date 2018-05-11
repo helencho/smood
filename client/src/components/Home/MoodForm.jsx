@@ -12,7 +12,7 @@ class MoodForm extends Component {
         const { moods, mood } = this.props
 
         return (
-            <div>
+            <div className="mood-form">
                 <h1>How are you feeling?</h1>
                 {moods.map((mood) =>
                     <MoodButton mood={mood} key={mood.mood_id} handleButton={this.props.handleButton} />

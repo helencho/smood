@@ -12,7 +12,7 @@ class ActivityForm extends Component {
         const { activities, activity } = this.props
 
         return (
-            <div>
+            <div className="activity-form">
                 <h1>What were you doing?</h1>
                 {activities.map((activity) =>
                     <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
