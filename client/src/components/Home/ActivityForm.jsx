@@ -13,7 +13,7 @@ class ActivityForm extends Component {
 
         return (
             <div>
-                <h1>ActivityForm Page</h1>
+                <h1>What were you doing?</h1>
                 {activities.map((activity) =>
                     <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
                 )}

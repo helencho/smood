@@ -13,7 +13,7 @@ class MoodForm extends Component {
 
         return (
             <div>
-                <h1>MoodForm Page</h1>
+                <h1>How are you feeling?</h1>
                 {moods.map((mood) =>
                     <MoodButton mood={mood} key={mood.mood_id} handleButton={this.props.handleButton} />
                 )}

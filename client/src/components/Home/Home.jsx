@@ -69,7 +69,6 @@ class Home extends Component {
 
         return (
             <div>
-                <p>How are you today?</p>
                 <this.activePage />
             </div>
         )
