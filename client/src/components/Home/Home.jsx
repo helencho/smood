@@ -65,7 +65,6 @@ class Home extends Component {
 
     render() {
         const { mood, activity } = this.state
-        console.log(this.state)
 
         // If no user is logged in, redirect to splash page 
         if (!this.props.currentUser) {
@@ -73,9 +72,7 @@ class Home extends Component {
         }
 
         return (
-            <div>
-                <this.activePage />
-            </div>
+            <this.activePage />
         )
     }
 }
