@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import MoodForm from './MoodForm'
 import ActivityForm from './ActivityForm'
 import { connect } from 'react-redux'
+import { newEntry } from '../../actions/entry_actions'
 
 class Home extends Component {
     constructor() {
@@ -28,9 +29,16 @@ class Home extends Component {
         })
     }
 
-    // When user clicks "Submit"
+    // When user clicks "Submit", create new entry 
     handleSubmit = () => {
         console.log('Submit entry')
+        const entry = {
+            date: new Date(),
+            note: 'lorem ipsum',
+            mood_id: this.state.mood,
+            activity_id: this.state.activity
+        }
+        this.props.newEntry(entry)
     }
 
     render() {
@@ -58,4 +66,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Home)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        newEntry: (entry) => dispatch(newEntry(entry))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

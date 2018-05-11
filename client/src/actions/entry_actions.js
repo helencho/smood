@@ -1,9 +1,9 @@
 import axios from 'axios'
-export const RECEIVE_ENTRY = 'RECEIVE_ENTRY'
+export const RECEIVE_ENTRIES = 'RECEIVE_ENTRIES'
 export const RECEIVE_ERROR = 'RECEIVE_ERROR'
 
-const receiveEntry = (entries) => ({
-    type: RECEIVE_ENTRY,
+const receiveEntries = (entries) => ({
+    type: RECEIVE_ENTRIES,
     entries
 })
 
@@ -18,7 +18,7 @@ export const getEntries = () => (dispatch) => {
         .get(`/entries`)
         .then((data) => {
             console.log(data)
-            // dispatch(receiveEntry(entries))
+            // dispatch(receiveEntries(entries))
         })
         .catch((err) => {
             console.log(err)
@@ -32,7 +32,7 @@ export const getEntry = (id) => (dispatch) => {
         .get(`/entries/${id}`)
         .then((data) => {
             console.log(data)
-            // dispatch(receiveEntry(entry))
+            // dispatch(receiveEntries(entry))
         })
         .catch((err) => {
             console.log(err)
@@ -51,11 +51,12 @@ export const newEntry = (entry) => (dispatch) => {
         })
         .then((data) => {
             console.log(data)
-            // dispatch(receiveEntry(entry))
+            // dispatch(receiveEntries(entry))
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error creating new entry`
+            dispatch(receiveError(error))
         })
 }
 
@@ -65,7 +66,7 @@ export const deleteEntry = (id) => (dispatch) => {
         .delete(`/entries/${id}`)
         .then((data) => {
             console.log(data)
-            // dispatch(receiveEntry(entry))
+            // dispatch(receiveEntries(entry))
         })
         .catch((err) => {
             console.log(err)
