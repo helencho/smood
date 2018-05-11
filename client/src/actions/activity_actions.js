@@ -20,13 +20,12 @@ export const getActivities = () => (dispatch) => {
         .get('/activities')
         .then((data) => {
             const activities = data.data.data
-            console.log(activities)
-            // dispatch(receiveActivities(activities))
+            dispatch(receiveActivities(activities))
         })
         .catch((err) => {
             console.log(err)
             const error = `Error getting all activities`
-            // dispatch(receiveError(error))
+            dispatch(receiveError(error))
         })
 }
 

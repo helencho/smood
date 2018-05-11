@@ -14,26 +14,29 @@ class Home extends Component {
         }
     }
 
+    // Whenever user chooses a mood or activity, update state 
     handleButton = (name, id) => {
         this.setState({
             [name]: id
         })
     }
 
+    // When user clicks "Next", set page to activity
     setPage = (page) => {
         this.setState({
             page
         })
     }
 
-    handleSubmit = e => {
-        e.preventDefault()
+    // When user clicks "Submit"
+    handleSubmit = () => {
         console.log('Submit entry')
     }
 
     render() {
-        const { mood } = this.state
+        const { mood, activity } = this.state
         console.log(this.state)
+
         // If no user is logged in, redirect to splash page 
         if (!this.props.currentUser) {
             return <Redirect to="/splash" />
@@ -43,7 +46,7 @@ class Home extends Component {
             <div>
                 <p>How are you today?</p>
                 <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
-                <ActivityForm handleSubmit={this.handleSubmit} />
+                <ActivityForm handleButton={this.handleButton} handleSubmit={this.handleSubmit} activity={activity} />
             </div>
         )
     }

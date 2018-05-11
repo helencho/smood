@@ -1,41 +1,40 @@
 import React, { Component } from 'react'
-// import { connect } from 'redux'
+import { connect } from 'react-redux'
+import { getActivities } from '../../actions/activity_actions'
 import ActivityButton from './ActivityButton'
 
 class ActivityForm extends Component {
-    constructor() {
-        super()
-        this.state = {
-            activities: [
-                'exercising',
-                'reading',
-                'eating',
-                'playing video games',
-                'sex',
-                'hanging out with friends',
-                'singing',
-                'spring cleaning'
-            ]
-        }
+    componentDidMount() {
+        this.props.getActivities()
     }
 
     render() {
-        const { activities } = this.state
+        const { activities, activity } = this.props
 
         return (
             <div>
                 <h1>ActivityForm Page</h1>
-                <form onSubmit={this.props.handleSubmit}>
-                    {activities.map((activity, idx) =>
-                        <ActivityButton activity={activity} key={idx} />
-                    )}
-                    <input type="submit" value="Submit" />
-                </form>
+                {activities.map((activity) =>
+                    <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
+                )}
+                <button disabled={!activity} onClick={this.props.handleSubmit}>Submit</button>
             </div>
         )
     }
 }
 
 // Connect state to props 
+const mapStateToProps = (state) => {
+    return {
+        activities: state.activities.activities,
+        error: state.activities.error
+    }
+}
 
-export default ActivityForm
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getActivities: () => dispatch(getActivities())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActivityForm)
