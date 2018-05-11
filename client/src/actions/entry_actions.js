@@ -51,6 +51,7 @@ export const newEntry = (entry) => (dispatch) => {
         })
         .then((data) => {
             console.log(data)
+            // Not much data to be return... 
             // dispatch(receiveEntries(entry))
         })
         .catch((err) => {

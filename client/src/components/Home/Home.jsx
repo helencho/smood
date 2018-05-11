@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import MoodForm from './MoodForm'
 import ActivityForm from './ActivityForm'
+import EntrySubmission from './EntrySubmission'
 import { connect } from 'react-redux'
 import { newEntry } from '../../actions/entry_actions'
 
@@ -9,7 +10,7 @@ class Home extends Component {
     constructor() {
         super()
         this.state = {
-            page: '0',
+            page: 'mood',
             mood: null,
             activity: null
         }
@@ -31,7 +32,7 @@ class Home extends Component {
 
     // When user clicks "Submit", create new entry 
     handleSubmit = () => {
-        console.log('Submit entry')
+        this.setPage('submit')
         const entry = {
             date: new Date(),
             note: 'lorem ipsum',
@@ -39,6 +40,22 @@ class Home extends Component {
             activity_id: this.state.activity
         }
         this.props.newEntry(entry)
+    }
+
+    // Toggle between home, users, and projects pages, with home being the fallback 
+    activePage = () => {
+        const { mood, activity, page } = this.state;
+
+        switch (page) {
+            case 'mood':
+                return <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
+            case 'activity':
+                return <ActivityForm handleButton={this.handleButton} handleSubmit={this.handleSubmit} activity={activity} />
+            case 'submit':
+                return <EntrySubmission />
+            default:
+                return <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
+        }
     }
 
     render() {
@@ -53,8 +70,7 @@ class Home extends Component {
         return (
             <div>
                 <p>How are you today?</p>
-                <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
-                <ActivityForm handleButton={this.handleButton} handleSubmit={this.handleSubmit} activity={activity} />
+                <this.activePage />
             </div>
         )
     }
