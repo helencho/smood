@@ -1,11 +1,35 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getEntries } from '../../actions/entry_actions'
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 class MoodsByYear extends Component {
+    constructor() {
+        super()
+        this.state = {
+            year: '2018',
+            moods: {}
+        }
+    }
+
+    componentDidMount() {
+        this.countMoods()
+    }
+
+    componentWillReceiveProps() {
+        // Set the year 
+    }
+
+    countMoods = () => {
+        const { year } = this.state 
+        // Filter entries in the year 
+        // Count number of occurences of moods in filtered entries  
+        // Mount to state 
+    }
+
     render() {
         // Allow user to click on a year 
         // By default, year will be 2018 (for now) 
-        // Filter all moo
 
         return (
             <div>
@@ -17,6 +41,16 @@ class MoodsByYear extends Component {
 }
 
 // Get all entries 
+const mapStateToProps = (state) => {
+    return {
+        entries: state.entries.entries
+    }
+}
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getEntries: () => dispatch(getEntries())
+    }
+}
 
-export default MoodsByYear
+export default connect(mapStateToProps, mapDispatchToProps)(MoodsByYear)

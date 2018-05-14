@@ -18,11 +18,13 @@ export const getEntries = () => (dispatch) => {
         .get(`/entries`)
         .then((data) => {
             console.log(data)
-            // dispatch(receiveEntries(entries))
+            const entries = data.data.data
+            dispatch(receiveEntries(entries))
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error getting all entries`
+            dispatch(receiveError(error))
         })
 }
 

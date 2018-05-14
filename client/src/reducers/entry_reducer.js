@@ -10,7 +10,7 @@ const entryReducer = (state = initialState, action) => {
     let newState
     switch (action.type) {
         case RECEIVE_ENTRIES:
-            newState = { ...state, entries: action.entry }
+            newState = { ...state, entries: action.entries }
             return newState
         case RECEIVE_ERROR:
             newState = { ...state, error: action.error }
