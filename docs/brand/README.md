@@ -4,18 +4,18 @@
 
 **Logo Fonts**
 
-| Font          | Samples                             |
-|---------------|-------------------------------------|
-| Patua One     | ![Patua One](patua-one.png)         |
-| Cherry Swash  | ![Cherry Swash](cherry-swash.png)   |
-| Zilla Slab    | ![Zilla Slab](zilla-slab.png)       |
-| Montserrat    | ![Montserrat](montserrat-bold.png)  |
-| Itim          | ![Itim](itim.png)                   |
+| Font          | Samples                             | Notes |
+|---------------|-------------------------------------|-------|
+| Patua One     | ![Patua One](patua-one.png)         | Clean |
+| Cherry Swash  | ![Cherry Swash](cherry-swash.png)   | Antique, playful |
+| Zilla Slab    | ![Zilla Slab](zilla-slab.png)       | Antique, clean |
+| Montserrat    | ![Montserrat](montserrat-bold.png)  | Clean, modern | 
+| Itim          | ![Itim](itim.png)                   | Playful, youthful |
 
 
 **Main Fonts**
 
-| Font          | Samples                               |
+| Font          | Samples                               | 
 |---------------|---------------------------------------|
 | Roboto Light  | ![Roboto](roboto-300.png)             |
 | Open Sans Light | ![Open Sans](open-sans-300.png)     |
