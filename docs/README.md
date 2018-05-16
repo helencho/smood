@@ -20,7 +20,7 @@ Mood is a web application built using Node.js and React/Redux. By the end of Wee
 - [React Components](component-hierarchy.md)
 - [Endpoints](endpoints.md)
 - [Database schema](schema.md)
-<!-- - [Sample State](sample-state.md) -->
+- [Research](research.md)
 
 ## Implementation Timeline
 
