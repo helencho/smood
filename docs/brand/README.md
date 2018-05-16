@@ -4,40 +4,24 @@
 
 **Logo Fonts**
 
-Patua One 
+| Font          | Samples                             |
+|---------------|-------------------------------------|
+| Patua One     | ![Patua One](patua-one.png)         |
+| Cherry Swash  | ![Cherry Swash](cherry-swash.png)   |
+| Zilla Slab    | ![Zilla Slab](zilla-slab.png)       |
+| Montserrat    | ![Montserrat](montserrat-bold.png)  |
+| Itim          | ![Itim](itim.png)                   |
 
-![Patua One](patua-one.png)
-
-Cherry Swash 
-
-![Cherry Swash](cherry-swash.png)
-
-Zilla Slab 
-
-![Zilla Slab](zilla-slab.png)
 
 **Main Fonts**
 
-Roboto Light
-
-![Roboto](roboto-300.png)
-
-Open Sans Light 
-
-![Open Sans](open-sans-300.png)
-
-Lato Light
-
-![Lato](lato-300.png)
-
-Montserrat Light
-
-![Montserrat](montserrat-300.png)
-
-Raleway Light
-
-![Raleway](raleway-300.png)
-
+| Font          | Samples                               |
+|---------------|---------------------------------------|
+| Roboto Light  | ![Roboto](roboto-300.png)             |
+| Open Sans Light | ![Open Sans](open-sans-300.png)     |
+| Lato Light | ![Lato](lato-300.png)                    |
+| Montserrat Light | ![Montserrat](montserrat-300.png)  |
+| Raleway Light | ![Raleway](raleway-300.png)           |
 
 
 ## Colors 
