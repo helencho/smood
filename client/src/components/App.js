@@ -12,6 +12,7 @@ import Customize from './Customize/Customize'
 import CustomizeMood from './Customize/CustomizeMood'
 import CustomizeActivity from './Customize/CustomizeActivity'
 import AuthRoute from '../utils/auth_utils'
+import '../stylesheets/App.css'
 
 class App extends Component {
   render() {

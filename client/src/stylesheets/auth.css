@@ -1,3 +1,8 @@
+.auth-container {
+    height: 100vh;
+    width: 100vw;
+}
+
 .auth-container input {
     font-family: 'Raleway', sans-serif;
 }
