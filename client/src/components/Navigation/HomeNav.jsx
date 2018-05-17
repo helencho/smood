@@ -12,10 +12,10 @@ class HomeNav extends Component {
         return (
             this.props.currentUser ?
                 <div>
-                    <Link to="/">mood</Link>{" "}
-                    <Link to="/dashboard">Dashboard</Link>{" "}
-                    <Link to="/custom">Customize</Link>{" "}
-                    <Link to="/profile">Profile</Link>{" "}
+                    <Link to="/"><i className="fas fa-book"></i></Link>
+                    <Link to="/dashboard"><i className="fas fa-tachometer-alt"></i></Link>
+                    <Link to="/custom"><i className="fas fa-cog"></i></Link>
+                    <Link to="/profile"><i className="far fa-user"></i></Link>
                 </div>
                 :
                 null
