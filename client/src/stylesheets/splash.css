@@ -3,8 +3,9 @@
     width: 100vw;
 }
 
-.splash-container h1 {
+.splash-title h1 {
     font-family: 'Patua One', cursive;
+    font-size: 3.6rem;
 }
 
 .splash-container button {
