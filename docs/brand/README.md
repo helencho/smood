@@ -30,14 +30,18 @@
 
 ## Colors 
 
-**Mood Colors**
+**Version 2.0**
 
-![Moods](./color/colors.png)
+![App](./color/colors-2.0.png)
 
-**Primary Color**
+Primary Color 
+
+![Fuschia](./color/color-main-fuschia.png)
+
+**Version 1.0**
+
+![Moods](./color/colors-1.0.png)
+
+Primary Color
 
 ![Peach](./color/color-main-peach.png)
-
-**Secondary Color**
-
-![Pink](./color/color-main-pink.png)
