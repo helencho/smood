@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getUser } from '../../actions/session_actions'
+import SplashTitle from './SplashTitle'
 import '../../stylesheets/splash.css'
 
 class Splash extends Component {
@@ -18,8 +19,7 @@ class Splash extends Component {
 
         return (
             <div className="splash-container gradient-warm">
-                <h1>mood</h1>
-                <p>Feeling some type of way</p>
+                <SplashTitle />
                 <Link to="/login"><button>Log in</button></Link>
                 <Link to="/signup"><button>Register</button></Link>
             </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login } from '../../actions/session_actions'
+import SplashTitle from '../Splash/SplashTitle'
 import '../../stylesheets/auth.css'
 
 class AuthLogin extends Component {
@@ -37,6 +38,7 @@ class AuthLogin extends Component {
 
         return (
             <div className="auth-container gradient-warm">
+                <SplashTitle />
                 <form onSubmit={this.handleSubmit}>
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />

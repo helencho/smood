@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signup } from '../../actions/session_actions'
+import SplashTitle from '../Splash/SplashTitle'
+import '../../stylesheets/auth.css'
 
 class AuthSignup extends Component {
     constructor() {
@@ -31,13 +33,14 @@ class AuthSignup extends Component {
 
     render() {
         const { name, email, password } = this.state
-        
+
         if (this.props.currentUser) {
             return <Redirect to="/" />
         }
 
         return (
             <div className="auth-container gradient-warm">
+                <SplashTitle />
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
