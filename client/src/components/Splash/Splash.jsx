@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getUser } from '../../actions/session_actions'
+import '../../stylesheets/splash.css'
 
 class Splash extends Component {
     componentDidMount() {
@@ -16,10 +17,11 @@ class Splash extends Component {
         }
 
         return (
-            <div>
+            <div className="splash-container">
                 <h1>mood</h1>
-                <Link to="/signup"><button>Signup</button></Link>
-                <Link to="/login"><button>Login</button></Link>
+                <p>Feeling some type of way</p>
+                <Link to="/login"><button>Log in</button></Link>
+                <Link to="/signup"><button>Register</button></Link>
             </div>
         )
     }
