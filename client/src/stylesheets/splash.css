@@ -7,3 +7,7 @@
 .splash-container h1 {
     font-family: 'Patua One', cursive;
 }
+
+.splash-container button {
+    font-family: 'Raleway', sans-serif;
+}
