@@ -35,7 +35,7 @@ class AuthLogin extends Component {
         }
 
         return (
-            <div>
+            <div className="auth-container gradient-warm">
                 <form onSubmit={this.handleSubmit}>
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />

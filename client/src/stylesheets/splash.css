@@ -1,7 +1,6 @@
 .splash-container {
     height: 100vh;
-    width: 100%;
-    background-image: url('../assets/backgrounds/background-warm.png');
+    width: 100vw;
 }
 
 .splash-container h1 {

@@ -17,7 +17,7 @@ class Splash extends Component {
         }
 
         return (
-            <div className="splash-container">
+            <div className="splash-container gradient-warm">
                 <h1>mood</h1>
                 <p>Feeling some type of way</p>
                 <Link to="/login"><button>Log in</button></Link>
