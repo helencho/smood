@@ -1,0 +1,9 @@
+.navigation {
+    background-color: #540032;
+    width: 50px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
