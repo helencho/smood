@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login } from '../../actions/session_actions'
+import '../../stylesheets/auth.css'
 
 class AuthLogin extends Component {
     constructor() {
