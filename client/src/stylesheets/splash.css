@@ -9,6 +9,20 @@
 
 .splash-container button {
     font-family: 'Raleway', sans-serif;
+    outline: none;
+    border: none;
+}
+
+.splash-container #button-login {
+    border: 2px solid #fefefe;
+    background: none;
+    color: #fefefe;
+}
+
+.splash-container #button-register {
+    border: 2px solid transparent;
+    background: none;
+    color: #fefefe;
 }
 
 /*---------------------------*/
@@ -18,3 +32,4 @@
     font-family: 'Patua One', cursive;
     font-size: 3.6rem;
 }
+

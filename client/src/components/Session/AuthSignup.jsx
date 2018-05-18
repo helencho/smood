@@ -45,7 +45,7 @@ class AuthSignup extends Component {
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
-                    <input type="submit" placeholder="Signup" />
+                    <input type="submit" placeholder="Signup" className="button" />
                     <p>Have an account? <Link to="/login">Login</Link></p>
                 </form>
             </div>

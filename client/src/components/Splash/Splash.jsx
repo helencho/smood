@@ -20,8 +20,8 @@ class Splash extends Component {
         return (
             <div className="splash-container gradient-warm">
                 <SplashTitle />
-                <Link to="/login"><button>Log in</button></Link>
-                <Link to="/signup"><button>Register</button></Link>
+                <Link to="/login"><button id="button-login">Log in</button></Link>
+                <Link to="/signup"><button id="button-register">Register</button></Link>
             </div>
         )
     }
