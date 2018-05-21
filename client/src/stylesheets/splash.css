@@ -95,7 +95,6 @@
     align-items: center;
     background-color: #F97794;
     background-image: linear-gradient(to left top, #F97794, #623AA2);
-    /* background-size: cover; */
 }
 .auth-container form {
     background-color: #fefefe;
@@ -108,6 +107,10 @@
     height: 420px;
     border-radius: 2px;
     margin-bottom: 0.8rem;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
 }
 
     .auth-container form input {
