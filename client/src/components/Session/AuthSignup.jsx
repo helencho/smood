@@ -60,6 +60,7 @@ class AuthSignup extends Component {
     }
 
     render() {
+        console.log(this.props)
         const { name, email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
@@ -90,7 +91,8 @@ class AuthSignup extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        currentUser: state.session.currentUser
+        currentUser: state.session.currentUser,
+        error: state.session.error
     }
 }
 

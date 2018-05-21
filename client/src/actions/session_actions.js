@@ -1,10 +1,16 @@
 import axios from 'axios'
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
+export const RECEIVE_ERROR = 'RECEIVE_ERROR'
 // Handle errors
 
 const receiveCurrentUser = (user) => ({
     type: RECEIVE_CURRENT_USER,
     user
+})
+
+const receiveError = (error) => ({
+    type: RECEIVE_ERROR,
+    error
 })
 
 // Sign up 
@@ -27,10 +33,14 @@ export const signup = (user) => (dispatch) => {
                 })
                 .catch((err) => {
                     console.log(err)
+                    const error = `Error logging in after signup`
+                    dispatch(receiveError(error))
                 })
         })
         .catch((err) => {
             console.log(err)
+            const error = `Error registering user`
+            dispatch(receiveError(error))
         })
 }
 
@@ -47,6 +57,8 @@ export const login = (user) => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
+            const error = `Error logging in`
+            dispatch(receiveError(error))
         })
 }
 
@@ -61,6 +73,8 @@ export const getUser = () => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
+            const error = `Error persisting session`
+            dispatch(receiveError(error))
         })
 }
 
@@ -74,5 +88,7 @@ export const logout = () => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
+            const error = `Error while logging out`
+            dispatch(receiveError(error))
         })
 }
