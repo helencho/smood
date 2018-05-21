@@ -1,9 +1,28 @@
+/* TOP NAVIGATION */
+.top-nav {
+    background-color: rgba(255, 0, 0, 0.2);
+    width: 100%;
+}
+
+.top-nav button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+/* SIDEBAR */
 .navigation {
-    background-color: #540032;
-    width: 50px;
+    background-color: rgba(0, 255, 0, 0.2);
+    /* width: 50px; */
     position: fixed;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+}
+
+.navigation-hidden {
+    background-color: rgba(0, 0, 255, 0.2);
 }
