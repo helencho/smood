@@ -6,32 +6,21 @@
     width: 100vw;
     text-align: center;
 }
-
-.splash-container button {
-    font-family: 'Raleway', sans-serif;
-    outline: none;
-    border: none;
-}
-
-.splash-container #button-login {
-    border: 1px solid #323232;
-    background: none;
-    color: #323232;
-}
-
-.splash-container #button-register {
-    border: 2px solid transparent;
-    background: none;
-    color: #323232;
-}
-
-/*---------------------------*/
-/*        Splash Title       */
-/*---------------------------*/
-.splash-title h1 {
-    font-family: 'Patua One', cursive;
-    font-size: 3.6rem;
-}
+    .splash-container button {
+        font-family: 'Raleway', sans-serif;
+        outline: none;
+        border: none;
+    }
+    .splash-container #button-login {
+        border: 1px solid #323232;
+        background: none;
+        color: #323232;
+    }
+    .splash-container #button-register {
+        border: 1px solid transparent;
+        background: none;
+        color: #323232;
+    }
 
 /*---------------------------*/
 /*    Auth Login & Signup    */
@@ -43,26 +32,98 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 255, 0, 0.1);
+    /* justify-content: center; */
+    background-color: #F97794;
+    background-image: linear-gradient(to left top, #F97794, #623AA2);
 }
-
 .auth-container form {
-    background-color: rgba(255, 0, 0, 0.1);
-    width: 80%;
+    background-color: #fefefe;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
+    width: 800px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+    height: 420px;
+    border-radius: 2px;
 }
 
-.auth-container input {
-    font-family: 'Raleway', sans-serif;
+    .auth-container form input {
+        outline: none;
+        border: none;
+        border: 2px solid #623AA2;
+        font-size: 1rem;
+        font-family: 'Raleway', sans-serif;
+        padding: 0.8rem;
+        width: 48%;
+        border-radius: 2px;
+        margin: 0.8rem 0;
+        color: rgba(0, 0, 0, 0.6);
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+        .auth-container form input::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .auth-container form input:focus {
+            border: 2px solid #F97794;
+            color: #F97794;
+        }
+
+    .auth-container form .button {
+        background-color: #623AA2;
+        color: #fefefe;
+        cursor: pointer;
+        width: 200px;
+    }
+    .auth-container form p {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+    }
+    .auth-container form a {
+        padding-bottom: 2.2px;
+        color: #623AA2;
+        border-bottom: 1px dotted #623AA2;
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+        .auth-container form a:hover {
+            color: #F97794;
+            border-bottom: 1px dotted #F97794;
+        }
+
+/*---------------------------*/
+/*        Splash Title       */
+/*---------------------------*/
+.splash-title {
+    margin: 3.2rem 0;
+}
+    .splash-title h1 {
+        font-family: 'Patua One', cursive;
+        font-size: 3.6rem;
+    }
+    .splash-title p {
+        font-size: 1.2rem;
+    }
+
+/*---------------------------*/
+/*       Responsiveness      */
+/*---------------------------*/
+@media screen and (max-width: 800px) {
+    .auth-container form {
+        width: 80%;
+    }
 }
 
-.auth-container .button {
-    font-family: 'Raleway', sans-serif;
-    outline: none;
-    border: none;
-    border: 1px solid #323232;
-    background: none;
-    color: #323232;
+@media screen and (max-width: 430px) {
+    .auth-container form {
+        width: 88%;
+    }
+    .auth-container form input {
+        width: 90%;
+    }
 }
-

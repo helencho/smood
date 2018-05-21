@@ -5,7 +5,7 @@ class SplashTitle extends Component {
         return (
             <div className="splash-title">
                 <h1>mood</h1>
-                <p>Feeling some type of way</p>
+                <p>Feeling some type of way?</p>
             </div>
         )
     }
