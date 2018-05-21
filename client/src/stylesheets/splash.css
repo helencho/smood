@@ -13,35 +13,71 @@
     align-items: center;
     background-color: #F97794;
     background-image: linear-gradient(to left top, #F97794, #623AA2);
-
 }
-    .splash-container button {
+
+/* Login and register button choices on splash page */
+.splash-container .auth-choices {
+    display: flex;
+}
+    .splash-container .auth-choices a {
+        display: inline-block;
+        margin: 0.8rem 0;
+    }
+    .splash-container .auth-choices button {
         font-family: 'Raleway', sans-serif;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        padding: 0.8rem;
+        border-radius: 2px;
+        width: 180px;
+        cursor: pointer;
+    }
+    .splash-container .auth-choices button:focus,
+    .splash-container .auth-choice button:active {
         outline: none;
         border: none;
     }
     .splash-container #button-login {
-        border: 1px solid #323232;
-        background: none;
-        color: #323232;
+        border: 2px solid #fefefe;
+        background: #fefefe;
+        color: #623AA2;
+        -moz-transition: 0.2s color;
+        -ms-transition: 0.2s color;
+        -webkit-transition: 0.2s color;
+        transition: 0.2s color;
     }
+        .splash-container #button-login:hover {
+            color: #F97794;
+        }
     .splash-container #button-register {
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         background: none;
-        color: #323232;
+        color: #fefefe;
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
     }
-.splash-container .auth-choices {
-    display: flex;
+        .splash-container #button-register:hover {
+            text-shadow: 0 0 10px rgba(254, 254, 254, 0.4);
+        }
+/* Container holds github logo */
+.splash-container #git {
+    position: absolute;
+    bottom: 80px;
+    padding: 0.8rem 0;
 }
 .splash-container #git a {
-    color: rgba(255, 255, 255, 0.8);
-    -moz-transition: 0.2s color;
-    -ms-transition: 0.2s color;
-    -webkit-transition: 0.2s color;
-    transition: 0.2s color;
+    color: #fefefe;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
 }
     .splash-container #git a:hover {
         color: #fefefe;
+        text-shadow: 0 0 10px rgba(254, 254, 254, 0.4);
     }
 
 /*---------------------------*/
@@ -139,13 +175,11 @@
     .splash-title h1 {
         font-family: 'Patua One', cursive;
         font-size: 3.6rem;
-        color: #fefefe;
+        color: #ffffff;
     }
     .splash-title p {
         font-size: 1.2rem;
-        color: #fefefe;
-        /* border-bottom: 1px dotted #fefefe; */
-        /* padding-bottom: 2.2px; */
+        color: #ffffff;
     }
 
 /*---------------------------*/
@@ -163,5 +197,8 @@
     }
     .auth-container form input {
         width: 90%;
+    }
+    .splash-container .auth-choices {
+        flex-direction: column;
     }
 }
