@@ -2,9 +2,18 @@
 /*        Splash Main        */
 /*---------------------------*/
 .splash-container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F97794;
+    background-image: linear-gradient(to left top, #F97794, #623AA2);
+
 }
     .splash-container button {
         font-family: 'Raleway', sans-serif;
@@ -21,20 +30,26 @@
         background: none;
         color: #323232;
     }
+.splash-container .auth-choices {
+    display: flex;
+}
 
 /*---------------------------*/
 /*    Auth Login & Signup    */
 /*---------------------------*/
 .auth-container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    position: fixed;
+    bottom: 0;
+    top: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     background-color: #F97794;
     background-image: linear-gradient(to left top, #F97794, #623AA2);
+    /* background-size: cover; */
 }
 .auth-container form {
     background-color: #fefefe;
@@ -46,6 +61,7 @@
     padding: 1.2rem;
     height: 420px;
     border-radius: 2px;
+    margin-bottom: 0.8rem;
 }
 
     .auth-container form input {
@@ -113,9 +129,13 @@
     .splash-title h1 {
         font-family: 'Patua One', cursive;
         font-size: 3.6rem;
+        color: #fefefe;
     }
     .splash-title p {
         font-size: 1.2rem;
+        color: #fefefe;
+        /* border-bottom: 1px dotted #fefefe; */
+        /* padding-bottom: 2.2px; */
     }
 
 /*---------------------------*/
