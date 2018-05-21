@@ -8,17 +8,19 @@
     padding: 0 0.6rem;
 }
 
-.top-nav button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: none;
-}
+    .top-nav button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
 
 
 /* SIDEBAR */
 .navigation {
-    background-color: rgba(0, 255, 0, 0.6);
+    /* background-color: rgba(0, 255, 0, 0.6); */
+    background-color: #fefefe;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.02);
     position: fixed;
     height: 100%;
     width: 164px;
@@ -65,6 +67,10 @@
         width: 0;
     }
 
+    .navigation a {
+        justify-content: center;
+    }
+    
     .navigation p,
     .navigation-hidden p {
         display: none;
