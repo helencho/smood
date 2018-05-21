@@ -31,11 +31,17 @@ class AuthSignup extends Component {
             message.push('name must be at least 2 letters')
         }
 
+        // Email isn't typed in 
+        if(!email) {
+            message.push('email is needed')
+        }
+
         // Password is at least 6 characters long 
         if (password.length <= 6) {
             message.push('password must be at least 6 characters')
         }
 
+        // If there are no error messages, process the form 
         if (message.length === 0) {
             let user = {
                 name: this.state.name,
