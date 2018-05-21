@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signup } from '../../actions/session_actions'
 import SplashTitle from '../Splash/SplashTitle'
-import '../../stylesheets/auth.css'
 
 class AuthSignup extends Component {
     constructor() {

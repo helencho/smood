@@ -28,7 +28,9 @@
     flex-direction: column;
     padding: 0.6rem;
     padding-top: 0;
-    transition: 0.3s all;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
     overflow: hidden;
 }
 
@@ -70,7 +72,7 @@
     .navigation a {
         justify-content: center;
     }
-    
+
     .navigation p,
     .navigation-hidden p {
         display: none;

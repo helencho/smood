@@ -14,15 +14,15 @@
 }
 
 .splash-container #button-login {
-    border: 2px solid #fefefe;
+    border: 1px solid #323232;
     background: none;
-    color: #fefefe;
+    color: #323232;
 }
 
 .splash-container #button-register {
     border: 2px solid transparent;
     background: none;
-    color: #fefefe;
+    color: #323232;
 }
 
 /*---------------------------*/
@@ -31,5 +31,38 @@
 .splash-title h1 {
     font-family: 'Patua One', cursive;
     font-size: 3.6rem;
+}
+
+/*---------------------------*/
+/*    Auth Login & Signup    */
+/*---------------------------*/
+.auth-container {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.auth-container form {
+    background-color: rgba(255, 0, 0, 0.1);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container input {
+    font-family: 'Raleway', sans-serif;
+}
+
+.auth-container .button {
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    border: none;
+    border: 1px solid #323232;
+    background: none;
+    color: #323232;
 }
 

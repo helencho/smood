@@ -33,10 +33,10 @@ class HomeNav extends Component {
                         <h1>mood</h1>
                     </div>
                     <div className={`navigation ${navClass}`}>
-                        <Link to="/"><i className="fas fa-book fa-fw fa-3x"></i><p>Log</p></Link>
-                        <Link to="/dashboard"><i className="fas fa-tachometer-alt fa-fw fa-3x"></i><p>Dashboard</p></Link>
-                        <Link to="/custom"><i className="fas fa-cog fa-fw fa-3x"></i><p>Customize</p></Link>
-                        <Link to="/profile"><i className="far fa-user fa-fw fa-3x"></i><p>Profile</p></Link>
+                        <Link to="/" onClick={this.handleSlideout}><i className="fas fa-book fa-fw fa-3x"></i><p>Log</p></Link>
+                        <Link to="/dashboard" onClick={this.handleSlideout}><i className="fas fa-tachometer-alt fa-fw fa-3x"></i><p>Dashboard</p></Link>
+                        <Link to="/custom" onClick={this.handleSlideout}><i className="fas fa-cog fa-fw fa-3x"></i><p>Customize</p></Link>
+                        <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x"></i><p>Profile</p></Link>
                     </div>
                 </div>
                 :
