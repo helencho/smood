@@ -33,6 +33,16 @@
 .splash-container .auth-choices {
     display: flex;
 }
+.splash-container #git a {
+    color: rgba(255, 255, 255, 0.8);
+    -moz-transition: 0.2s color;
+    -ms-transition: 0.2s color;
+    -webkit-transition: 0.2s color;
+    transition: 0.2s color;
+}
+    .splash-container #git a:hover {
+        color: #fefefe;
+    }
 
 /*---------------------------*/
 /*    Auth Login & Signup    */
