@@ -16,6 +16,7 @@
 .navigation {
     background-color: rgba(0, 255, 0, 0.2);
     /* width: 50px; */
+    /* padding: 0 0.8rem; */
     position: fixed;
     height: 100%;
     display: flex;
