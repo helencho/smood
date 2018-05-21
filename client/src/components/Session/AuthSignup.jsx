@@ -55,7 +55,11 @@ class AuthSignup extends Component {
 
     render() {
         const { name, email, password, message } = this.state
-        const errorMessage = message.length > 0 ? this.capitalize(message.join(' & ')) : ''
+        const errorMessage = message.length > 0
+            ?
+            <p id="auth-message">{this.capitalize(message.join(' & '))}</p>
+            :
+            null
 
         if (this.props.currentUser) {
             return <Redirect to="/" />
@@ -70,7 +74,7 @@ class AuthSignup extends Component {
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
                     <input type="submit" value="Register" className="button" />
-                    <p id="auth-message">{errorMessage}</p>
+                    {errorMessage}
                     <p>Have an account? <Link to="/login">Login</Link></p>
                 </form>
             </div>
