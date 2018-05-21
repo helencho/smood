@@ -10,7 +10,8 @@ class AuthSignup extends Component {
         this.state = {
             name: '',
             email: '',
-            password: ''
+            password: '',
+            message: []
         }
     }
 
@@ -22,16 +23,39 @@ class AuthSignup extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        let user = {
-            name: this.state.name,
-            username: this.state.email,
-            password: this.state.password
+        const { name, email, password } = this.state
+        let message = []
+
+        // User's name is at least 2 letters long 
+        if (name.length <= 2) {
+            message.push('name must be at least 2 letters')
         }
-        this.props.processForm(user)
+
+        // Password is at least 6 characters long 
+        if (password.length <= 6) {
+            message.push('password must be at least 6 characters')
+        }
+
+        if (message.length === 0) {
+            let user = {
+                name: this.state.name,
+                username: this.state.email,
+                password: this.state.password
+            }
+            this.props.processForm(user)
+        } else {
+            this.setState({ message })
+        }
+    }
+
+    // Capitalize the first letter of the string 
+    capitalize = (str) => {
+        return str[0].toUpperCase() + str.slice(1)
     }
 
     render() {
-        const { name, email, password } = this.state
+        const { name, email, password, message } = this.state
+        const errorMessage = message.length > 0 ? this.capitalize(message.join(' & ')) : ''
 
         if (this.props.currentUser) {
             return <Redirect to="/" />
@@ -46,6 +70,7 @@ class AuthSignup extends Component {
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
                     <input type="submit" value="Register" className="button" />
+                    <p id="auth-message">{errorMessage}</p>
                     <p>Have an account? <Link to="/login">Login</Link></p>
                 </form>
             </div>
