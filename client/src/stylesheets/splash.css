@@ -77,7 +77,15 @@
         color: #fefefe;
         cursor: pointer;
         width: 200px;
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
     }
+        .auth-container form .button:hover {
+            background-color: #F97794;
+            border-color: #F97794;
+        }
     .auth-container form p {
         font-size: 1rem;
         margin: 0.8rem 0;

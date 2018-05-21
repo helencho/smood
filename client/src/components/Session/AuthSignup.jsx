@@ -41,7 +41,7 @@ class AuthSignup extends Component {
             <div className="auth-container gradient-warm">
                 <SplashTitle />
                 <form onSubmit={this.handleSubmit}>
-                    <h1>Sign up for feelings</h1>
+                    <h1>Sign up for feelings 🔥</h1>
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
