@@ -4,15 +4,10 @@
 .splash-container {
     height: 100%;
     width: 100vw;
-    position: fixed;
-    top: 0;
-    bottom: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F97794;
-    background-image: linear-gradient(to left top, #F97794, #623AA2);
 }
 
 /* Login and register button choices on splash page */
@@ -86,15 +81,10 @@
 .auth-container {
     height: 100%;
     width: 100vw;
-    position: fixed;
-    bottom: 0;
-    top: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F97794;
-    background-image: linear-gradient(to left top, #F97794, #623AA2);
 }
 .auth-container form {
     background-color: #fefefe;
@@ -210,6 +200,7 @@
 @media screen and (max-width: 430px) {
     .auth-container form {
         width: 88%;
+        height: auto;
     }
     .auth-container form input {
         width: 90%;

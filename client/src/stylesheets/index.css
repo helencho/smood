@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One|Raleway:300');
 
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 10px;
-  color: #323232;
-  background-color: #fefefe;
-  /* color: #fefefe; */
-  /* background-color: #323232; */
+  background-image: linear-gradient(to left top, #F97794, #623AA2);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
   margin: 0;
   padding: 0;
   font-weight: 300;
-  /* color: #fefefe; */
   color: #323232;
 }
 
