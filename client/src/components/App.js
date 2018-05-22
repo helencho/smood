@@ -13,9 +13,18 @@ import CustomizeMood from './Customize/CustomizeMood'
 import CustomizeActivity from './Customize/CustomizeActivity'
 import AuthRoute from '../utils/auth_utils'
 import '../stylesheets/App.css'
+import AOS from 'aos'
+import '../../node_modules/aos/dist/aos.css'
 
 class App extends Component {
+  componentDidMount() {
+    AOS.init({
+      once: true
+    }) 
+  }
+
   render() {
+
     return (
       <div>
         <HomeNav />

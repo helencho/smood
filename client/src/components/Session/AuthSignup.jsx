@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signup } from '../../actions/session_actions'
 import SplashTitle from '../Splash/SplashTitle'
+import AOS from 'aos'
 
 class AuthSignup extends Component {
     constructor() {
@@ -13,6 +14,16 @@ class AuthSignup extends Component {
             password: '',
             message: []
         }
+    }
+
+    componentDidMount() {
+        AOS.init({
+            once: true
+        })
+    }
+
+    componentWillReceiveProps() {
+        AOS.refresh()
     }
 
     handleInput = e => {
@@ -75,7 +86,7 @@ class AuthSignup extends Component {
         return (
             <div className="auth-container gradient-warm">
                 <SplashTitle />
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} data-aos="fade-up">
                     <h1>Sign up for feelings 🔥</h1>
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
