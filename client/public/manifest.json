@@ -1,6 +1,7 @@
 {
   "short_name": "Mood",
-  "name": "Feeling some type of way",
+  "name": "Mood Diary",
+  "description": "Feeling some type of way",
   "icons": [
     {
       "src": "favicon.ico",
@@ -44,7 +45,7 @@
      "density": "4.0"
     }
    ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#623AA2",
   "background_color": "#623AA2"
