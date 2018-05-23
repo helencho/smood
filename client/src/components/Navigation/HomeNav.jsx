@@ -30,7 +30,7 @@ class HomeNav extends Component {
                 <div>
                     <div className="top-nav">
                         <button onClick={this.handleSlideout}><i className="fas fa-bars fa-fw fa-2x"></i></button>
-                        <h1>mood</h1>
+                        {/* <h1>mood</h1> */}
                     </div>
                     <div className={`navigation ${navClass}`}>
                         <Link to="/" onClick={this.handleSlideout}><i className="fas fa-book fa-fw fa-3x"></i><p>Log</p></Link>

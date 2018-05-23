@@ -1,0 +1,6 @@
+/* MOOD FORM */
+
+.mood-form {
+    top: calc(32px + 1.2rem);
+    position: relative;
+}

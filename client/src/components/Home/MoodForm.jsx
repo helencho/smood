@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getMoods } from '../../actions/mood_actions'
 import MoodButton from './MoodButton'
+import '../../stylesheets/home.css'
 
 class MoodForm extends Component {
     componentDidMount() {
