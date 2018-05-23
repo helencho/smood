@@ -20,7 +20,7 @@ class MoodForm extends Component {
                         <MoodButton md={md} key={md.mood_id} handleButton={this.props.handleButton} mood={mood} />
                     )}
                 </div>
-                <button disabled={!mood} onClick={() => this.props.setPage('activity')}>Next</button>
+                <button disabled={!mood} onClick={() => this.props.setPage('activity')}>Next <i className="fas fa-chevron-right fa-fw"></i></button>
             </div>
         )
     }

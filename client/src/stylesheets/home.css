@@ -1,16 +1,50 @@
-/* MOOD FORM */
+/*---------------------------*/
+/*          Mood Form        */
+/*---------------------------*/
 
 .mood-form {
-    top: calc(32px + 1.2rem);
+    padding-top: calc(32px + 1.2rem);
     position: relative;
-    /* background-color: rgba(0, 255, 0, 0.4); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - (32px + 1.2rem));
+    justify-content: space-around;
 }
+.mood-form h1 {
+    color: #fefefe;
+    font-size: 2.2rem;
+    padding: 0.6rem 0;
+}
+.mood-form button {
+    color: #fefefe;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.6rem 0;
+    cursor: pointer;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+    .mood-form button:disabled {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+/*---------------------------*/
+/*     Individual Buttons    */
+/*---------------------------*/
+
 .mood-button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0.6rem 0;
 }
-.mood-button {
+.mood-button-container .mood-button {
     height: 160px;
     width: 160px;
     outline: none;
@@ -24,25 +58,46 @@
     border-radius: 2px;
     padding: 0.6rem;
 }
-    .mood-button:focus,
-    .mood-button:active {
+    .mood-button-container .mood-button:focus,
+    .mood-button-container .mood-button:active {
         outline: none;
         border: none;
     }
-    .mood-button:hover {
-        opacity: 0.8;
+    .mood-button-container .mood-button:hover {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
     }
-
-.mood-button-active {
-    background-color: rgba(255, 255, 255, 0.4);
+/* Button that's been clicked on */
+.mood-button-container .mood-button-active {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
 }
-
-.mood-button img {
+.mood-button-container .mood-button img {
     height: 76%;
     width: 76%;
 }
-.mood-button p {
+.mood-button-container .mood-button p {
     color: #fefefe;
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
+}
+  
+/*---------------------------*/
+/*       Responsiveness      */
+/*---------------------------*/
+@media screen and (max-width: 800px) {
+    /* do this */
+    .mood-form {
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    /* do this */
 }
