@@ -14,9 +14,11 @@ class ActivityForm extends Component {
         return (
             <div className="activity-form">
                 <h1>What were you doing?</h1>
-                {activities.map((activity) =>
-                    <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
-                )}
+                <div className="activity-button-container">
+                    {activities.map((activity) =>
+                        <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
+                    )}
+                </div>
                 <button disabled={!activity} onClick={this.props.handleSubmit}>Submit</button>
             </div>
         )

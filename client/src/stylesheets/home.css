@@ -1,8 +1,9 @@
 /*---------------------------*/
-/*          Mood Form        */
+/*    Mood & Activity Form   */
 /*---------------------------*/
 
-.mood-form {
+.mood-form,
+.activity-form {
     padding-top: calc(32px + 1.2rem);
     position: relative;
     display: flex;
@@ -11,12 +12,14 @@
     height: calc(100vh - (32px + 1.2rem));
     justify-content: space-around;
 }
-.mood-form h1 {
+.mood-form h1,
+.activity-form h1 {
     color: #fefefe;
     font-size: 2.2rem;
     padding: 0.6rem 0;
 }
-.mood-form button {
+.mood-form button,
+.activity-form button {
     color: #fefefe;
     outline: none;
     border: none;
@@ -30,8 +33,16 @@
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-    .mood-form button:disabled {
+    .mood-form button:disabled,
+    .activity-form button:disabled {
         color: rgba(255, 255, 255, 0.4);
+    }
+    .mood-form button:active,
+    .mood-form button:focus,
+    .activity-form button:active,
+    .activity-form button:focus {
+        outline: none;
+        border: none;
     }
 
 /*---------------------------*/

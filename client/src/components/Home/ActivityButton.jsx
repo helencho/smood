@@ -6,7 +6,7 @@ class ActivityButton extends Component {
 
         return (
             <button onClick={() => handleButton('activity', activity.activity_id)}>
-                <img alt={activity.activity_name} src={activity.activity_img} height='100' width='100' />
+                <img alt={activity.activity_name} src={activity.activity_img} />
             </button>
         )
     }
