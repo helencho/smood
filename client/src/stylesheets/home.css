@@ -3,4 +3,45 @@
 .mood-form {
     top: calc(32px + 1.2rem);
     position: relative;
+    /* background-color: rgba(0, 255, 0, 0.4); */
+}
+
+.mood-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mood-button {
+    height: 160px;
+    width: 160px;
+    outline: none;
+    border: none;
+    background: none;
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .mood-button:focus,
+    .mood-button:active {
+        outline: none;
+        border: none;
+    }
+
+    .mood-button:hover {
+        opacity: 0.8;
+    }
+
+.mood-button img {
+    height: 76%;
+    width: 76%;
+}
+
+.mood-button p {
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
 }
