@@ -17,6 +17,10 @@
     color: #fefefe;
     font-size: 2.2rem;
     padding: 0.6rem 0;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
 }
 .mood-form button,
 .activity-form button {
@@ -68,6 +72,11 @@
     align-items: center;
     border-radius: 2px;
     padding: 0.6rem;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+
 }
     .mood-button-container .mood-button:focus,
     .mood-button-container .mood-button:active {
@@ -102,13 +111,25 @@
 /*---------------------------*/
 /*       Responsiveness      */
 /*---------------------------*/
+
 @media screen and (max-width: 800px) {
     /* do this */
-    .mood-form {
+    /* .mood-form {
         height: inherit;
-    }
+    } */
 }
 
 @media screen and (max-width: 430px) {
     /* do this */
+    .mood-form,
+    .activity-form {
+        padding-bottom: 1.6rem;
+    }
+    .mood-form h1 {
+        font-size: 1.8rem;
+    }
+    .mood-button-container .mood-button {
+        height: 120px;
+        width: 120px;
+    }
 }

@@ -12,6 +12,7 @@ body {
   background-image: linear-gradient(to left top, #F97794, #623AA2);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
