@@ -5,13 +5,11 @@
     position: relative;
     /* background-color: rgba(0, 255, 0, 0.4); */
 }
-
 .mood-button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .mood-button {
     height: 160px;
     width: 160px;
@@ -23,23 +21,26 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-radius: 2px;
+    padding: 0.6rem;
 }
-
     .mood-button:focus,
     .mood-button:active {
         outline: none;
         border: none;
     }
-
     .mood-button:hover {
         opacity: 0.8;
     }
+
+.mood-button-active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
 .mood-button img {
     height: 76%;
     width: 76%;
 }
-
 .mood-button p {
     color: #fefefe;
     font-size: 1.2rem;

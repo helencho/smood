@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 
 class MoodButton extends Component {
     render() {
-        const { mood, handleButton } = this.props
-        
+        const { md, handleButton, mood } = this.props
+        const activeMood = mood && md.mood_id === mood ? `active` : null
+       
+
         return (
-            <button onClick={() => handleButton('mood', mood.mood_id)} className="mood-button">
-                <img src={mood.mood_img} alt={mood.mood_name} />
-                <p>{mood.mood_name}</p>
+            <button onClick={() => handleButton('mood', md.mood_id)} className={`mood-button mood-button-${activeMood}`}>
+                <img src={md.mood_img} alt={md.mood_name} />
+                <p>{md.mood_name}</p>
             </button>
         )
     }
