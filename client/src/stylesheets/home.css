@@ -5,6 +5,7 @@
 .mood-form,
 .activity-form {
     padding-top: calc(32px + 1.2rem);
+    padding-bottom: 1.6rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -12,6 +13,9 @@
     height: calc(100vh - (32px + 1.2rem));
     justify-content: space-around;
 }
+    .activity-form {
+        height: 100%;
+    }
 .mood-form h1,
 .activity-form h1 {
     color: #fefefe;
@@ -53,20 +57,25 @@
 /*     Individual Buttons    */
 /*---------------------------*/
 
-.mood-button-container {
+.mood-button-container,
+.activity-button-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0.6rem 0;
 }
-.mood-button-container .mood-button {
+.mood-button-container .mood-button,
+.activity-button-container .activity-button {
     height: 160px;
     width: 160px;
     outline: none;
     border: none;
     background: none;
     margin: 0.8rem;
-    display: flex;
+    /* display: flex; */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -76,14 +85,16 @@
     -ms-transition: 0.2s all;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-
 }
     .mood-button-container .mood-button:focus,
-    .mood-button-container .mood-button:active {
+    .mood-button-container .mood-button:active,
+    .activity-button-container .activity-button:focus,
+    .activity-button-container .activity-button:active {
         outline: none;
         border: none;
     }
-    .mood-button-container .mood-button:hover {
+    .mood-button-container .mood-button:hover,
+    .activity-button-container .activity-button:hover {
         filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
         -moz-transition: 0.2s all;
         -ms-transition: 0.2s all;
@@ -98,14 +109,17 @@
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-.mood-button-container .mood-button img {
+.mood-button-container .mood-button img,
+.activity-button-container .activity-button img {
     height: 76%;
-    width: 76%;
+    /* width: 76%; */
 }
-.mood-button-container .mood-button p {
+.mood-button-container .mood-button p,
+.activity-button-container .activity-button p {
     color: #fefefe;
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
+    padding: 0.8rem 0;
 }
   
 /*---------------------------*/
@@ -130,7 +144,6 @@
     .mood-form,
     .activity-form {
         padding-bottom: 1.6rem;
-        height: inherit;
     }
     .mood-form h1 {
         font-size: 1.8rem;
