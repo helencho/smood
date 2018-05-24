@@ -112,11 +112,17 @@
 /*       Responsiveness      */
 /*---------------------------*/
 
+/* @media screen and (max-height: 90vh) {
+    .mood-form {
+        height: inherit;
+    }
+} */
+
 @media screen and (max-width: 800px) {
     /* do this */
-    /* .mood-form {
-        height: inherit;
-    } */
+    .mood-form {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -124,6 +130,7 @@
     .mood-form,
     .activity-form {
         padding-bottom: 1.6rem;
+        height: inherit;
     }
     .mood-form h1 {
         font-size: 1.8rem;
