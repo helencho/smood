@@ -7,6 +7,7 @@ import MoodPerMonth from './MoodPerMonth'
 import PopularActivities from './PopularActivities'
 import MonthInMoods from './MonthInMoods'
 
+
 class Dashboard extends Component {
     constructor() {
         super()
@@ -20,24 +21,19 @@ class Dashboard extends Component {
         this.props.getEntries()
     }
 
-    componentWillReceiveProps() {
-        this.setState({
-            entries: this.props.entries 
-        })
-    }
 
     render() {
-        const { year, entries } = this.state
+        const { year } = this.state
 
         return (
             <div>
                 <h1>Dashboard for year {year - 1}</h1>
 
-                <MoodsByYear entries={entries} year={year} />
+                <MoodsByYear entries={this.props.entries} year={year} />
 
                 <ActivitiesByMood />
 
-                <MoodPerMonth />
+                <MoodPerMonth entries={this.props.entries} year={year} />
 
                 <PopularActivities />
 

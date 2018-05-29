@@ -1,22 +1,9 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { getEntries } from '../../actions/entry_actions'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
 class MoodPerMonth extends Component {
-    constructor() {
-        super()
-        this.state = {
-            year: '2019'
-        }
-    }
-
-    componentDidMount() {
-        this.props.getEntries()
-    }
-
     render() {
-        // console.log(this.props.entries)
+        console.log(this.props.entries)
 
         const data = [
             { name: 'Page A', uv: 4000, count: 2400, amt: 2400 },
@@ -45,17 +32,4 @@ class MoodPerMonth extends Component {
     }
 }
 
-// Get all moods 
-const mapStateToProps = (state) => {
-    return {
-        entries: state.entries.entries 
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getEntries: () => dispatch(getEntries())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MoodPerMonth)
+export default MoodPerMonth

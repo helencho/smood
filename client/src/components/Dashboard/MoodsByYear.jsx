@@ -4,6 +4,10 @@ import { getEntries } from '../../actions/entry_actions'
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 class MoodsByYear extends Component {
+    constructor() {
+        super() 
+    }
+    
     render() {
         const { entries, year } = this.props
 
