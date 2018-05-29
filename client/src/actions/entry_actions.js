@@ -17,7 +17,6 @@ export const getEntries = () => (dispatch) => {
     axios
         .get(`/entries`)
         .then((data) => {
-            console.log(data)
             const entries = data.data.data
             dispatch(receiveEntries(entries))
         })

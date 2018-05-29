@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
+// import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 class PopularActivities extends Component {
     render() {
