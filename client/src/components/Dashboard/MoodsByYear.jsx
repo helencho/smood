@@ -3,19 +3,21 @@ import { connect } from 'react-redux'
 import { getEntries } from '../../actions/entry_actions'
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
+// Presentational 
 class MoodsByYear extends Component {
-    constructor() {
-        super() 
+    constructor(props) {
+        super(props) 
     }
     
     render() {
         const { entries, year } = this.props
-
         // Get all the entries in the target year 
+        const lowTarget = new Date((year - 1).toString())
         const target = new Date(year)
+
         const targetEntries = entries.filter(entry => {
             const compare = new Date(entry.entry_date)
-            return compare <= target
+            return compare > lowTarget && compare <= target
         })
 
         // Count all the moods felt in the year 

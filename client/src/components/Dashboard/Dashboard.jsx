@@ -7,13 +7,13 @@ import MoodPerMonth from './MoodPerMonth'
 import PopularActivities from './PopularActivities'
 import MonthInMoods from './MonthInMoods'
 
-
+// Smart 
 class Dashboard extends Component {
     constructor() {
         super()
+        this.years = [2018, 2019, 2020, 2021]
         this.state = {
-            year: '2019',
-            entries: []
+            year: '2019'
         }
     }
 
@@ -21,6 +21,11 @@ class Dashboard extends Component {
         this.props.getEntries()
     }
 
+    handleSelectChange = e => {
+        this.setState({
+            year: e.target.value
+        })
+    }
 
     render() {
         const { year } = this.state
@@ -32,6 +37,14 @@ class Dashboard extends Component {
                 <MoodsByYear entries={this.props.entries} year={year} />
 
                 <ActivitiesByMood />
+
+                <select value={year} onChange={this.handleSelectChange}>
+                    {this.years.map(year => {
+                        return (
+                            <option value={year}>{year - 1}</option>
+                        )
+                    })}
+                </select>
 
                 <MoodPerMonth entries={this.props.entries} year={year} />
 

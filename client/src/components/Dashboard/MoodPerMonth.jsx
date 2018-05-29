@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 
+// Presentational
 class MoodPerMonth extends Component {
     render() {
         console.log(this.props.entries)
+        // Grab the most popular moods in a month (for 12 months) 
+        // January => happy => count 
+        // February => angry => count 
+        // So on... 
+
+        const moodData = [
+            { name: 'January' }
+        ]
 
         const data = [
-            { name: 'Page A', uv: 4000, count: 2400, amt: 2400 },
-            { name: 'Page B', uv: 3000, count: 1398, amt: 2210 },
-            { name: 'Page C', uv: 2000, count: 9800, amt: 2290 },
-            { name: 'Page D', uv: 2780, count: 3908, amt: 2000 },
-            { name: 'Page E', uv: 1890, count: 4800, amt: 2181 },
-            { name: 'Page F', uv: 2390, count: 3800, amt: 2500 },
-            { name: 'Page G', uv: 3490, count: 4300, amt: 2100 },
+            { name: 'Page A', uv: 'happy', count: 2400, amt: 2400 },
+            { name: 'Page B', uv: 'angry', count: 1398, amt: 2210 },
+            { name: 'Page C', uv: 'upset', count: 9800, amt: 2290 },
+            { name: 'Page D', uv: 'happy', count: 3908, amt: 2000 },
+            { name: 'Page E', uv: 'sad', count: 4800, amt: 2181 },
+            { name: 'Page F', uv: 'excited', count: 3800, amt: 2500 },
+            { name: 'Page G', uv: 'relaxed', count: 4300, amt: 2100 },
         ];
 
         return (
