@@ -4,23 +4,12 @@ import { getEntries } from '../../actions/entry_actions'
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 class MoodsByYear extends Component {
-    constructor() {
-        super()
-        this.state = {
-            year: '2019'
-        }
-    }
-
-    componentDidMount() {
-        this.props.getEntries()
-    }
-
     render() {
-        const { year } = this.state
+        const { entries, year } = this.props
 
         // Get all the entries in the target year 
         const target = new Date(year)
-        const targetEntries = this.props.entries.filter(entry => {
+        const targetEntries = entries.filter(entry => {
             const compare = new Date(entry.entry_date)
             return compare <= target
         })
@@ -50,23 +39,9 @@ class MoodsByYear extends Component {
                     <PolarRadiusAxis />
                     <Radar name="TestUser" dataKey="A" stroke="#ffffff" fill="#ffffff" fillOpacity={0.6} />
                 </RadarChart>
-                <p><a href="https://jsfiddle.net/alidingling/6ebcxbx4/" target="_blank">Simple radar chart</a></p>
             </div>
         )
     }
 }
 
-// Get all entries 
-const mapStateToProps = (state) => {
-    return {
-        entries: state.entries.entries
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        getEntries: () => dispatch(getEntries())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MoodsByYear)
+export default MoodsByYear 
