@@ -7,7 +7,7 @@ class ActivitiesByMood extends Component {
     }
 
     render() {
-        const { selectedMood } = this.props
+        const { selectedMood, handleSelectChange } = this.props
 
         // Filter entries by selected mood 
         const filteredEntries = this.props.entries.filter(entry => {
@@ -33,6 +33,7 @@ class ActivitiesByMood extends Component {
             i++
         }
 
+        // Bar chart styles 
         const style = {
             top: 0,
             left: 350,
@@ -42,6 +43,13 @@ class ActivitiesByMood extends Component {
         return (
             <div>
                 <h3>Things you did when you were {selectedMood}</h3>
+                <select value={selectedMood} name='selectedMood' onChange={handleSelectChange}>
+                    {this.props.moods.map(mood => {
+                        return (
+                            <option value={mood.mood_name}>{mood.mood_name}</option>
+                        )
+                    })}
+                </select>
                 <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
                     <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='count' />
                     <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style} />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getEntries } from '../../actions/entry_actions'
+import { getMoods } from '../../actions/mood_actions'
 import MoodsByYear from './MoodsByYear'
 import ActivitiesByMood from './ActivitiesByMood'
 import MoodPerMonth from './MoodPerMonth'
@@ -22,11 +23,12 @@ class Dashboard extends Component {
 
     componentDidMount() {
         this.props.getEntries()
+        this.props.getMoods()
     }
 
     handleSelectChange = e => {
         this.setState({
-            year: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -37,7 +39,7 @@ class Dashboard extends Component {
             <div className="dashboard-container">
                 <div className="title">
                     <h1>Dashboard for year</h1>
-                    <select value={year} onChange={this.handleSelectChange}>
+                    <select value={year} name='year' onChange={this.handleSelectChange}>
                         {this.years.map(year => {
                             return (
                                 <option value={year}>{year - 1}</option>
@@ -48,7 +50,7 @@ class Dashboard extends Component {
 
                 <MoodsByYear entries={this.props.entries} year={year} />
 
-                <ActivitiesByMood entries={this.props.entries} selectedMood={selectedMood} />
+                <ActivitiesByMood entries={this.props.entries} selectedMood={selectedMood} moods={this.props.moods} handleSelectChange={this.handleSelectChange} />
 
                 <MoodPerMonth entries={this.props.entries} year={year} />
 
@@ -63,13 +65,15 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        entries: state.entries.entries
+        entries: state.entries.entries,
+        moods: state.moods.moods
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getEntries: () => dispatch(getEntries())
+        getEntries: () => dispatch(getEntries()),
+        getMoods: () => dispatch(getMoods())
     }
 }
 
