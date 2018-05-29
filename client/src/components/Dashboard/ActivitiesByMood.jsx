@@ -7,10 +7,20 @@ class ActivitiesByMood extends Component {
     }
 
     render() {
-        const { selectedMood, handleSelectChange } = this.props
+        const { selectedMood, handleSelectChange, year, entries } = this.props
 
         // Filter entries by selected mood 
-        const filteredEntries = this.props.entries.filter(entry => {
+        // const filteredEntries = this.props.entries.filter(entry => {
+        //     return entry.mood_name === selectedMood
+        // })
+
+        // Get all the entries in the target year 
+        const lowTarget = new Date((year - 1).toString())
+        const target = new Date(year)
+        const filteredEntries = entries.filter(entry => {
+            const compare = new Date(entry.entry_date)
+            return compare > lowTarget && compare <= target
+        }).filter(entry => {
             return entry.mood_name === selectedMood
         })
 
@@ -41,15 +51,17 @@ class ActivitiesByMood extends Component {
         };
 
         return (
-            <div>
-                <h3>Things you did when you were {selectedMood}</h3>
-                <select value={selectedMood} name='selectedMood' onChange={handleSelectChange}>
-                    {this.props.moods.map(mood => {
-                        return (
-                            <option value={mood.mood_name}>{mood.mood_name}</option>
-                        )
-                    })}
-                </select>
+            <div className="activities-by-mood-container">
+                <div className="title">
+                    <h3>Things you did when you were</h3>
+                    <select value={selectedMood} name='selectedMood' onChange={handleSelectChange}>
+                        {this.props.moods.map(mood => {
+                            return (
+                                <option value={mood.mood_name}>{mood.mood_name}</option>
+                            )
+                        })}
+                    </select>
+                </div>
                 <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
                     <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='count' />
                     <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style} />

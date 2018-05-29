@@ -1,8 +1,13 @@
-
+/* Dashboard Container */
 .dashboard-container {
     padding-top: 51.2px;
 }
 
 .dashboard-container .title {
+    display: flex;
+}
+
+/* Activities By Mood */
+.activities-by-mood-container .title {
     display: flex;
 }
