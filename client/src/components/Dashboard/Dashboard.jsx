@@ -14,7 +14,9 @@ class Dashboard extends Component {
         super()
         this.years = [2018, 2019, 2020, 2021]
         this.state = {
-            year: '2019'
+            year: '2019',
+            moods: [],
+            selectedMood: 'happy'
         }
     }
 
@@ -29,7 +31,7 @@ class Dashboard extends Component {
     }
 
     render() {
-        const { year } = this.state
+        const { year, selectedMood } = this.state
 
         return (
             <div className="dashboard-container">
@@ -46,8 +48,7 @@ class Dashboard extends Component {
 
                 <MoodsByYear entries={this.props.entries} year={year} />
 
-                <ActivitiesByMood />
-
+                <ActivitiesByMood entries={this.props.entries} selectedMood={selectedMood} />
 
                 <MoodPerMonth entries={this.props.entries} year={year} />
 

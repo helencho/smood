@@ -3,8 +3,12 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 
 // Presentational
 class MoodPerMonth extends Component {
+    constructor(props) {
+        super(props) 
+    }
+
     render() {
-        console.log(this.props.entries)
+        // console.log(this.props.entries)
         // Grab the most popular moods in a month (for 12 months) 
         // January => happy => count 
         // February => angry => count 

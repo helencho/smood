@@ -11,10 +11,10 @@ class MoodsByYear extends Component {
     
     render() {
         const { entries, year } = this.props
+
         // Get all the entries in the target year 
         const lowTarget = new Date((year - 1).toString())
         const target = new Date(year)
-
         const targetEntries = entries.filter(entry => {
             const compare = new Date(entry.entry_date)
             return compare > lowTarget && compare <= target
@@ -30,7 +30,7 @@ class MoodsByYear extends Component {
             }
         })
 
-        // Put counted moods in a table 
+        // Fill counted moods in a data table / array  
         let moodData = []
         for (let mood in moodTable) {
             moodData = [...moodData, { subject: mood, A: moodTable[mood] }]
