@@ -4,7 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 // Presentational
 class MoodPerMonth extends Component {
     constructor(props) {
-        super(props) 
+        super(props)
     }
 
     render() {
@@ -14,18 +14,34 @@ class MoodPerMonth extends Component {
         // February => angry => count 
         // So on... 
 
-        const moodData = [
-            { name: 'January' }
-        ]
+        // console.log(this.props.entries)
+        let may = {}
+        let monthMay = new Date('2018-06')
+        console.log(monthMay)
+        this.props.entries.map(entry => {
+            if (entry.entry_date <= monthMay) {
+                if (!may[entry.mood_name]) {
+                    may[entry.mood_name] = 1
+                } else {
+                    may[entry.mood_name]++
+                }
+            }
+        })
+
+        console.log(may)
+        // Map through the entries 
+        // If entry is dated for ____ month, 
+        // For all entries dated January, count the most repeated mood 
+        // For all entries dated February, count the most repeated mood 
 
         const data = [
-            { name: 'Page A', uv: 'happy', count: 2400, amt: 2400 },
-            { name: 'Page B', uv: 'angry', count: 1398, amt: 2210 },
-            { name: 'Page C', uv: 'upset', count: 9800, amt: 2290 },
-            { name: 'Page D', uv: 'happy', count: 3908, amt: 2000 },
-            { name: 'Page E', uv: 'sad', count: 4800, amt: 2181 },
-            { name: 'Page F', uv: 'excited', count: 3800, amt: 2500 },
-            { name: 'Page G', uv: 'relaxed', count: 4300, amt: 2100 },
+            { name: 'January', uv: 'happy', count: 2400 },
+            { name: 'February', uv: 'angry', count: 1398 },
+            { name: 'March', uv: 'upset', count: 9800 },
+            { name: 'April', uv: 'happy', count: 3908 },
+            { name: 'May', uv: 'sad', count: 4800 },
+            { name: 'June', uv: 'excited', count: 3800 },
+            { name: 'July', uv: 'relaxed', count: 4300 },
         ];
 
         return (

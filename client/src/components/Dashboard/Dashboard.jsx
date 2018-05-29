@@ -52,7 +52,7 @@ class Dashboard extends Component {
 
                 <ActivitiesByMood entries={this.props.entries} year={year} selectedMood={selectedMood} moods={this.props.moods} handleSelectChange={this.handleSelectChange} />
 
-                <MoodPerMonth entries={this.props.entries} year={year} />
+                <MoodPerMonth entries={this.props.entries} />
 
                 <PopularActivities />
 

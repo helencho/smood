@@ -9,12 +9,7 @@ class ActivitiesByMood extends Component {
     render() {
         const { selectedMood, handleSelectChange, year, entries } = this.props
 
-        // Filter entries by selected mood 
-        // const filteredEntries = this.props.entries.filter(entry => {
-        //     return entry.mood_name === selectedMood
-        // })
-
-        // Get all the entries in the target year 
+        // Get all the entries in the target year and filter by selected mood 
         const lowTarget = new Date((year - 1).toString())
         const target = new Date(year)
         const filteredEntries = entries.filter(entry => {
