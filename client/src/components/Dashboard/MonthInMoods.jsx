@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class MonthInMoods extends Component {
     render() {
         const { year, entries } = this.props 
-        
+
         // Count up all the moods felt in that year and month 
         const countAllMoods = (year, month) => {
             let monthMoods = {}
@@ -24,7 +24,7 @@ class MonthInMoods extends Component {
 
         return (
             <div>
-                <h3>A Month In Moods</h3>
+                <h3>Breaking down MONTH in moods</h3>
                 <p>Moods in colors in a gradient for current month</p>
             </div>
         )

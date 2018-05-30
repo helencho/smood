@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { RadialBarChart, RadialBar, Legend } from 'recharts'
+import { ResponsiveContainer, RadialBarChart, RadialBar, Legend } from 'recharts'
 
 class ActivitiesByMood extends Component {
     constructor(props) {
@@ -57,10 +57,12 @@ class ActivitiesByMood extends Component {
                         })}
                     </select>
                 </div>
-                <RadialBarChart width={500} height={300} cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
-                    <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='count' />
-                    <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style} />
-                </RadialBarChart>
+                <ResponsiveContainer height={500} width="100%">
+                    <RadialBarChart cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
+                        <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='count' />
+                        <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style} />
+                    </RadialBarChart>
+                </ResponsiveContainer>
             </div>
         )
     }

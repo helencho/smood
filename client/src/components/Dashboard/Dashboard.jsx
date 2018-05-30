@@ -38,7 +38,7 @@ class Dashboard extends Component {
         return (
             <div className="dashboard-container">
                 <div className="title">
-                    <h1>Dashboard for year</h1>
+                    <h1>Dashboard for</h1>
                     <select value={year} name='year' onChange={this.handleSelectChange}>
                         {this.years.map(year => {
                             return (

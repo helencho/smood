@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getEntries } from '../../actions/entry_actions'
-import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
+import { ResponsiveContainer, Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 // Presentational 
 class MoodsByYear extends Component {
     constructor(props) {
-        super(props) 
+        super(props)
     }
-    
+
     render() {
         const { entries, year } = this.props
 
@@ -37,14 +37,16 @@ class MoodsByYear extends Component {
         }
 
         return (
-            <div>
-                <h3>Your Moods in {year - 1}</h3>
-                <RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={moodData}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="subject" />
-                    <PolarRadiusAxis />
-                    <Radar name="TestUser" dataKey="A" stroke="#ffffff" fill="#ffffff" fillOpacity={0.6} />
-                </RadarChart>
+            <div className="moods-by-year-container">
+                <h3>Let's look at your moods in {year - 1}</h3>
+                <ResponsiveContainer width="100%" height={400}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={moodData}>
+                        <PolarGrid />
+                        <PolarAngleAxis dataKey="subject" />
+                        <PolarRadiusAxis />
+                        <Radar name="TestUser" dataKey="A" stroke="#ffffff" fill="#ffffff" fillOpacity={0.6} />
+                    </RadarChart>
+                </ResponsiveContainer>
             </div>
         )
     }
