@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
+import moment from 'moment'
 
 // Presentational
 class MoodPerMonth extends Component {
@@ -13,11 +14,13 @@ class MoodPerMonth extends Component {
         // Count up all the moods felt in that year and month 
         const countAllMoods = (year, month) => {
             let monthMoods = {}
-            const targetStart = new Date(`${year}-${(month - 1).toString()}`)
-            const targetEnd = new Date(`${year}-${month}`)
+
+            const targetStart = new Date(`${year}-${(month - 1).toString()}`) // 2 => 2018-01-01
+            const targetEnd = new Date(`${year}-${month}`) // 2 => 2018-02-01
+
             entries.map(entry => {
                 const compare = new Date(entry.entry_date)
-                if (compare > targetStart && compare <= targetEnd) {
+                if (compare >= targetStart && compare < targetEnd) {
                     if (!monthMoods[entry.mood_name]) {
                         monthMoods[entry.mood_name] = 1
                     } else {
@@ -29,32 +32,31 @@ class MoodPerMonth extends Component {
         }
 
         // Get the most felt mood in a given mood object 
-        const getMostFeltMood = (obj) => {
+        const getMostFeltMood = (obj, month) => {
             const moodCount = Object.values(obj).sort((a, b) => b - a)
-            for (let mood in obj) {
-                if (obj[mood] === moodCount[0]) {
-                    return { mood: mood, count: obj[mood] }
+            let name = month
+            let mood = ''
+            let count = 0
+            for (let md in obj) {
+                if (obj[md] === moodCount[0]) {
+                    mood = md
+                    count = obj[md]
+                    break
                 }
             }
-            return {}
+            return { name, mood, count }
         }
 
-        let monthlyMoodData = []
-        for (let i = 1; i < 13; i++) {
-            monthlyMoodData.push(getMostFeltMood(countAllMoods(year - 1, i)))
+        // Data to be rendered in a graph 
+        let data = []
+        const months = moment.monthsShort()
+        for (let i = 0; i < months.length; i++) {
+            let month = i + 2
+            data.push(getMostFeltMood(countAllMoods(year - 1, month), months[i]))
         }
 
-        console.log(monthlyMoodData)
+        console.log(data)
 
-        const data = [
-            { name: 'January', uv: 'happy', count: 2400 },
-            { name: 'February', uv: 'angry', count: 1398 },
-            { name: 'March', uv: 'upset', count: 9800 },
-            { name: 'April', uv: 'happy', count: 3908 },
-            { name: 'May', uv: 'sad', count: 4800 },
-            { name: 'June', uv: 'excited', count: 3800 },
-            { name: 'July', uv: 'relaxed', count: 4300 },
-        ];
 
         return (
             <div>
