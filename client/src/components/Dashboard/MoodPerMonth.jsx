@@ -9,11 +9,6 @@ class MoodPerMonth extends Component {
 
     render() {
         const { year, entries } = this.props
-        // console.log(this.props.entries)
-        // Grab the most popular moods in a month (for 12 months) 
-        // January => happy => count 
-        // February => angry => count 
-        // So on... 
 
         // Count up all the moods felt in that year and month 
         const countAllMoods = (year, month) => {
@@ -33,21 +28,23 @@ class MoodPerMonth extends Component {
             return monthMoods
         }
 
-        // Grab only the most repeated mood per month 
-        // Get the values 
-        // Find the key of the highest value 
+        // Get the most felt mood in a given mood object 
+        const getMostFeltMood = (obj) => {
+            const moodCount = Object.values(obj).sort((a, b) => b - a)
+            for (let mood in obj) {
+                if (obj[mood] === moodCount[0]) {
+                    return { mood: mood, count: obj[mood] }
+                }
+            }
+            return {}
+        }
 
         let monthlyMoodData = []
         for (let i = 1; i < 13; i++) {
-            monthlyMoodData.push(countAllMoods(year - 1, i))
+            monthlyMoodData.push(getMostFeltMood(countAllMoods(year - 1, i)))
         }
-        console.log(monthlyMoodData)
-        // console.log(countAllMoods(2018, 5))
 
-        // Map through the entries 
-        // If entry is dated for ____ month, 
-        // For all entries dated January, count the most repeated mood 
-        // For all entries dated February, count the most repeated mood 
+        console.log(monthlyMoodData)
 
         const data = [
             { name: 'January', uv: 'happy', count: 2400 },
