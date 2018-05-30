@@ -57,10 +57,10 @@ class ActivitiesByMood extends Component {
                         })}
                     </select>
                 </div>
-                <ResponsiveContainer height={500} width="100%">
-                    <RadialBarChart cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
+                <ResponsiveContainer width="100%" height={400}>
+                    <RadialBarChart cx="50%" cy="50%" outerRadius="80%" barSize={10} data={data}>
                         <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='count' />
-                        <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style} />
+                        <Legend iconSize={10} width="50%" height="50%" layout='vertical' verticalAlign='middle' wrapperStyle={style} />
                     </RadialBarChart>
                 </ResponsiveContainer>
             </div>

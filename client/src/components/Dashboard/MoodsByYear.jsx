@@ -40,7 +40,7 @@ class MoodsByYear extends Component {
             <div className="moods-by-year-container">
                 <h3>Let's look at your moods in {year - 1}</h3>
                 <ResponsiveContainer width="100%" height={400}>
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={moodData}>
+                    <RadarChart data={moodData}>
                         <PolarGrid />
                         <PolarAngleAxis dataKey="subject" />
                         <PolarRadiusAxis />
