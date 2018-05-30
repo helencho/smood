@@ -8,27 +8,42 @@ class MoodPerMonth extends Component {
     }
 
     render() {
+        const { year, entries } = this.props
         // console.log(this.props.entries)
         // Grab the most popular moods in a month (for 12 months) 
         // January => happy => count 
         // February => angry => count 
         // So on... 
 
-        // console.log(this.props.entries)
-        let may = {}
-        let monthMay = new Date('2018-06')
-        console.log(monthMay)
-        this.props.entries.map(entry => {
-            if (entry.entry_date <= monthMay) {
-                if (!may[entry.mood_name]) {
-                    may[entry.mood_name] = 1
-                } else {
-                    may[entry.mood_name]++
+        // Count up all the moods felt in that year and month 
+        const countAllMoods = (year, month) => {
+            let monthMoods = {}
+            const targetStart = new Date(`${year}-${(month - 1).toString()}`)
+            const targetEnd = new Date(`${year}-${month}`)
+            entries.map(entry => {
+                const compare = new Date(entry.entry_date)
+                if (compare > targetStart && compare <= targetEnd) {
+                    if (!monthMoods[entry.mood_name]) {
+                        monthMoods[entry.mood_name] = 1
+                    } else {
+                        monthMoods[entry.mood_name]++
+                    }
                 }
-            }
-        })
+            })
+            return monthMoods
+        }
 
-        console.log(may)
+        // Grab only the most repeated mood per month 
+        // Get the values 
+        // Find the key of the highest value 
+
+        let monthlyMoodData = []
+        for (let i = 1; i < 13; i++) {
+            monthlyMoodData.push(countAllMoods(year - 1, i))
+        }
+        console.log(monthlyMoodData)
+        // console.log(countAllMoods(2018, 5))
+
         // Map through the entries 
         // If entry is dated for ____ month, 
         // For all entries dated January, count the most repeated mood 
