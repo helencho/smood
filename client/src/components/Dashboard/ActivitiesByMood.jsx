@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { ResponsiveContainer, RadialBarChart, RadialBar, Legend } from 'recharts'
 
 class ActivitiesByMood extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         const { selectedMood, handleSelectChange, year, entries } = this.props
@@ -50,9 +47,9 @@ class ActivitiesByMood extends Component {
                 <div className="title">
                     <h3>Things you did when you were</h3>
                     <select value={selectedMood} name='selectedMood' onChange={handleSelectChange}>
-                        {this.props.moods.map(mood => {
+                        {this.props.moods.map((mood, index) => {
                             return (
-                                <option value={mood.mood_name}>{mood.mood_name}</option>
+                                <option key={index} value={mood.mood_name}>{mood.mood_name}</option>
                             )
                         })}
                     </select>
