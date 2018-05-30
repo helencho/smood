@@ -48,6 +48,7 @@ class MonthInMoods extends Component {
                 <ResponsiveContainer height={400} width="100%">
                     <PieChart>
                         <Pie
+                            dataKey="value"
                             data={data}
                             cx="50%"
                             cy="50%"

@@ -40,9 +40,9 @@ class Dashboard extends Component {
                 <div className="title">
                     <h1>Dashboard for</h1>
                     <select value={year} name='year' onChange={this.handleSelectChange}>
-                        {this.years.map(year => {
+                        {this.years.map((year, index) => {
                             return (
-                                <option value={year}>{year - 1}</option>
+                                <option key={index} value={year}>{year - 1}</option>
                             )
                         })}
                     </select>

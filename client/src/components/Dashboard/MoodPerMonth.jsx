@@ -55,6 +55,9 @@ class MoodPerMonth extends Component {
             data.push(getMostFeltMood(countAllMoods(year - 1, month), months[i]))
         }
 
+        // CUSTOM TOOLTIP! 
+        // https://jsfiddle.net/alidingling/vxq4ep63/ 
+
         return (
             <div>
                 <h3>Your most popular moods by month</h3>

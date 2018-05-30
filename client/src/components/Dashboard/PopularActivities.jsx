@@ -12,6 +12,4 @@ class PopularActivities extends Component {
     }
 }
 
-// Get all  
-
 export default PopularActivities
