@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../../actions/session_actions'
+import '../../stylesheets/logout.css'
 
 class Logout extends Component {
     componentDidMount() {
@@ -11,8 +12,10 @@ class Logout extends Component {
 
     render() {
         return (
-            <div>
-                <i className="fas fa-spinner fa-fw fa-5x fa-pulse"></i>
+            <div className="logout-container">
+                <div className="spinner">
+                    <i className="fas fa-spinner fa-fw fa-5x fa-pulse"></i>
+                </div>
             </div>
         )
     }

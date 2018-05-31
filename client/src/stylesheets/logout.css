@@ -1,0 +1,24 @@
+/* Logout Page */
+
+.logout-container {
+    padding-top: calc(32px + 1.2rem);
+    padding-bottom: 1.6rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    height: calc(100vh - (32px + 1.2rem));
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.logout-container .spinner {
+    color: #ffffff;
+}
+
+.spinner i {
+    display: block;
+}
