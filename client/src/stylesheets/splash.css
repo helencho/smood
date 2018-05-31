@@ -67,6 +67,7 @@
     height: 22%;
     display: flex;
     align-items: center;
+    bottom: 0;
     /* position: absolute; */
     /* bottom: 80px; */
     /* padding: 0.8rem 0; */

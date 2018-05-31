@@ -13,6 +13,10 @@ class Splash extends Component {
         AOS.init()
     }
 
+    componentWillReceiveProps() {
+        AOS.refresh()
+    }
+
     render() {
         // If user is logged in to session, redirect to home
         if (this.props.currentUser) {
@@ -26,7 +30,7 @@ class Splash extends Component {
                     <Link to="/login" data-aos="fade-up" data-aos-delay="100"><button id="button-login">Log in</button></Link>
                     <Link to="/signup" data-aos="fade-up" data-aos-delay="200"><button id="button-register">Register</button></Link>
                 </div>
-                <div id="git" data-aos="fade-up" data-aos-delay="300">
+                <div id="git" data-aos="fade-up" data-aos-delay="350" data-aos-offset="0">
                     {/* https://github.com/asciidoctor/asciidoctor/issues/2071 */}
                     <a href="https://github.com/helencho/mood" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-fw fa-5x"></i></a>
                 </div>
