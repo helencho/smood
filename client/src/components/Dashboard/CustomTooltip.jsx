@@ -8,9 +8,10 @@ class CustomTooltip extends Component {
 
             // Find the mood name of the current bar 
             let moodLabel
-            data.find(entry => {
+            data.forEach(entry => {
                 if (entry.name === label) {
                     moodLabel = entry.mood
+                    return
                 }
             })
 

@@ -1,14 +1,8 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { getEntries } from '../../actions/entry_actions'
-import { ResponsiveContainer, Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
+import { ResponsiveContainer, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts'
 
 // Presentational 
 class MoodsByYear extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const { entries, year } = this.props
 

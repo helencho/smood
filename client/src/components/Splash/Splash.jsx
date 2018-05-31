@@ -25,7 +25,8 @@ class Splash extends Component {
                     <Link to="/signup"><button id="button-register">Register</button></Link>
                 </div>
                 <div id="git">
-                    <a href="https://github.com/helencho/mood" target="_blank"><i className="fab fa-github fa-fw fa-5x"></i></a>
+                    {/* https://github.com/asciidoctor/asciidoctor/issues/2071 */}
+                    <a href="https://github.com/helencho/mood" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-fw fa-5x"></i></a>
                 </div>
             </div>
         )

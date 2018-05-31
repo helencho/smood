@@ -5,10 +5,6 @@ import CustomTooltip from './CustomTooltip'
 
 // Presentational
 class MoodPerMonth extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const { year, entries } = this.props
 
@@ -19,7 +15,7 @@ class MoodPerMonth extends Component {
             const targetStart = new Date(`${year}-${(month - 1).toString()}`) // 2 => 2018-01-01
             const targetEnd = new Date(`${year}-${month}`) // 2 => 2018-02-01
 
-            entries.map(entry => {
+            entries.forEach(entry => {
                 const compare = new Date(entry.entry_date)
                 if (compare >= targetStart && compare < targetEnd) {
                     if (!monthMoods[entry.mood_name]) {

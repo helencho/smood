@@ -50,7 +50,8 @@ class AuthLogin extends Component {
             <div className="auth-container gradient-warm">
                 <SplashTitle />
                 <form onSubmit={this.handleSubmit} data-aos="fade-up">
-                    <h1>Welcome back 🙌</h1>
+                    {/* https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md */}
+                    <h1>Welcome back <span role="img" aria-label="praise">🙌</span></h1>
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
                     <input type="submit" value="Login" className="button" />

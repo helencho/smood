@@ -43,7 +43,7 @@ class AuthSignup extends Component {
         }
 
         // Email isn't typed in 
-        if(!email) {
+        if (!email) {
             message.push('email is needed')
         }
 
@@ -87,7 +87,8 @@ class AuthSignup extends Component {
             <div className="auth-container gradient-warm">
                 <SplashTitle />
                 <form onSubmit={this.handleSubmit} data-aos="fade-up">
-                    <h1>Sign up for feelings 🔥</h1>
+                    {/* https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md */}
+                    <h1>Sign up for feelings <span role="img" aria-label="fire">🔥</span></h1>
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />

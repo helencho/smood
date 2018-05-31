@@ -5,7 +5,7 @@ import { getMoods } from '../../actions/mood_actions'
 import MoodsByYear from './MoodsByYear'
 import ActivitiesByMood from './ActivitiesByMood'
 import MoodPerMonth from './MoodPerMonth'
-import PopularActivities from './PopularActivities'
+// import PopularActivities from './PopularActivities'
 import MonthInMoods from './MonthInMoods'
 import '../../stylesheets/dashboard.css'
 
@@ -52,7 +52,7 @@ class Dashboard extends Component {
                 <MonthInMoods entries={this.props.entries} year={year} />
                 <MoodPerMonth entries={this.props.entries} year={year} />
                 <ActivitiesByMood entries={this.props.entries} year={year} selectedMood={selectedMood} moods={this.props.moods} handleSelectChange={this.handleSelectChange} />
-                <PopularActivities />
+                {/* <PopularActivities /> */}
 
             </div>
         )

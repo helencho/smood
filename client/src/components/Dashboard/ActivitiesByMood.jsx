@@ -65,6 +65,4 @@ class ActivitiesByMood extends Component {
     }
 }
 
-// Get all moods 
-
 export default ActivitiesByMood
