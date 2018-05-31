@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getUser } from '../../actions/session_actions'
-import { logout } from '../../actions/session_actions'
-
 import '../../stylesheets/navigation.css'
 
 class HomeNav extends Component {
@@ -23,10 +21,6 @@ class HomeNav extends Component {
             sidebar: !this.state.sidebar
         })
     }
-
-    // handleLogout = e => {
-    //     this.props.processLogout()
-    // }
 
     render() {
         const navClass = this.state.sidebar ? null : `navigation-hidden`
@@ -59,8 +53,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getUser: () => dispatch(getUser()),
-        processLogout: () => dispatch(logout())
+        getUser: () => dispatch(getUser())
     }
 }
 
