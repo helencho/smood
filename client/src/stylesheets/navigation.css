@@ -48,6 +48,7 @@
         align-items: center;
         margin-top: 0.8rem;
         overflow: hidden;
+        cursor: pointer;
     }
 
     .navigation p {

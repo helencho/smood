@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../../actions/session_actions'
+import '../../stylesheets/profile.css'
 
 class Profile extends Component {
     handleLogout = e => {
@@ -9,8 +10,8 @@ class Profile extends Component {
 
     render() {
         return (
-            <div>
-                <h1>User Profile Page</h1>
+            <div className="profile-container">
+                <h1>Name</h1>
                 <button onClick={this.handleLogout}>Logout</button>
             </div>
         )

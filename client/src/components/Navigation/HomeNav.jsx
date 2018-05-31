@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getUser } from '../../actions/session_actions'
+import { logout } from '../../actions/session_actions'
+
 import '../../stylesheets/navigation.css'
 
 class HomeNav extends Component {
@@ -22,6 +24,10 @@ class HomeNav extends Component {
         })
     }
 
+    handleLogout = e => {
+        this.props.processLogout()
+    }
+
     render() {
         const navClass = this.state.sidebar ? null : `navigation-hidden`
 
@@ -30,13 +36,13 @@ class HomeNav extends Component {
                 <div>
                     <div className="top-nav">
                         <button onClick={this.handleSlideout}><i className="fas fa-bars fa-fw fa-2x"></i></button>
-                        {/* <h1>mood</h1> */}
                     </div>
                     <div className={`navigation ${navClass}`}>
-                        <Link to="/" onClick={this.handleSlideout}><i className="fas fa-book fa-fw fa-3x"></i><p>Log</p></Link>
-                        <Link to="/dashboard" onClick={this.handleSlideout}><i className="fas fa-tachometer-alt fa-fw fa-3x"></i><p>Dashboard</p></Link>
-                        <Link to="/custom" onClick={this.handleSlideout}><i className="fas fa-cog fa-fw fa-3x"></i><p>Customize</p></Link>
-                        <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x"></i><p>Profile</p></Link>
+                        <Link to="/" onClick={this.handleSlideout}><i className="fas fa-book fa-fw fa-3x" /><p>Log</p></Link>
+                        <Link to="/dashboard" onClick={this.handleSlideout}><i className="fas fa-tachometer-alt fa-fw fa-3x" /><p>Dashboard</p></Link>
+                        <Link to="/custom" onClick={this.handleSlideout}><i className="fas fa-cog fa-fw fa-3x" /><p>Customize</p></Link>
+                        <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x" /><p>Profile</p></Link>
+                        <a onClick={this.handleLogout}><i className="fas fa-sign-out-alt fa-fw fa-3x" /><p>Signout</p></a>
                     </div>
                 </div>
                 :
@@ -53,7 +59,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getUser: () => dispatch(getUser())
+        getUser: () => dispatch(getUser()),
+        processLogout: () => dispatch(logout())
     }
 }
 
