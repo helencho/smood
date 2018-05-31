@@ -2,7 +2,8 @@
 /*        Splash Main        */
 /*---------------------------*/
 .splash-container {
-    height: 100%;
+    /* height: 100%; */
+    height: 100vh;
     width: 100vw;
     text-align: center;
     display: flex;
@@ -13,6 +14,10 @@
 /* Login and register button choices on splash page */
 .splash-container .auth-choices {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56%;
+    /* background-color: tomato; */
 }
     .splash-container .auth-choices a {
         display: inline-block;
@@ -59,9 +64,13 @@
         }
 /* Container holds github logo */
 .splash-container #git {
-    position: absolute;
-    bottom: 80px;
-    padding: 0.8rem 0;
+    height: 22%;
+    display: flex;
+    align-items: center;
+    /* position: absolute; */
+    /* bottom: 80px; */
+    /* padding: 0.8rem 0; */
+    /* background-color: palevioletred; */
 }
 .splash-container #git a {
     color: #fefefe;
@@ -169,7 +178,12 @@
 /*        Splash Title       */
 /*---------------------------*/
 .splash-title {
-    margin: 3.2rem 0;
+    /* margin: 3.2rem 0; */
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: lightcoral; */
 }
     .splash-title h1 {
         font-family: 'Patua One', cursive;
