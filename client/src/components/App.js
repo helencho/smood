@@ -11,6 +11,7 @@ import Entry from './Entry/Entry'
 import Customize from './Customize/Customize'
 import CustomizeMood from './Customize/CustomizeMood'
 import CustomizeActivity from './Customize/CustomizeActivity'
+import Logout from './Logout/Logout'
 import AuthRoute from '../utils/auth_utils'
 import '../stylesheets/App.css'
 import AOS from 'aos'
@@ -20,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     AOS.init({
       once: true
-    }) 
+    })
   }
 
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
           <AuthRoute exact path="/entry/:id" component={Entry} />
           <AuthRoute exact path="/profile" component={Profile} />
           <AuthRoute exact path="/custom" component={Customize} />
+          <AuthRoute exact path="/logout" component={Logout} />
           <AuthRoute path="/custom/mood" component={CustomizeMood} />
           <AuthRoute path="/custom/activity" component={CustomizeActivity} />
         </Switch>

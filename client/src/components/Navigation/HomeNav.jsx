@@ -24,9 +24,9 @@ class HomeNav extends Component {
         })
     }
 
-    handleLogout = e => {
-        this.props.processLogout()
-    }
+    // handleLogout = e => {
+    //     this.props.processLogout()
+    // }
 
     render() {
         const navClass = this.state.sidebar ? null : `navigation-hidden`
@@ -42,7 +42,7 @@ class HomeNav extends Component {
                         <Link to="/dashboard" onClick={this.handleSlideout}><i className="fas fa-tachometer-alt fa-fw fa-3x" /><p>Dashboard</p></Link>
                         <Link to="/custom" onClick={this.handleSlideout}><i className="fas fa-cog fa-fw fa-3x" /><p>Customize</p></Link>
                         <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x" /><p>Profile</p></Link>
-                        <a onClick={this.handleLogout}><i className="fas fa-sign-out-alt fa-fw fa-3x" /><p>Signout</p></a>
+                        <Link to="/logout" onClick={this.handleSlideout}><i className="fas fa-sign-out-alt fa-fw fa-3x" /><p>Signout</p></Link>
                     </div>
                 </div>
                 :
