@@ -2,6 +2,35 @@ import React, { Component } from 'react'
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts'
 import moment from 'moment'
 
+class CustomTooltip extends Component {
+    render() {
+        const { active } = this.props
+        if (active) {
+            const { payload, label, data } = this.props
+
+            // Find the mood name of the current bar 
+            let moodLabel
+            data.find(entry => {
+                if (entry.name === label) {
+                    moodLabel = entry.mood
+                }
+            })
+
+            // Return the mood and count 
+            return (
+                <div className="custom-tooltip">
+                    {moodLabel ?
+                        <p className="label">{`${moodLabel} : ${payload[0].value}`}</p>
+                        : 'Nothing :('}
+                </div>
+            );
+        }
+
+        // If not active, return null 
+        return null;
+    }
+}
+
 // Presentational
 class MoodPerMonth extends Component {
     constructor(props) {
@@ -55,9 +84,6 @@ class MoodPerMonth extends Component {
             data.push(getMostFeltMood(countAllMoods(year - 1, month), months[i]))
         }
 
-        // CUSTOM TOOLTIP! 
-        // https://jsfiddle.net/alidingling/vxq4ep63/ 
-
         return (
             <div>
                 <h3>Your most popular moods by month</h3>
@@ -66,7 +92,7 @@ class MoodPerMonth extends Component {
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
                         <YAxis />
-                        <Tooltip />
+                        <Tooltip content={<CustomTooltip data={data} />} />
                         <Legend />
                         <Bar dataKey="count" fill="#8884d8" />
                     </BarChart>
