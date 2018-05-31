@@ -106,14 +106,23 @@
     -ms-transition: 0.2s all;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    height: 62%
+    height: 62%;
 }
-    /* Login Register title */
-    /* .auth-container form h1 {
-        position: absolute;
-        top: 1.2rem;
-    } */
-
+    /* Form header */
+    .auth-container form h1 {
+        /* background-color: skyblue; */
+        height: 10%;
+    }
+    /* Contains text fields */
+    .auth-container .input-container {
+        /* background-color: salmon; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 60%;
+    }
     .auth-container form input {
         outline: none;
         border: none;
@@ -138,13 +147,15 @@
             color: #F97794;
         }
     /* Login Register buttons */
+    .auth-container .submit-container {
+        /* background-color: peru; */
+        height: 20%;
+    }
     .auth-container form .button {
         background-color: #623AA2;
         color: #fefefe;
         cursor: pointer;
         width: 200px;
-        /* position: absolute; */
-        /* bottom: 1.2rem; */
         -moz-transition: 0.2s all;
         -ms-transition: 0.2s all;
         -webkit-transition: 0.2s all;
@@ -155,7 +166,11 @@
             border-color: #F97794;
         }
     /* Error message container */
-    .auth-container #auth-message {
+    .auth-container .auth-message-container {
+        /* background-color: lawngreen; */
+        height: 10%;
+    }
+    .auth-container .auth-message {
         background-color: rgba(255, 0, 0, 0.3);
         padding: 0.6rem;
         border-radius: 2px;
@@ -225,12 +240,21 @@
 @media screen and (max-width: 430px) {
     .auth-container form {
         width: 88%;
-        /* height: auto; */
+        height: 68%;
+    }
+    .auth-container .input-container {
+        height: 50%;
     }
     .auth-container form input {
         width: 90%;
     }
+    .auth-container .auth-message-container {
+        height: 20%;
+    }
     .splash-container .auth-choices {
         flex-direction: column;
+    }
+    .auth-container .account-message {
+        height: 10%;
     }
 }

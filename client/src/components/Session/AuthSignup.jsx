@@ -74,7 +74,7 @@ class AuthSignup extends Component {
         const { name, email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
-            <p id="auth-message">{this.capitalize(message.join(' & '))}</p>
+            <p class="auth-message">{this.capitalize(message.join(' & '))}</p>
             :
             null
 
@@ -88,11 +88,17 @@ class AuthSignup extends Component {
                 <form onSubmit={this.handleSubmit} data-aos="fade-up">
                     {/* https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md */}
                     <h1>Sign up for feelings <span role="img" aria-label="fire">🔥</span></h1>
-                    <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
-                    <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
-                    <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
-                    {errorMessage}
-                    <input type="submit" value="Register" className="button" />
+                    <div className="input-container">
+                        <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
+                        <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
+                        <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
+                    </div>
+                    <div className="auth-message-container">
+                        {errorMessage}
+                    </div>
+                    <div className="submit-container">
+                        <input type="submit" value="Register" className="button" />
+                    </div>
                 </form>
                 <p className="account-message">Have an account? <Link to="/login">Login</Link></p>
             </div>

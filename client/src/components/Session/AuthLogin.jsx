@@ -65,7 +65,7 @@ class AuthLogin extends Component {
         const { email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
-            <p id="auth-message">{this.capitalize(message.join(' & '))}</p>
+            <p class="auth-message">{this.capitalize(message.join(' & '))}</p>
             :
             null
 
@@ -79,10 +79,16 @@ class AuthLogin extends Component {
                 <form onSubmit={this.handleSubmit} data-aos="fade-up">
                     {/* https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md */}
                     <h1>Welcome back <span role="img" aria-label="praise">🙌</span></h1>
-                    <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
-                    <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
-                    {errorMessage}
-                    <input type="submit" value="Login" className="button" />
+                    <div className="input-container">
+                        <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
+                        <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
+                    </div>
+                    <div className="auth-message-container">
+                        {errorMessage}
+                    </div>
+                    <div className="submit-container">
+                        <input type="submit" value="Login" className="button" />
+                    </div>
                 </form>
                 <p className="account-message">Don't have an account? <Link to="/signup">Register</Link></p>
             </div>
