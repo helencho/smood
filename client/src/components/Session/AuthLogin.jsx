@@ -10,7 +10,8 @@ class AuthLogin extends Component {
         super()
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            message: []
         }
     }
 
@@ -32,15 +33,41 @@ class AuthLogin extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        let user = {
-            username: this.state.email,
-            password: this.state.password
+        const { email, password } = this.state
+        let message = []
+
+        // Username is at least 6 letters long  
+        if (email.length <= 6) {
+            message.push('email must be valid length')
         }
-        this.props.processForm(user)
+        // Password is at least 6 characters long 
+        if (password.length <= 6) {
+            message.push('password must be at least 6 characters')
+        }
+
+        if (message.length === 0) {
+            let user = {
+                username: this.state.email,
+                password: this.state.password
+            }
+            this.props.processForm(user)
+        } else {
+            this.setState({ message })
+        }
+    }
+
+    // Capitalize the first letter of the string 
+    capitalize = (str) => {
+        return str[0].toUpperCase() + str.slice(1)
     }
 
     render() {
-        const { email, password } = this.state
+        const { email, password, message } = this.state
+        const errorMessage = message.length > 0
+            ?
+            <p id="auth-message">{this.capitalize(message.join(' & '))}</p>
+            :
+            null
 
         if (this.props.currentUser) {
             return <Redirect to="/" />
@@ -54,9 +81,10 @@ class AuthLogin extends Component {
                     <h1>Welcome back <span role="img" aria-label="praise">🙌</span></h1>
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
+                    {errorMessage}
                     <input type="submit" value="Login" className="button" />
-                    <p>Don't have an account? <Link to="/signup">Register</Link></p>
                 </form>
+                <p className="account-message">Don't have an account? <Link to="/signup">Register</Link></p>
             </div>
         )
     }

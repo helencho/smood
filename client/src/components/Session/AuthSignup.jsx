@@ -71,7 +71,6 @@ class AuthSignup extends Component {
     }
 
     render() {
-        console.log(this.props)
         const { name, email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
@@ -92,10 +91,10 @@ class AuthSignup extends Component {
                     <input type="text" placeholder="Name" name="name" value={name} onChange={this.handleInput} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={this.handleInput} />
                     <input type="password" placeholder="Password" name="password" value={password} onChange={this.handleInput} />
-                    <input type="submit" value="Register" className="button" />
                     {errorMessage}
-                    <p>Have an account? <Link to="/login">Login</Link></p>
+                    <input type="submit" value="Register" className="button" />
                 </form>
+                <p className="account-message">Have an account? <Link to="/login">Login</Link></p>
             </div>
         )
     }

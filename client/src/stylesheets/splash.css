@@ -2,7 +2,6 @@
 /*        Splash Main        */
 /*---------------------------*/
 .splash-container {
-    /* height: 100%; */
     height: 100vh;
     width: 100vw;
     text-align: center;
@@ -17,7 +16,6 @@
     align-items: center;
     justify-content: center;
     height: 56%;
-    /* background-color: tomato; */
 }
     .splash-container .auth-choices a {
         display: inline-block;
@@ -68,10 +66,6 @@
     display: flex;
     align-items: center;
     bottom: 0;
-    /* position: absolute; */
-    /* bottom: 80px; */
-    /* padding: 0.8rem 0; */
-    /* background-color: palevioletred; */
 }
 .splash-container #git a {
     color: #fefefe;
@@ -89,7 +83,7 @@
 /*    Auth Login & Signup    */
 /*---------------------------*/
 .auth-container {
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     text-align: center;
     display: flex;
@@ -103,15 +97,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1.2rem;
-    height: 460px;
+    /* height: 460px; */
     border-radius: 2px;
-    margin-bottom: 0.8rem;
+    /* margin-bottom: 0.8rem; */
     -moz-transition: 0.2s all;
     -ms-transition: 0.2s all;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
+    height: 62%
 }
+    /* Login Register title */
+    /* .auth-container form h1 {
+        position: absolute;
+        top: 1.2rem;
+    } */
 
     .auth-container form input {
         outline: none;
@@ -136,12 +137,14 @@
             border: 2px solid #F97794;
             color: #F97794;
         }
-
+    /* Login Register buttons */
     .auth-container form .button {
         background-color: #623AA2;
         color: #fefefe;
         cursor: pointer;
         width: 200px;
+        /* position: absolute; */
+        /* bottom: 1.2rem; */
         -moz-transition: 0.2s all;
         -ms-transition: 0.2s all;
         -webkit-transition: 0.2s all;
@@ -151,41 +154,48 @@
             background-color: #F97794;
             border-color: #F97794;
         }
-    .auth-container form p {
-        font-size: 1rem;
-        margin: 0.8rem 0;
-    }
-    .auth-container form a {
-        padding-bottom: 2.2px;
-        color: #623AA2;
-        border-bottom: 1px dotted #623AA2;
-        -moz-transition: 0.2s all;
-        -ms-transition: 0.2s all;
-        -webkit-transition: 0.2s all;
-        transition: 0.2s all;
-    }
-        .auth-container form a:hover {
-            color: #F97794;
-            border-bottom: 1px dotted #F97794;
-        }
     /* Error message container */
     .auth-container #auth-message {
         background-color: rgba(255, 0, 0, 0.3);
         padding: 0.6rem;
         border-radius: 2px;
+        font-size: 1rem;
+    }
+/* Account message */
+.auth-container .account-message {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    color: #fefefe;
+    height: 16%;
+    /* background-color: lightskyblue; */
+}
+.auth-container a {
+    padding-bottom: 2.2px;
+    color: #623AA2;
+    border-bottom: 1px dotted #623AA2;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+    .auth-container a:hover {
+        color: #F97794;
+        border-bottom: 1px dotted #F97794;
     }
 
 /*---------------------------*/
 /*        Splash Title       */
 /*---------------------------*/
 .splash-title {
-    /* margin: 3.2rem 0; */
     height: 22%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* background-color: lightcoral; */
 }
+    .splash-title a,
+    .splash-title a:hover {
+        border: none;
+    }
     .splash-title h1 {
         font-family: 'Patua One', cursive;
         font-size: 3.6rem;
@@ -215,7 +225,7 @@
 @media screen and (max-width: 430px) {
     .auth-container form {
         width: 88%;
-        height: auto;
+        /* height: auto; */
     }
     .auth-container form input {
         width: 90%;
