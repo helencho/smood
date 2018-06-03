@@ -1,6 +1,6 @@
--- DROP DATABASE IF EXISTS mood;
--- CREATE DATABASE mood;
--- \c mood;
+DROP DATABASE IF EXISTS mood;
+CREATE DATABASE mood;
+\c mood;
 
 DROP TABLE users CASCADE;
 CREATE TABLE users (
@@ -26,7 +26,7 @@ CREATE TABLE activities (
     activity_id SERIAL UNIQUE,
     user_id INTEGER NOT NULL,
     activity_name VARCHAR NOT NULL,
-    activity_img VARCHAR NOT NULL,
+    activity_img TEXT,
     PRIMARY KEY (activity_id)
 );
 
@@ -55,55 +55,49 @@ VALUES
 
 INSERT INTO moods (user_id, mood_name, mood_img)
 VALUES
-    (0, 'happy', 'https://i.imgur.com/YamOYXt.png'),
-    (0, 'calm', 'https://i.imgur.com/qzkkCbf.png'),
-    (0, 'upset', 'https://i.imgur.com/U4dsaLs.png'),
-    (0, 'sad', 'https://i.imgur.com/87QoEYl.png'),
-    (0, 'meh', 'https://i.imgur.com/IHblVsA.png'),
-    (1, 'silly', 'https://i.imgur.com/cedkuiq.png'),
-    (1, 'angry', 'https://i.imgur.com/MB7SuaO.png'),
-    (2, 'hyper', 'https://i.imgur.com/LXYQOAH.png'),
-    (3, 'excited', 'https://i.imgur.com/i4RbQU9.png')
+    (0, 'happy', '😀'),
+    (0, 'calm', '😌'),
+    (0, 'upset', '😡'),
+    (0, 'sad', '😔'),
+    (0, 'meh', '😒'),
+    (1, 'silly', '🙃'),
+    (2, 'hyper', '🤩'),
+    (3, 'sick', '🤒 ')
+    -- (0, 'happy', 'https://i.imgur.com/YamOYXt.png'),
+    -- (0, 'calm', 'https://i.imgur.com/qzkkCbf.png'),
+    -- (0, 'upset', 'https://i.imgur.com/U4dsaLs.png'),
+    -- (0, 'sad', 'https://i.imgur.com/87QoEYl.png'),
+    -- (0, 'meh', 'https://i.imgur.com/IHblVsA.png'),
+    -- (1, 'silly', 'https://i.imgur.com/cedkuiq.png'),
+    -- (1, 'angry', 'https://i.imgur.com/MB7SuaO.png'),
+    -- (2, 'hyper', 'https://i.imgur.com/LXYQOAH.png'),
+    -- (3, 'excited', 'https://i.imgur.com/i4RbQU9.png')
 ;
 
 INSERT INTO activities (user_id, activity_name, activity_img)
 VALUES
-    (0, 'yoga', 'https://i.imgur.com/tXkjlKM.png'),
-    (0, 'weightlifting', 'https://i.imgur.com/GE3IUY4.png'),
-    (0, 'gaming', 'https://i.imgur.com/CzMkvWn.png'),
-    (0, 'hiking', 'https://i.imgur.com/az5kmZ0.png'),
-    (0, 'snowboarding', 'https://i.imgur.com/M35QeZc.png'),
-    (0, 'shopping', 'https://i.imgur.com/Q9wKq8A.png'),
-    (0, 'running', 'https://i.imgur.com/9fFX2ZC.png'),
-    (0, 'reading', 'https://i.imgur.com/tE363OX.png'),
-    (0, 'pottery', 'https://i.imgur.com/BbLLsSC.png'),
-    (0, 'playing piano', 'https://i.imgur.com/W4ZQGQD.png'),
-    (0, 'photography', 'https://i.imgur.com/NrBfw0z.png'),
-    (0, 'parachuting', 'https://i.imgur.com/CIqnkAq.png'),
-    (0, 'origami', 'https://i.imgur.com/KrO2IQ9.png'),
-    (0, 'riding', 'https://i.imgur.com/pNfSmIg.png'),
-    (0, 'solving a puzzle', 'https://i.imgur.com/lllseqw.png'),
-    (0, 'hunting', 'https://i.imgur.com/E6CeDWv.png'),
-    (0, 'horseback', 'https://i.imgur.com/xYm6czJ.png'),
-    (0, 'playing guitar', 'https://i.imgur.com/I1E6Qf9.png'),
-    (0, 'fishing', 'https://i.imgur.com/BZPWHbV.png'),
-    (0, 'exericsing', 'https://i.imgur.com/8wpoRXF.png'),
-    (0, 'painting', 'https://i.imgur.com/d69GcNx.png'),
-    (0, 'fixing', 'https://i.imgur.com/qgvAAqR.png'),
-    (0, 'scuba diving', 'https://i.imgur.com/Beat9QJ.png'),
-    (0, 'bicycling', 'https://i.imgur.com/SOK2kl1.png'),
-    (0, 'cooking', 'https://i.imgur.com/4RJEsjj.png'),
-    (0, 'climbing', 'https://i.imgur.com/nyI7zzl.png'),
-    (0, 'camping', 'https://i.imgur.com/nz57iVE.png'),
-    (0, 'board games', 'https://i.imgur.com/mLsEjUr.png'),
-    (0, 'baseball', 'https://i.imgur.com/9hyr5Bg.png'),
-    (0, 'baking', 'https://i.imgur.com/Ja04rFE.png'),
-    (0, 'archery', 'https://i.imgur.com/ZQ35npG.png')
+    (0, 'dance', '💃'),
+    (0, 'run', '🏃'),
+    (0, 'shop', '🛍'),
+    (0, 'video game', '🎮'),
+    (0, 'tv', '📺'),
+    (0, 'paint', '🎨'),
+    (0, 'read', '📚'),
+    (0, 'write', '📝'),
+    (0, 'movie', '🎟'),
+    (0, 'bike', '🚴'),
+    (0, 'beach', '🏖'),
+    (0, 'travel', '✈️'),
+    (0, 'celebrate', '🎉'),
+    (0, 'baby', '🍼'),
+    (0, 'work', '💼'),
+    (0, 'school', '🎒'),
+    (0, 'graduate', '🎓')
 ;
 
 INSERT INTO entries (user_id, mood_id, activity_id, entry_date, note)
 VALUES 
-    (1, 1, 1, '2018-04-30', 'Running makes me feel so good.'),
-    (2, 2, 4, '2018-05-05', 'I love ube cake!'),
-    (3, 3, 8, '2018-05-08', 'Got rejected from Google today.')
+    (1, 1, 1, '2018-04-30', 'I love dancing'),
+    (2, 2, 4, '2018-05-05', 'I LOVE RUNNING'),
+    (3, 3, 8, '2018-05-08', 'I hate shopping')
 ;

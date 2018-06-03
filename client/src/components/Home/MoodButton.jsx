@@ -7,8 +7,8 @@ class MoodButton extends Component {
        
         return (
             <button onClick={() => handleButton('mood', md.mood_id)} className={`mood-button mood-button-${activeMood}`}>
-                <img src={md.mood_img} alt={md.mood_name} />
-                <p>{md.mood_name}</p>
+                {/* <img src={md.mood_img} alt={md.mood_name} /> */}
+                <p>{md.mood_img}</p>
             </button>
         )
     }
