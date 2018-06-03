@@ -1,0 +1,441 @@
+{
+    "videogame": {
+        "src": "🎮",
+        "name": [
+            "game",
+            "xbox",
+            "playstation",
+            "switch",
+            "nintendo",
+            "console",
+            "controller",
+            "videogame",
+            "wii",
+            "fortnite",
+            "overwatch",
+            "league",
+            "videogame"
+        ]
+    },
+    "painting": {
+        "src": "🎨",
+        "name": [
+            "art",
+            "paint",
+            "oil",
+            "acrylic",
+            "draw",
+            "color",
+            "sketch",
+            "artwork",
+            "painting"
+        ]
+    },
+    "music": {
+        "src": "🎧",
+        "name": [
+            "listen",
+            "jam",
+            "soundtrack",
+            "music"
+        ]
+    },
+    "karaoke": {
+        "src": "🎤",
+        "name": [
+            "sing",
+            "karaoke",
+            "nrb"
+        ]
+    },
+    "gambling": {
+        "src": "🎰",
+        "name": [
+            "casino",
+            "slot",
+            "slot machine",
+            "machine",
+            "777",
+            "play cards",
+            "cards",
+            "blackjack",
+            "poker",
+            "vegas",
+            "las vegas",
+            "gamble",
+            "gambling"
+        ]
+    },
+    "movie": {
+        "src": "🎟",
+        "name": [
+            "watch a movie",
+            "theater",
+            "movie",
+            "entertainment"
+        ]
+    },
+    "biking": {
+        "src": "🚴",
+        "name": [
+            "bicycling",
+            "cycling",
+            "biking",
+            "bike",
+            "workout",
+            "exercise",
+            "fitness"
+        ]
+    },
+    "climbing": {
+        "src": "🧗",
+        "name": [
+            "rock climbing",
+            "climbing",
+            "exercise",
+            "workout",
+            "fitness"
+        ]
+    },
+    "swimming": {
+        "src": "🏊🏼‍",
+        "name": [
+            "swim",
+            "swimming"
+        ]
+    },
+    "yoga": {
+        "src": "🧘",
+        "name": [
+            "relax",
+            "stretch",
+            "dynamic stretching",
+            "meditate",
+            "om",
+            "yoga"
+        ]
+    },
+    "snowboarding": {
+        "src": "🏂",
+        "name": [
+            "boarding",
+            "snowboard",
+            "snowboarding"
+        ]
+    },
+    "skiing": {
+        "src": "⛷",
+        "name": [
+            "ski",
+            "skiing",
+            "cross country",
+            "snow"
+        ]
+    },
+    "golfing": {
+        "src": "🏌🏼‍",
+        "name": [
+            "golfing",
+            "golf"
+        ]
+    },
+    "surfing": {
+        "src": "🏄",
+        "name": [
+            "surf",
+            "surfing"
+        ]
+    },
+    "ball": {
+        "src": "⛹🏽‍",
+        "name": [
+            "basketball",
+            "ball",
+            "play"
+        ]
+    },
+    "basketball": {
+        "src": "🏀",
+        "name": [
+            "basketball",
+            "ball",
+            "play"
+        ]
+    },
+    "soccer": {
+        "src": "⚽",
+        "name": [
+            "soccer",
+            "ball"
+        ]
+    },
+    "football": {
+        "src": "🏈",
+        "name": [
+            "football",
+            "ball"
+        ]
+    },
+    "pingpong": {
+        "src": "🏓",
+        "name": [
+            "pingpong",
+            "pong"
+        ]
+    },
+    "volleyball": {
+        "src": "🏐",
+        "name": [
+            "volleyball",
+            "ball"
+        ]
+    },
+    "fishing": {
+        "src": "🎣",
+        "name": [
+            "fish",
+            "fishing"
+        ]
+    },
+    "skating": {
+        "src": "⛸",
+        "name": [
+            "ice skating",
+            "skating",
+            "skate",
+            "ice skate"
+        ]
+    },
+    "award": {
+        "src": "🏆",
+        "name": [
+            "win",
+            "place",
+            "reward",
+            "trophy",
+            "gold",
+            "1st",
+            "award"
+        ]
+    },
+    "bowling": {
+        "src": "🎳",
+        "name": [
+            "bowl",
+            "bowling",
+            "pins"
+        ]
+    },
+    "beach": {
+        "src": "🏖",
+        "name": [
+            "beach",
+            "tan",
+            "beaching",
+            "park"
+        ]
+    },
+    "camp": {
+        "src": "⛺",
+        "name": [
+            "camping",
+            "tent",
+            "tenting",
+            "camp",
+            "woods"
+        ]
+    },
+    "amusementpark": {
+        "src": "🎡",
+        "name": [
+            "amusement",
+            "theme park",
+            "park",
+            "amusementpark",
+            "ferris wheel"
+        ]
+    },
+    "travel": {
+        "src": "✈️",
+        "name": [
+            "fly",
+            "travel"
+        ]
+    },
+    "celebrate": {
+        "src": "🎉",
+        "name": [
+            "birthday",
+            "celebration",
+            "celebrate"
+        ]
+    },
+    "bath": {
+        "src": "🛁",
+        "name": [
+            "bath",
+            "shower",
+            "clean",
+            "bubble bath"
+        ]
+    },
+    "tv": {
+        "src": "📺",
+        "name": [
+            "watch tv",
+            "watch television",
+            "television",
+            "tv"
+        ]
+    },
+    "shop": {
+        "src": "🛍",
+        "name": [
+            "shopping",
+            "mall",
+            "shop"
+        ]
+    },
+    "death": {
+        "src": "⚰️",
+        "name": [
+            "death",
+            "funeral"
+        ]
+    },
+    "mahjong": {
+        "src": "🀄",
+        "name": [
+            "card",
+            "cards",
+            "card games",
+            "board",
+            "board games",
+            "mahjong",
+            "gamble"
+        ]
+    },
+    "poker": {
+        "src": "🃏",
+        "name": [
+            "poker",
+            "card games",
+            "cards",
+            "gamble",
+            "blackjack",
+            "21",
+            "casino"
+        ]
+    },
+    "read": {
+        "src": "📚",
+        "name": [
+            "books",
+            "read"
+        ]
+    },
+    "write": {
+        "src": "📝",
+        "name": [
+            "journal",
+            "diary",
+            "write"
+        ]
+    },
+    "champagne": {
+        "src": "🥂",
+        "name": [
+            "celebrate",
+            "champagne",
+            "bubbly"
+        ]
+    },
+    "baby": {
+        "src": "🍼",
+        "name": [
+            "feed baby",
+            "baby",
+            "bottle",
+            "milk"
+        ]
+    },
+    "sports": {
+        "src": "🏟",
+        "name": [
+            "watch",
+            "stadium",
+            "sports",
+            "game",
+            "live"
+        ]
+    },
+    "work": {
+        "src": "💼",
+        "name": [
+            "work",
+            "9 to 5",
+            "business",
+            "job",
+            "career"
+        ]
+    },
+    "graduate": {
+        "src": "🎓",
+        "name": [
+            "graduate",
+            "college",
+            "university",
+            "high",
+            "hs",
+            "middle",
+            "ms",
+            "school",
+            "degree"
+        ]
+    },
+    "school": {
+        "src": "🎒",
+        "name": [
+            "school",
+            "class",
+            "university",
+            "college",
+            "high",
+            "middle"
+        ]
+    },
+    "dance": {
+        "src": "💃🏻",
+        "name": [
+            "dance",
+            "prom",
+            "salsa",
+            "clubbing",
+            "ballet",
+            "jazz",
+            "hiphop"
+        ]
+    },
+    "run": {
+        "src": "🏃🏽‍",
+        "name": [
+            "jog",
+            "run",
+            "cross country",
+            "workout",
+            "fitness",
+            "exercise",
+            "cardio"
+        ]
+    },
+    "breakfast": {
+        "src": "🍳",
+        "name": [
+            "make",
+            "breakfast",
+            "brunch",
+            "eggs",
+            "cook"
+        ]
+    }
+}
