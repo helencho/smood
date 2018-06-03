@@ -41,7 +41,7 @@ class AuthLogin extends Component {
             message.push('email must be valid length')
         }
         // Password is at least 6 characters long 
-        if (password.length <= 6) {
+        if (password.length < 6) {
             message.push('password must be at least 6 characters')
         }
 

@@ -48,7 +48,7 @@ class AuthSignup extends Component {
         }
 
         // Password is at least 6 characters long 
-        if (password.length <= 6) {
+        if (password.length < 6) {
             message.push('password must be at least 6 characters')
         }
 
