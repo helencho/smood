@@ -13,8 +13,8 @@
             "wii",
             "fortnite",
             "overwatch",
-            "league",
-            "videogame"
+            "okami",
+            "league"
         ]
     },
     "painting": {
@@ -25,10 +25,12 @@
             "oil",
             "acrylic",
             "draw",
-            "color",
+            "colors",
             "sketch",
             "artwork",
-            "painting"
+            "painting",
+            "palette",
+            "creative"
         ]
     },
     "music": {
@@ -37,7 +39,12 @@
             "listen",
             "jam",
             "soundtrack",
-            "music"
+            "music",
+            "melody",
+            "relax",
+            "tunes",
+            "headphones",
+            "earphones"
         ]
     },
     "karaoke": {
@@ -45,7 +52,8 @@
         "name": [
             "sing",
             "karaoke",
-            "nrb"
+            "nrb",
+            "microphone"
         ]
     },
     "gambling": {
@@ -53,24 +61,28 @@
         "name": [
             "casino",
             "slot",
-            "slot machine",
             "machine",
             "777",
-            "play cards",
+            "play",
             "cards",
             "blackjack",
+            "21",
             "poker",
             "vegas",
             "las vegas",
             "gamble",
-            "gambling"
+            "gambling",
+            "bet",
+            "win"
         ]
     },
     "movie": {
         "src": "🎟",
         "name": [
-            "watch a movie",
+            "watch",
             "theater",
+            "admit",
+            "ticket",
             "movie",
             "entertainment"
         ]
@@ -84,24 +96,34 @@
             "bike",
             "workout",
             "exercise",
-            "fitness"
+            "fitness",
+            "outdoors"
         ]
     },
     "climbing": {
         "src": "🧗",
         "name": [
-            "rock climbing",
+            "rock",
             "climbing",
             "exercise",
             "workout",
-            "fitness"
+            "fitness",
+            "sports",
+            "outdoors"
         ]
     },
     "swimming": {
         "src": "🏊🏼‍",
         "name": [
             "swim",
-            "swimming"
+            "swimming",
+            "workout",
+            "fitness",
+            "cardio",
+            "pool",
+            "ocean",
+            "sports",
+            "olympics"
         ]
     },
     "yoga": {
@@ -109,10 +131,11 @@
         "name": [
             "relax",
             "stretch",
-            "dynamic stretching",
+            "dynamic",
             "meditate",
             "om",
-            "yoga"
+            "yoga",
+            "routine"
         ]
     },
     "snowboarding": {
@@ -129,21 +152,25 @@
             "ski",
             "skiing",
             "cross country",
-            "snow"
+            "snow",
+            "alpine"
         ]
     },
     "golfing": {
         "src": "🏌🏼‍",
         "name": [
             "golfing",
-            "golf"
+            "golf",
+            "club"
         ]
     },
     "surfing": {
         "src": "🏄",
         "name": [
             "surf",
-            "surfing"
+            "surfing",
+            "ocean",
+            "kawabunga"
         ]
     },
     "ball": {
@@ -151,7 +178,11 @@
         "name": [
             "basketball",
             "ball",
-            "play"
+            "play",
+            "man",
+            "sports",
+            "exercise",
+            "games"
         ]
     },
     "basketball": {
@@ -159,51 +190,65 @@
         "name": [
             "basketball",
             "ball",
-            "play"
+            "play",
+            "games",
+            "sports"
         ]
     },
     "soccer": {
         "src": "⚽",
         "name": [
             "soccer",
-            "ball"
+            "ball",
+            "football",
+            "fifa",
+            "games",
+            "sports"
         ]
     },
     "football": {
         "src": "🏈",
         "name": [
             "football",
-            "ball"
+            "ball",
+            "games",
+            "sports",
+            "superbowl"
         ]
     },
     "pingpong": {
         "src": "🏓",
         "name": [
             "pingpong",
-            "pong"
+            "pong",
+            "games",
+            "sports"
         ]
     },
     "volleyball": {
         "src": "🏐",
         "name": [
             "volleyball",
-            "ball"
+            "ball",
+            "games",
+            "sports",
+            "beach"
         ]
     },
     "fishing": {
         "src": "🎣",
         "name": [
             "fish",
-            "fishing"
+            "fishing",
+            "sea"
         ]
     },
     "skating": {
         "src": "⛸",
         "name": [
-            "ice skating",
+            "ice",
             "skating",
-            "skate",
-            "ice skate"
+            "skate"
         ]
     },
     "award": {
@@ -215,7 +260,10 @@
             "trophy",
             "gold",
             "1st",
-            "award"
+            "first",
+            "award",
+            "competition",
+            "race"
         ]
     },
     "bowling": {
@@ -223,7 +271,8 @@
         "name": [
             "bowl",
             "bowling",
-            "pins"
+            "pins",
+            "game"
         ]
     },
     "beach": {
@@ -232,7 +281,14 @@
             "beach",
             "tan",
             "beaching",
-            "park"
+            "park",
+            "parasol",
+            "umbrella",
+            "island",
+            "ocean",
+            "vacation",
+            "pacific",
+            "sand"
         ]
     },
     "camp": {
@@ -242,14 +298,17 @@
             "tent",
             "tenting",
             "camp",
-            "woods"
+            "woods",
+            "forest",
+            "nature",
+            "burning man"
         ]
     },
     "amusementpark": {
         "src": "🎡",
         "name": [
             "amusement",
-            "theme park",
+            "theme",
             "park",
             "amusementpark",
             "ferris wheel"
@@ -259,7 +318,9 @@
         "src": "✈️",
         "name": [
             "fly",
-            "travel"
+            "travel",
+            "plane",
+            "airplane"
         ]
     },
     "celebrate": {
@@ -267,7 +328,10 @@
         "name": [
             "birthday",
             "celebration",
-            "celebrate"
+            "celebrate",
+            "hat",
+            "cone",
+            "confetti"
         ]
     },
     "bath": {
@@ -276,16 +340,22 @@
             "bath",
             "shower",
             "clean",
-            "bubble bath"
+            "bubble",
+            "wash",
+            "relax",
+            "bathtub",
+            "tub"
         ]
     },
     "tv": {
         "src": "📺",
         "name": [
-            "watch tv",
-            "watch television",
+            "watch",
             "television",
-            "tv"
+            "tv",
+            "show",
+            "sitcom",
+            "series"
         ]
     },
     "shop": {
@@ -293,24 +363,25 @@
         "name": [
             "shopping",
             "mall",
-            "shop"
+            "shop",
+            "bags"
         ]
     },
     "death": {
         "src": "⚰️",
         "name": [
             "death",
-            "funeral"
+            "dead",
+            "funeral",
+            "coffin"
         ]
     },
     "mahjong": {
         "src": "🀄",
         "name": [
-            "card",
             "cards",
-            "card games",
+            "games",
             "board",
-            "board games",
             "mahjong",
             "gamble"
         ]
@@ -319,19 +390,25 @@
         "src": "🃏",
         "name": [
             "poker",
-            "card games",
+            "games",
             "cards",
             "gamble",
             "blackjack",
             "21",
-            "casino"
+            "casino",
+            "joker"
         ]
     },
     "read": {
         "src": "📚",
         "name": [
             "books",
-            "read"
+            "read",
+            "study",
+            "learn",
+            "homework",
+            "research",
+            "library"
         ]
     },
     "write": {
@@ -339,7 +416,9 @@
         "name": [
             "journal",
             "diary",
-            "write"
+            "write",
+            "paper",
+            "pencil"
         ]
     },
     "champagne": {
@@ -347,13 +426,16 @@
         "name": [
             "celebrate",
             "champagne",
-            "bubbly"
+            "bubbly",
+            "cups",
+            "glass",
+            "alcohol"
         ]
     },
     "baby": {
         "src": "🍼",
         "name": [
-            "feed baby",
+            "feed",
             "baby",
             "bottle",
             "milk"
@@ -366,14 +448,16 @@
             "stadium",
             "sports",
             "game",
-            "live"
+            "live",
+            "fan"
         ]
     },
     "work": {
         "src": "💼",
         "name": [
             "work",
-            "9 to 5",
+            "bag",
+            "briefcase",
             "business",
             "job",
             "career"
@@ -386,11 +470,11 @@
             "college",
             "university",
             "high",
-            "hs",
             "middle",
-            "ms",
             "school",
-            "degree"
+            "degree",
+            "cap",
+            "tassle"
         ]
     },
     "school": {
@@ -401,7 +485,11 @@
             "university",
             "college",
             "high",
-            "middle"
+            "middle",
+            "learn",
+            "backpack",
+            "bag",
+            "red"
         ]
     },
     "dance": {
@@ -411,9 +499,13 @@
             "prom",
             "salsa",
             "clubbing",
+            "night out",
             "ballet",
             "jazz",
-            "hiphop"
+            "hiphop",
+            "tap",
+            "lady",
+            "woman"
         ]
     },
     "run": {
@@ -435,7 +527,9 @@
             "breakfast",
             "brunch",
             "eggs",
-            "cook"
+            "pan",
+            "cook",
+            "sizzle"
         ]
     }
 }
