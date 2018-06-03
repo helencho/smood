@@ -531,5 +531,75 @@
             "cook",
             "sizzle"
         ]
+    },
+    "smoke": {
+        "src": "🚬",
+        "name": [
+            "smoke",
+            "cigarette",
+            "addicted",
+            "bogie",
+            "stogie",
+            "nicotine"
+        ]
+    },
+    "grocery": {
+        "src": "🛒",
+        "name": [
+            "groceries",
+            "grocery",
+            "shopping",
+            "cart",
+            "chores",
+            "ingredients",
+            "walmart",
+            "costco",
+            "sams club",
+            "hmart",
+            "kmart",
+            "whole foods",
+            "trader joes"
+        ]
+    },
+    "move": {
+        "src": "📦",
+        "name": [
+            "move",
+            "box",
+            "moving",
+            "pack",
+            "unpack",
+            "relocate",
+            "housewarming"
+        ]
+    },
+    "coffee": {
+        "src": "☕️",
+        "name": [
+            "coffee",
+            "cup",
+            "caffeine",
+            "latte",
+            "espresso",
+            "mug",
+            "americano",
+            "drink",
+            "hot"
+        ]
+    },
+    "tea": {
+        "src": "🍵",
+        "name": [
+            "tea",
+            "green",
+            "matcha",
+            "jasmine",
+            "white",
+            "black",
+            "earl grey",
+            "caffeine",
+            "drink",
+            "hot"
+        ]
     }
 }
