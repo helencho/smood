@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import emotions from '../../utils/emotions.json'
-// import activities from '../../utils/activities.json'
+import { connect } from 'react-redux'
+import { getMoods } from '../../actions/mood_actions'
 import '../../stylesheets/customize.css'
 
 class Customize extends Component {
+    componentDidMount() {
+        this.props.getMoods()
+    }
+
     render() {
-        // console.log(emotions)
-        // console.log(activities)
+        // Render user's current moods 
+        // Render user's current activities 
+        // Add button at the end 
+        // Click add button => render emojis 
+        console.log(this.props.moods)
 
         return (
             <div className="customize-container">
@@ -20,4 +27,17 @@ class Customize extends Component {
     }
 }
 
-export default Customize
+const mapStateToProps = (state) => {
+    return {
+        moods: state.moods.moods 
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMoods: () => dispatch(getMoods())
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Customize)

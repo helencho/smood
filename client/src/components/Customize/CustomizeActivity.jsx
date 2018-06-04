@@ -29,13 +29,16 @@ class CustomizeActivity extends Component {
 
         console.log(renderActivities)
 
+        // User click on emoji, add a name to emoji 
+        // Save emoji 
+
         return (
             <div className="customize-activity-container">
                 <h1>Customize your activities</h1>
                 <SearchBar placeholder="Search activities..." value={input} handleInput={this.handleInput} />
                 <div className="emojis-container">
-                    {renderActivities.map(emoji => (
-                        <p>{emoji}</p>
+                    {renderActivities.map((emoji, index) => (
+                        <p key={index}>{emoji}</p>
                     ))}
                 </div>
             </div>
