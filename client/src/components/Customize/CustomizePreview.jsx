@@ -9,12 +9,12 @@ class CustomizePreview extends Component {
         return (
             <div className="preview-container">
                 <h1>{customType}</h1>
-                <div>
+                <div className="emojis-container">
                     {emojis.map((emoji, index) => (
                         <p key={index}>{emoji.img}</p>
                     ))}
+                    <Link to={`/custom/${linkTo}`}><button><i className="fas fa-plus fa-fw" /></button></Link>
                 </div>
-                <Link to={`/custom/${linkTo}`}><button><i className="fas fa-plus fa-fw" /></button></Link>
             </div>
         )
     }

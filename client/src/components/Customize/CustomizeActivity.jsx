@@ -91,22 +91,9 @@ class CustomizeActivity extends Component {
     }
 
     render() {
-        console.log(this.state) 
-
         return (
             <this.activePage />
         )
-
-        // return (
-        //     <div className="customize-activity-container">
-        //         <h1>Customize your activities</h1>
-        //         <div className="emojis-container">
-        //             {renderActivities.map((emoji, index) => (
-        //                 <p key={index}>{emoji}</p>
-        //             ))}
-        //         </div>
-        //     </div>
-        // )
     }
 }
 

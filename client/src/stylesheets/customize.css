@@ -1,10 +1,19 @@
-/* Customize Page */
+/*---------------------------*/
+/*       Customize Page      */
+/*---------------------------*/
 .customize-container {
     padding-top: calc(32px + 1.2rem);
+    color: #fefefe;
 }
+
+/*---------------------------*/
+/*        Preview Page       */
+/*---------------------------*/
 .customize-container .preview-container {
     background-color: #fefefe;
-    margin: 0.8rem;
+}
+.customize-container .emojis-container {
+    display: flex;
 }
 /* Mood and Activity button */
 .customize-container button {
@@ -16,26 +25,22 @@
     cursor: pointer;
 }
 
-
-
-/* Customize Moods / Activities */
-.customize-form-container,
-.customize-activity-container {
+/*---------------------------*/
+/*       Customize Form      */
+/*---------------------------*/
+.customize-form-container {
     padding-top: calc(32px + 1.2rem);
 }
-
-
-
 /* Holds mood and activity emojis */
-.emojis-container {
+.customize-form-container .emojis-container {
     display: flex;
     flex-wrap: wrap;
     font-size: 1.2rem;
 }
 
-
-
-/* Customize Submission Page */
+/*---------------------------*/
+/*      Submission Page      */
+/*---------------------------*/
 .customize-submit-container {
     padding-top: calc(32px + 1.2rem);
 }

@@ -7,7 +7,7 @@ import '../../stylesheets/customize.css'
 
 // Smart (intelligent, sentient, all-knowing...)
 class Customize extends Component {
-    
+
     // Mount user's moods and activities from state 
     componentDidMount() {
         this.props.getMoods()
@@ -18,7 +18,7 @@ class Customize extends Component {
         return (
             <div className="customize-container">
                 <h1>Customize</h1>
-                <p>Keep it relevant</p>
+                <p>Keep it relevant <span role="img" aria-label="sparkle">✨</span></p>
 
                 <CustomizePreview
                     customType="moods"
