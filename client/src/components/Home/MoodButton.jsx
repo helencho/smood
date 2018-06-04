@@ -8,7 +8,7 @@ class MoodButton extends Component {
         return (
             <button onClick={() => handleButton('mood', md.mood_id)} className={`mood-button mood-button-${activeMood}`}>
                 <p className="emoji">{md.mood_img}</p>
-                <p>{md.mood_name}</p>
+                {/* <p>{md.mood_name}</p> */}
             </button>
         )
     }

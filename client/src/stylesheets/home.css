@@ -60,7 +60,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0.6rem 0;
 }
 .mood-button-container .mood-button,
 .activity-button-container .activity-button {
@@ -70,13 +69,6 @@
     border: none;
     background: none;
     margin: 0.8rem;
-    /* display: flex; */
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     border-radius: 2px;
     padding: 0.6rem;
     -moz-transition: 0.2s all;
@@ -107,18 +99,7 @@
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-.mood-button-container .mood-button img,
-.activity-button-container .activity-button img {
-    height: 76%;
-    /* width: 76%; */
-}
-.mood-button-container .mood-button p,
-.activity-button-container .activity-button p {
-    color: #fefefe;
-    font-size: 1.2rem;
-    font-family: 'Raleway', sans-serif;
-    padding: 0.8rem 0;
-}
+/* Emojis */
 .mood-button-container .mood-button p.emoji,
 .activity-button p.emoji {
     font-size: 4rem;
