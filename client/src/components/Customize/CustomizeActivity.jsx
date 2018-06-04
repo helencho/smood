@@ -1,25 +1,58 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { newActivity } from '../../actions/activity_actions'
 import SearchBar from './SearchBar'
+import CustomizeForm from './CustomizeForm'
+import CustomizeSubmit from './CustomizeSubmit'
 import activities from '../../utils/activities.json'
 
+// Smart 
 class CustomizeActivity extends Component {
     constructor() {
         super()
         this.state = {
-            input: ''
+            page: 'custom',
+            chosenEmoji: '',
+            chosenName: ''
         }
     }
 
     // Handle text input on key change 
     handleInput = (e) => {
         this.setState({
-            input: e.target.value
+            [e.target.name]: e.target.value
         })
     }
 
-    render() {
-        const { input } = this.state
-        console.log(activities)
+    // When user clicks on an emoji 
+    handleClick = (emoji) => {
+        this.setState({
+            chosenEmoji: emoji
+        })
+    }
+
+    // Toggles page (Ex. When user clicks "Save", set page to submit)
+    setPage = (page) => {
+        this.setState({
+            page
+        })
+    }
+
+    // When user clicks "save" emoji, send request to backend 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        const { chosenEmoji, chosenName } = this.state
+        const activity = {
+            name: chosenName,
+            url: chosenEmoji
+        }
+        this.props.processNewActivity(activity)
+        this.setPage('submit')
+    }
+
+    // Renders page based on state 
+    activePage = () => {
+        const { page, input, chosenEmoji, chosenName } = this.state
 
         const renderActivities = []
 
@@ -27,23 +60,60 @@ class CustomizeActivity extends Component {
             renderActivities.push(activities[key].src)
         }
 
-        console.log(renderActivities)
+        switch (page) {
+            case 'custom':
+                return <CustomizeForm
+                    customType="activity"
+                    emojis={renderActivities}
+                    input={input}
+                    chosenEmoji={chosenEmoji}
+                    chosenName={chosenName}
+                    handleSubmit={this.handleSubmit}
+                    handleInput={this.handleInput}
+                    handleClick={this.handleClick}
+                />
+            case 'submit':
+                return <CustomizeSubmit
+                    customType="activity"
+                />
+            default:
+                return <CustomizeForm
+                    customType="activity"
+                    emojis={renderActivities}
+                    input={input}
+                    chosenEmoji={chosenEmoji}
+                    chosenName={chosenName}
+                    handleSubmit={this.handleSubmit}
+                    handleInput={this.handleInput}
+                    handleClick={this.handleClick}
+                />
+        }
+    }
 
-        // User click on emoji, add a name to emoji 
-        // Save emoji 
+    render() {
+        console.log(this.state) 
 
         return (
-            <div className="customize-activity-container">
-                <h1>Customize your activities</h1>
-                <SearchBar placeholder="Search activities..." value={input} handleInput={this.handleInput} />
-                <div className="emojis-container">
-                    {renderActivities.map((emoji, index) => (
-                        <p key={index}>{emoji}</p>
-                    ))}
-                </div>
-            </div>
+            <this.activePage />
         )
+
+        // return (
+        //     <div className="customize-activity-container">
+        //         <h1>Customize your activities</h1>
+        //         <div className="emojis-container">
+        //             {renderActivities.map((emoji, index) => (
+        //                 <p key={index}>{emoji}</p>
+        //             ))}
+        //         </div>
+        //     </div>
+        // )
     }
 }
 
-export default CustomizeActivity
+const mapDispatchToProps = (dispatch) => {
+    return {
+        processNewActivity: (activity) => dispatch(newActivity(activity))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CustomizeActivity)

@@ -12,7 +12,7 @@ class CustomizeMood extends Component {
         this.state = {
             page: 'custom',
             chosenEmoji: '',
-            moodName: ''
+            chosenName: ''
         }
     }
 
@@ -40,9 +40,9 @@ class CustomizeMood extends Component {
     // When user clicks "save" emoji, send request to backend 
     handleSubmit = (e) => {
         e.preventDefault()
-        const { chosenEmoji, moodName } = this.state
+        const { chosenEmoji, chosenName } = this.state
         const mood = {
-            name: moodName,
+            name: chosenName,
             url: chosenEmoji
         }
         this.props.processNewMood(mood)
@@ -51,7 +51,7 @@ class CustomizeMood extends Component {
 
     // Renders page based on state 
     activePage = () => {
-        const { page, input, chosenEmoji, moodName } = this.state
+        const { page, input, chosenEmoji, chosenName } = this.state
         switch (page) {
             case 'custom':
                 return <CustomizeForm
@@ -59,7 +59,7 @@ class CustomizeMood extends Component {
                     emojis={emotions}
                     input={input}
                     chosenEmoji={chosenEmoji}
-                    moodName={moodName}
+                    chosenName={chosenName}
                     handleSubmit={this.handleSubmit}
                     handleInput={this.handleInput}
                     handleClick={this.handleClick}
@@ -74,7 +74,7 @@ class CustomizeMood extends Component {
                     emojis={emotions}
                     input={input}
                     chosenEmoji={chosenEmoji}
-                    moodName={moodName}
+                    chosenName={chosenName}
                     handleSubmit={this.handleSubmit}
                     handleInput={this.handleInput}
                     handleClick={this.handleClick}

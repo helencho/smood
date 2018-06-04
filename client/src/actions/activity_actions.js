@@ -30,6 +30,21 @@ export const getActivities = () => (dispatch) => {
 // Get single activity
 
 // Create activity
+export const newActivity = (activity) => (dispatch) => {
+    axios
+        .post(`/activities/new`, {
+            name: activity.name,
+            url: activity.url
+        })
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            console.log(err)
+            const error = `Error creating activity`
+            dispatch(receiveError(error))
+        })
+}
 
 // Edit activity
 
