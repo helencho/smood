@@ -1,7 +1,6 @@
 /*---------------------------*/
 /*    Mood & Activity Form   */
 /*---------------------------*/
-
 .mood-form,
 .activity-form {
     padding-top: calc(32px + 1.2rem);
@@ -56,7 +55,6 @@
 /*---------------------------*/
 /*     Individual Buttons    */
 /*---------------------------*/
-
 .mood-button-container,
 .activity-button-container {
     display: flex;
@@ -125,22 +123,13 @@
 /*---------------------------*/
 /*       Responsiveness      */
 /*---------------------------*/
-
-/* @media screen and (max-height: 90vh) {
-    .mood-form {
-        height: inherit;
-    }
-} */
-
 @media screen and (max-width: 800px) {
-    /* do this */
     .mood-form {
         height: 100%;
     }
 }
 
 @media screen and (max-width: 430px) {
-    /* do this */
     .mood-form,
     .activity-form {
         padding-bottom: 1.6rem;

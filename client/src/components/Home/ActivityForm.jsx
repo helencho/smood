@@ -19,7 +19,10 @@ class ActivityForm extends Component {
                         <ActivityButton activity={activity} key={activity.activity_id} handleButton={this.props.handleButton} />
                     )}
                 </div>
-                <button disabled={!activity} onClick={this.props.handleSubmit}>Submit</button>
+                <div className="activity-form-button-container">
+                    <button onClick={() => this.props.setPage('mood')}><i className="fas fa-chevron-left fa-fw"></i>Back</button>
+                    <button disabled={!activity} onClick={this.props.handleSubmit}>Submit</button>
+                </div>
             </div>
         )
     }

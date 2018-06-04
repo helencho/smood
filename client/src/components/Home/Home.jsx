@@ -5,7 +5,7 @@ import ActivityForm from './ActivityForm'
 import EntrySubmission from './EntrySubmission'
 import { connect } from 'react-redux'
 import { newEntry } from '../../actions/entry_actions'
-import '../../stylesheets/home.css'
+// import '../../stylesheets/home.css'
 
 class Home extends Component {
     constructor() {
@@ -36,6 +36,14 @@ class Home extends Component {
         })
     }
 
+    // Clears saved mood and activity 
+    clearForm = () => {
+        this.setState({
+            mood: null,
+            activity: null
+        })
+    }
+
     // When user clicks "Submit", create new entry 
     handleSubmit = () => {
         this.setPage('submit')
@@ -46,6 +54,7 @@ class Home extends Component {
             activity_id: this.state.activity
         }
         this.props.newEntry(entry)
+        this.clearForm()
     }
 
     // Toggle between home, users, and projects pages, with home being the fallback 
@@ -56,7 +65,7 @@ class Home extends Component {
             case 'mood':
                 return <MoodForm handleButton={this.handleButton} setPage={this.setPage} mood={mood} />
             case 'activity':
-                return <ActivityForm handleButton={this.handleButton} handleSubmit={this.handleSubmit} activity={activity} />
+                return <ActivityForm handleButton={this.handleButton} setPage={this.setPage} handleSubmit={this.handleSubmit} activity={activity} />
             case 'submit':
                 return <EntrySubmission moodId={mood} />
             default:
