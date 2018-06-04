@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import emotions from '../../utils/emotions.json'
 import activities from '../../utils/activities.json'
+import '../../stylesheets/customize.css'
 
 class Customize extends Component {
     constructor() {
