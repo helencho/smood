@@ -5,30 +5,15 @@ import activities from '../../utils/activities.json'
 import '../../stylesheets/customize.css'
 
 class Customize extends Component {
-    constructor() {
-        super()
-        this.state = {
-            input: ''
-        }
-    }
-
-    handleInput = e => {
-        this.setState({
-            input: e.target.value
-        })
-    }
-
     render() {
-        const { input } = this.state
-        console.log(emotions)
-        console.log(activities)
+        // console.log(emotions)
+        // console.log(activities)
 
         return (
             <div className="customize-container">
-                <h1>Customize Things</h1>
-                <input type='text' value={input} placeholder="Search..." onChange={this.handeInput} />
-                <Link to="/custom/mood">Moods</Link>
-                <Link to="/custom/activity">Activities</Link>
+                <h1>Keep it relevant</h1>
+                <Link to="/custom/mood">Customize Moods</Link>
+                <Link to="/custom/activity">Customize Activities</Link>
             </div>
         )
     }
