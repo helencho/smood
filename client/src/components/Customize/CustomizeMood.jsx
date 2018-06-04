@@ -18,17 +18,18 @@ class CustomizeMood extends Component {
     }
 
     render() {
-        const { input } = this.state 
-        console.log(emotions) 
+        const { input } = this.state
         console.log(this.state)
 
         return (
-            <div className="customize-moods-container">
+            <div className="customize-mood-container">
                 <h1>Customize your moods</h1>
-                <SearchBar placeholder="Search moods..." value={input} handleInput={this.handleInput} />
-                {emotions.map((mood, index) => {
-                    return <p key={index}><span role="img" aria-label="smiley">{mood}</span></p>
-                })}
+                {/* <SearchBar placeholder="Search moods..." value={input} handleInput={this.handleInput} /> */}
+                <div className="emojis-container">
+                    {emotions.map((mood, index) => (
+                        <p key={index}><span role="img" aria-label="smiley">{mood}</span></p>
+                    ))}
+                </div>
             </div>
         )
     }
