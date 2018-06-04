@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import SearchBar from './SearchBar'
-
+import emotions from '../../utils/emotions.json'
 
 class CustomizeMood extends Component {
-
     constructor() {
         super()
         this.state = {
@@ -19,11 +18,17 @@ class CustomizeMood extends Component {
     }
 
     render() {
+        const { input } = this.state 
+        console.log(emotions) 
+        console.log(this.state)
+
         return (
-            <div>
-                <h1>Customize Mood</h1>
-                <p>Keep your moods relevant</p>
-                <SearchBar placeholder="Search moods..." value="happy" handleInput={this.handleInput} />
+            <div className="customize-moods-container">
+                <h1>Customize your moods</h1>
+                <SearchBar placeholder="Search moods..." value={input} handleInput={this.handleInput} />
+                {emotions.map((mood, index) => {
+                    return <p key={index}><span role="img" aria-label="smiley">{mood}</span></p>
+                })}
             </div>
         )
     }
