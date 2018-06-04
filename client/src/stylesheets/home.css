@@ -100,9 +100,12 @@
     transition: 0.2s all;
 }
 /* Emojis */
-.mood-button-container .mood-button p.emoji,
-.activity-button p.emoji {
+.mood-button-container .mood-button p.emoji {
     font-size: 4rem;
+}
+
+.activity-button p.emoji {
+    font-size: 2.6rem;
 }
 
 /*---------------------------*/
