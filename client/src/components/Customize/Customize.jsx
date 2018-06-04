@@ -6,14 +6,13 @@ import { getActivities } from '../../actions/activity_actions'
 import '../../stylesheets/customize.css'
 
 class Customize extends Component {
+    // Mount user's moods and activities from state 
     componentDidMount() {
         this.props.getMoods()
         this.props.getActivities()
     }
 
     render() {
-        console.log(this.props.activities)
-
         return (
             <div className="customize-container">
                 <h1>Customize</h1>
