@@ -1,5 +1,3 @@
-// Activity actions
-
 import axios from 'axios'
 export const RECEIVE_ACTIVITIES = 'RECEIVE_ACTIVITIES'
 export const RECEIVE_ERROR = 'RECEIVE_ERROR'

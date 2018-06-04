@@ -7,14 +7,14 @@
     outline: none;
     border: none;
     background: none;
-    border: 2px solid #fefefe;
-    border-radius: 2px;
+    /* border: 2px solid #fefefe; */
+    /* border-radius: 2px; */
     color: #fefefe;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-    width: 180px;
-    padding: 0.8rem;
-    margin: 0.8rem;
+    /* width: 180px; */
+    /* padding: 0.8rem; */
+    /* margin: 0.8rem; */
     cursor: pointer;
 }
 
