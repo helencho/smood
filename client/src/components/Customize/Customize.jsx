@@ -5,6 +5,24 @@ import { getMoods } from '../../actions/mood_actions'
 import { getActivities } from '../../actions/activity_actions'
 import '../../stylesheets/customize.css'
 
+class CustomizePreview extends Component {
+    render() {
+        const { customType, emojis, linkTo } = this.props
+
+        return (
+            <div className="activities-preview">
+                <h1>{customType}</h1>
+                <div>
+                    {emojis.map((emoji, index) => (
+                        <p key={index}>{emoji.img}</p>
+                    ))}
+                </div>
+                <Link to={`/custom/${linkTo}`}><button><i className="fas fa-plus fa-fw" /></button></Link>
+            </div>
+        )
+    }
+}
+
 class Customize extends Component {
     // Mount user's moods and activities from state 
     componentDidMount() {
@@ -22,21 +40,17 @@ class Customize extends Component {
                     <h1>Moods</h1>
                     <div>
                         {this.props.moods.map((mood, index) => (
-                            <p key={index}>{mood.mood_img}</p>
+                            <p key={index}>{mood.img}</p>
                         ))}
                     </div>
                     <Link to="/custom/mood"><button><i className="fas fa-plus fa-fw" /></button></Link>
                 </div>
 
-                <div className="activities-preview">
-                    <h1>Activities</h1>
-                    <div>
-                        {this.props.activities.map((activity, index) => (
-                            <p key={index}>{activity.activity_img}</p>
-                        ))}
-                    </div>
-                    <Link to="/custom/activity"><button><i className="fas fa-plus fa-fw" /></button></Link>
-                </div>
+                <CustomizePreview
+                    customType="activities"
+                    linkTo="activity"
+                    emojis={this.props.activities}
+                />
 
             </div>
         )
