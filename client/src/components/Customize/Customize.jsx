@@ -12,15 +12,12 @@ class Customize extends Component {
         this.props.getActivities()
     }
 
-    componentWillReceiveProps() {
-        this.props.getMoods()
-    }
-
     render() {
         return (
             <div className="customize-container">
                 <h1>Customize</h1>
                 <p>Keep it relevant</p>
+
                 <div className="moods-preview">
                     <h1>Moods</h1>
                     <div>
@@ -30,6 +27,7 @@ class Customize extends Component {
                     </div>
                     <Link to="/custom/mood"><button><i className="fas fa-plus fa-fw" /></button></Link>
                 </div>
+
                 <div className="activities-preview">
                     <h1>Activities</h1>
                     <div>
