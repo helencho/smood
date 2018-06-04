@@ -19,7 +19,7 @@
 }
 
 /* Customize Moods / Activities */
-.customize-mood-container,
+.customize-form-container,
 .customize-activity-container {
     padding-top: calc(32px + 1.2rem);
 }

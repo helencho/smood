@@ -29,7 +29,7 @@ class Home extends Component {
         })
     }
 
-    // When user clicks "Next", set page to activity
+    // Toggles page (Ex. When user clicks "Next", set page to activity) 
     setPage = (page) => {
         this.setState({
             page
@@ -59,7 +59,7 @@ class Home extends Component {
 
     // Toggle between home, users, and projects pages, with home being the fallback 
     activePage = () => {
-        const { mood, activity, page } = this.state;
+        const { mood, activity, page } = this.state
 
         switch (page) {
             case 'mood':

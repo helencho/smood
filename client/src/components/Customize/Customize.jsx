@@ -12,6 +12,10 @@ class Customize extends Component {
         this.props.getActivities()
     }
 
+    componentWillReceiveProps() {
+        this.props.getMoods()
+    }
+
     render() {
         return (
             <div className="customize-container">
