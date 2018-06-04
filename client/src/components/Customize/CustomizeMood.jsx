@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { newMood } from '../../actions/mood_actions'
-import SearchBar from './SearchBar'
 import CustomizeSubmit from './CustomizeSubmit'
 import CustomizeForm from './CustomizeForm'
 import emotions from '../../utils/emotions.json'

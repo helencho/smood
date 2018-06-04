@@ -1,29 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getMoods } from '../../actions/mood_actions'
 import { getActivities } from '../../actions/activity_actions'
+import CustomizePreview from './CustomizePreview'
 import '../../stylesheets/customize.css'
 
-class CustomizePreview extends Component {
-    render() {
-        const { customType, emojis, linkTo } = this.props
-
-        return (
-            <div className="activities-preview">
-                <h1>{customType}</h1>
-                <div>
-                    {emojis.map((emoji, index) => (
-                        <p key={index}>{emoji.img}</p>
-                    ))}
-                </div>
-                <Link to={`/custom/${linkTo}`}><button><i className="fas fa-plus fa-fw" /></button></Link>
-            </div>
-        )
-    }
-}
-
+// Smart (intelligent, sentient, all-knowing...)
 class Customize extends Component {
+    
     // Mount user's moods and activities from state 
     componentDidMount() {
         this.props.getMoods()
@@ -36,15 +20,11 @@ class Customize extends Component {
                 <h1>Customize</h1>
                 <p>Keep it relevant</p>
 
-                <div className="moods-preview">
-                    <h1>Moods</h1>
-                    <div>
-                        {this.props.moods.map((mood, index) => (
-                            <p key={index}>{mood.img}</p>
-                        ))}
-                    </div>
-                    <Link to="/custom/mood"><button><i className="fas fa-plus fa-fw" /></button></Link>
-                </div>
+                <CustomizePreview
+                    customType="moods"
+                    linkTo="mood"
+                    emojis={this.props.moods}
+                />
 
                 <CustomizePreview
                     customType="activities"

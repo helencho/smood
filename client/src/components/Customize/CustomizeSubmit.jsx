@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+// Presentataional 
 class CustomizeSubmit extends Component {
     render() {
         const { customType } = this.props 

@@ -2,16 +2,21 @@
 .customize-container {
     padding-top: calc(32px + 1.2rem);
 }
+.customize-container .preview-container {
+    background-color: #fefefe;
+    margin: 0.8rem;
+}
 /* Mood and Activity button */
 .customize-container button {
     outline: none;
     border: none;
     background: none;
-    color: #fefefe;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     cursor: pointer;
 }
+
+
 
 /* Customize Moods / Activities */
 .customize-form-container,
@@ -19,12 +24,16 @@
     padding-top: calc(32px + 1.2rem);
 }
 
+
+
 /* Holds mood and activity emojis */
 .emojis-container {
     display: flex;
     flex-wrap: wrap;
     font-size: 1.2rem;
 }
+
+
 
 /* Customize Submission Page */
 .customize-submit-container {
