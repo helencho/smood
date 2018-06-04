@@ -6,8 +6,8 @@ class ActivityButton extends Component {
 
         return (
             <button onClick={() => handleButton('activity', activity.activity_id)} className={`activity-button`}>
-                {/* <img alt={activity.activity_name} src={activity.activity_img} /> */}
                 <p>{activity.activity_img}</p>
+                <p>{activity.activity_name}</p>
             </button>
         )
     }

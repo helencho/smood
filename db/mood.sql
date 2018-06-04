@@ -60,18 +60,9 @@ VALUES
     (0, 'upset', '😡'),
     (0, 'sad', '😔'),
     (0, 'meh', '😒'),
-    (1, 'silly', '🙃'),
+    (1, 'silly', '🤪'),
     (2, 'hyper', '🤩'),
     (3, 'sick', '🤒 ')
-    -- (0, 'happy', 'https://i.imgur.com/YamOYXt.png'),
-    -- (0, 'calm', 'https://i.imgur.com/qzkkCbf.png'),
-    -- (0, 'upset', 'https://i.imgur.com/U4dsaLs.png'),
-    -- (0, 'sad', 'https://i.imgur.com/87QoEYl.png'),
-    -- (0, 'meh', 'https://i.imgur.com/IHblVsA.png'),
-    -- (1, 'silly', 'https://i.imgur.com/cedkuiq.png'),
-    -- (1, 'angry', 'https://i.imgur.com/MB7SuaO.png'),
-    -- (2, 'hyper', 'https://i.imgur.com/LXYQOAH.png'),
-    -- (3, 'excited', 'https://i.imgur.com/i4RbQU9.png')
 ;
 
 INSERT INTO activities (user_id, activity_name, activity_img)
