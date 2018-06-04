@@ -54,7 +54,8 @@ export const newMood = (mood) => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error creating mood`
+            dispatch(receiveError(error))
         })
 }
 
@@ -84,6 +85,7 @@ export const deleteMood = (id) => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error deleting mood`
+            dispatch(receiveError(error))
         })
 }
