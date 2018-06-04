@@ -5,7 +5,7 @@ import ActivityForm from './ActivityForm'
 import EntrySubmission from './EntrySubmission'
 import { connect } from 'react-redux'
 import { newEntry } from '../../actions/entry_actions'
-// import '../../stylesheets/home.css'
+import '../../stylesheets/home.css'
 
 class Home extends Component {
     constructor() {

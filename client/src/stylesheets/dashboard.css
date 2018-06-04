@@ -1,11 +1,24 @@
 /* Dashboard Container */
 .dashboard-container {
     padding-top: 51.2px;
+    color: #fefefe;
+    font-family: 'Raleway', sans-serif;
 }
-
 .dashboard-container .title {
     display: flex;
+    font-size: 1.2rem;
 }
+.dashboard-container select {
+    outline: none;
+    border: none;
+    width: 180px;
+    background: none;
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+
 
 /* Activities By Mood */
 .activities-by-mood-container .title {

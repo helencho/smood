@@ -119,6 +119,46 @@
     font-family: 'Raleway', sans-serif;
     padding: 0.8rem 0;
 }
+.mood-button-container .mood-button p.emoji,
+.activity-button p.emoji {
+    font-size: 4rem;
+}
+
+/*---------------------------*/
+/*      Submission Page      */
+/*---------------------------*/
+.submission-page {
+    padding-top: calc(32px + 1.2rem);
+    height: calc(100vh - (32px + 1.2rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fefefe;
+}
+
+.submission-page button {
+    outline: none;
+    border: none;
+    border: 2px solid #fefefe;
+    background: none;
+    color: #fefefe;
+    font-size: 1rem;
+    border-radius: 2px;
+    width: 220px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.submission-page button:hover {
+    background-color: #fefefe;
+    color: #f97794;
+}
   
 /*---------------------------*/
 /*       Responsiveness      */
