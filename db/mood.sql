@@ -17,7 +17,7 @@ CREATE TABLE moods (
     mood_id SERIAL UNIQUE,
     user_id INTEGER NOT NULL,
     mood_name VARCHAR NOT NULL,
-    mood_img VARCHAR NOT NULL,
+    img VARCHAR NOT NULL,
     PRIMARY KEY (mood_id)
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE activities (
     activity_id SERIAL UNIQUE,
     user_id INTEGER NOT NULL,
     activity_name VARCHAR NOT NULL,
-    activity_img TEXT,
+    img TEXT,
     PRIMARY KEY (activity_id)
 );
 
@@ -53,7 +53,7 @@ VALUES
     ('david@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'David')
 ;
 
-INSERT INTO moods (user_id, mood_name, mood_img)
+INSERT INTO moods (user_id, mood_name, img)
 VALUES
     (0, 'happy', '😀'),
     (0, 'calm', '😌'),
@@ -65,7 +65,7 @@ VALUES
     (3, 'sick', '🤒 ')
 ;
 
-INSERT INTO activities (user_id, activity_name, activity_img)
+INSERT INTO activities (user_id, activity_name, img)
 VALUES
     (0, 'dance', '💃'),
     (0, 'run', '🏃'),

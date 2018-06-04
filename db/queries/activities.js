@@ -42,7 +42,7 @@ const getSingleActivity = (req, res, next) => {
 // /activities/new
 const createActivity = (req, res, next) => {
     db
-        .one('INSERT INTO activities (user_id, activity_name, activity_img) VALUES (${user_id}, ${name}, ${url}) RETURNING activity_id;', {
+        .one('INSERT INTO activities (user_id, activity_name, img) VALUES (${user_id}, ${name}, ${url}) RETURNING activity_id;', {
             user_id: req.user.id,
             name: req.body.name,
             url: req.body.url

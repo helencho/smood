@@ -42,7 +42,7 @@ const getSingleMood = (req, res, next) => {
 // /moods/new
 const createMood = (req, res, next) => {
     db
-        .one('INSERT INTO moods (user_id, mood_name, mood_img) VALUES (${user_id}, ${name}, ${url}) RETURNING mood_id;', {
+        .one('INSERT INTO moods (user_id, mood_name, img) VALUES (${user_id}, ${name}, ${url}) RETURNING mood_id;', {
             user_id: req.user.id,
             name: req.body.name,
             url: req.body.url
