@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { newMood } from '../../actions/mood_actions'
 import SearchBar from './SearchBar'
 import emotions from '../../utils/emotions.json'
 
@@ -31,7 +33,11 @@ class CustomizeMood extends Component {
         e.preventDefault() 
         const { chosenEmoji, moodName } = this.state 
         // Send request to save to backend 
-        console.log('Saving emoji!') 
+        const mood = {
+            name: moodName,
+            url: chosenEmoji
+        }
+        this.props.processNewMood(mood)
     }
 
     render() {
@@ -57,4 +63,10 @@ class CustomizeMood extends Component {
     }
 }
 
-export default CustomizeMood
+const mapDispatchToProps = (dispatch) => {
+    return {
+        processNewMood: (mood) => dispatch(newMood(mood))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CustomizeMood)
