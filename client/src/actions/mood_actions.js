@@ -82,7 +82,6 @@ export const deleteMood = (id) => (dispatch) => {
         .delete(`/moods/${id}`)
         .then((data) => {
             console.log(data)
-            // dispatch(receiveMoods(mood))
         })
         .catch((err) => {
             console.log(err)

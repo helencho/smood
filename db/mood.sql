@@ -17,7 +17,7 @@ CREATE TABLE moods (
     mood_id SERIAL UNIQUE,
     user_id INTEGER NOT NULL,
     mood_name VARCHAR NOT NULL,
-    img VARCHAR NOT NULL,
+    img TEXT,
     PRIMARY KEY (mood_id)
 );
 

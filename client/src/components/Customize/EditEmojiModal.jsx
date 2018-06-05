@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { editMood } from '../../actions/mood_actions'
-import { editActivity } from '../../actions/activity_actions'
+import { editMood, deleteMood } from '../../actions/mood_actions'
+import { editActivity, deleteActivity } from '../../actions/activity_actions'
 
 class EditEmojiModal extends Component {
     constructor() {
@@ -43,14 +43,27 @@ class EditEmojiModal extends Component {
                 break
             default:
                 this.setState({
-                    message: 'Error'
+                    message: 'Error updating'
                 })
         }
     }
 
     // When user clicks on trash can button 
-    handleDelete = (e) => {
-        console.log('Delete emoji?')
+    handleDelete = () => {
+        const id = this.props.emoji[`${this.props.linkTo}_id`]
+
+        switch(this.props.linkTo) {
+            case 'mood': 
+                this.props.deleteMood(id)
+                break 
+            case 'activity':
+                this.props.deleteActivity(id)
+                break 
+            default:
+                this.setState({
+                    message: 'Error deleting'
+                })
+        }
     }
 
     render() {
@@ -91,7 +104,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         editMood: (mood) => dispatch(editMood(mood)),
-        editActivity: (activity) => dispatch(editActivity(activity))
+        deleteMood: (id) => dispatch(deleteMood(id)),
+        editActivity: (activity) => dispatch(editActivity(activity)),
+        deleteActivity: (id) => dispatch(deleteActivity(id))
     }
 }
 

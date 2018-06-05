@@ -63,3 +63,15 @@ export const editActivity = (activity) => (dispatch) => {
 }
 
 // Delete activity
+export const deleteActivity = (id) => (dispatch) => {
+    axios
+        .delete(`/activities/${id}`)
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            console.log(err)
+            const error = `Error deleting activity`
+            dispatch(receiveError(error))
+        })
+}
