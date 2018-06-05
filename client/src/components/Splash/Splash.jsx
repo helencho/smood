@@ -22,7 +22,6 @@ class Splash extends Component {
         if (this.props.currentUser) {
             return <Redirect to="/" />
         }
-
         return (
             <div className="splash-container">
                 <SplashTitle />
