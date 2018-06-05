@@ -82,21 +82,21 @@ class EditEmojiModal extends Component {
     // !!! 
 
     render() {
-        const { emoji } = this.props
+        const { emoji, linkTo, toggleModal } = this.props
 
         const renderPage = this.props.currentUser.id === emoji.user_id ?
             (
                 <div className="edit-container">
                     <div className="top">
-                        <h1>Edit</h1>
-                        {/* <i className="fas fa-times fa-fw fa-2x" /> */}
+                        <h1>Edit {linkTo}</h1>
+                        <i className="fas fa-times fa-fw fa-2x exit" onClick={toggleModal} />
                     </div>
                     <form onSubmit={this.handleSubmit}>
                         <p>{emoji.img}</p>
                         <input type="text" value={this.state.input} onChange={this.handleInput} />
                         <div className="button-container">
                             <input type="submit" value="Save" className="save" />
-                            <input type="button" value="Cancel" className="cancel" onClick={this.props.toggleModal} />
+                            <input type="button" value="Cancel" className="cancel" onClick={toggleModal} />
                         </div>
                     </form>
                     <div className="bottom">

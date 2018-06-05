@@ -91,6 +91,7 @@
     outline: none;
     border: none;
     border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
 }
 .edit-emoji-modal .edit-container {
     display: flex;
@@ -101,14 +102,21 @@
 .edit-emoji-modal .edit-container .top {
     display: flex;
     height: 12%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.8rem;
     /* background-color: rgba(255, 0, 0, 0.2); */
 }
+    .edit-emoji-modal .edit-container .top .exit {
+        cursor: pointer;
+    }
+
 /* Form */
 .edit-emoji-modal .edit-container form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 76%;
+    height: 78%;
     /* background-color: rgba(255, 0, 0, 0.4); */
 }
     .edit-emoji-modal .edit-container form p {
@@ -179,9 +187,11 @@
         }
 /* Trashcan button */
 .edit-emoji-modal .edit-container .bottom {
-    height: 12%;
+    height: 10%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    margin: 0 0.8rem;
     /* background-color: rgba(255, 0, 0, 0.5); */
 }
     .edit-emoji-modal .edit-container .bottom button {
