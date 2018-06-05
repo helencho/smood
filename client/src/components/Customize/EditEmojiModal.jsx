@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { editMood } from '../../actions/mood_actions'
+import { editActivity } from '../../actions/activity_actions'
 
 class EditEmojiModal extends Component {
     constructor() {
         super()
         this.state = {
-            input: ''
+            input: '',
+            message: ''
         }
     }
 
@@ -23,26 +27,56 @@ class EditEmojiModal extends Component {
     // On save, the new mood/activity gets saved to backend 
     // Update database 
     handleSubmit = (e) => {
-        e.preventDefault() 
-        console.log('updating name')
+        e.preventDefault()
+        const updatedEmoji = {
+            name: this.state.input,
+            id: this.props.emoji[`${this.props.linkTo}_id`]
+        }
+        switch (this.props.linkTo) {
+            case 'mood':
+                // update mood 
+                this.props.editMood(updatedEmoji)
+                break
+            case 'activity':
+                // update activity 
+                this.props.editActivity(updatedEmoji)
+                break 
+            default:
+                this.setState({
+                    message: 'Error'
+                })
+        }
+        // console.log(updatedEmoji)
+    }
+
+    // When user clicks on trash can button 
+    handleDelete = (e) => {
+        console.log('Delete emoji?')
     }
 
     render() {
         const { emoji } = this.props
 
-        console.log(this.state)
-
         return (
             <div>
                 <p>X</p>
                 <h1>Edit Emoji</h1>
-                <p>{emoji.img}</p>
-                <input type="text" value={this.state.input} onChange={this.handleInput} />
-                <button>Save</button>
+                <form onSubmit={this.handleSubmit}>
+                    <p>{emoji.img}</p>
+                    <input type="text" value={this.state.input} onChange={this.handleInput} />
+                    <input type="submit" value="Save" />
+                </form>
                 <button><i className="fas fa-trash fa-fw"></i></button>
             </div>
         )
     }
 }
 
-export default EditEmojiModal
+const mapDispatchToProps = (dispatch) => {
+    return {
+        editMood: (mood) => dispatch(editMood(mood)),
+        editActivity: (activity) => dispatch(editActivity(activity))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(EditEmojiModal)

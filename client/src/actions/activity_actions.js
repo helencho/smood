@@ -47,5 +47,19 @@ export const newActivity = (activity) => (dispatch) => {
 }
 
 // Edit activity
+export const editActivity = (activity) => (dispatch) => {
+    axios
+        .patch(`/activities/${activity.id}`, {
+            name: activity.name
+        })
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            console.log(err)
+            const error = `Error updating activity`
+            dispatch(receiveError(error))
+        })
+}
 
 // Delete activity

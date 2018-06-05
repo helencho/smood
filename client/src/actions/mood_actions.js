@@ -71,7 +71,8 @@ export const editMood = (mood) => (dispatch) => {
         })
         .catch((err) => {
             console.log(err)
-            // dispatch(receiveError(error))
+            const error = `Error updating mood`
+            dispatch(receiveError(error))
         })
 }
 
