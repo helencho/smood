@@ -9,14 +9,19 @@
 /*---------------------------*/
 /*        Preview Page       */
 /*---------------------------*/
-.customize-container .preview-container {
+.preview-container {
     background-color: #fefefe;
 }
-.customize-container .emojis-container {
+.preview-container h1 {
+    color: rgba(0, 0, 0, 0.6);
+}
+.preview-container .emojis-container {
     display: flex;
 }
-/* Mood and Activity button */
-.customize-container button {
+.preview-container .emojis-container p {
+    cursor: pointer;
+}
+.preview-container button {
     outline: none;
     border: none;
     background: none;
@@ -36,6 +41,9 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 1.2rem;
+}
+.customize-form-container .emojis-container p {
+    cursor: pointer;
 }
 
 /*---------------------------*/
