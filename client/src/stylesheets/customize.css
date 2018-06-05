@@ -4,6 +4,17 @@
 .customize-container {
     padding-top: calc(32px + 1.2rem);
     color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.customize-container h1 {
+    font-size: 2.2rem;
+    padding: 0.6rem 0;
+}
+.customize-container p {
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
 }
 
 /*---------------------------*/
@@ -11,23 +22,62 @@
 /*---------------------------*/
 .preview-container {
     background-color: #fefefe;
+    margin-top: 1.2rem;
+    border-radius: 2px;
+    padding: 0.8rem;
+    width: 800px;
 }
 .preview-container h1 {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.8rem;
+    padding: 0.6rem;
 }
-.preview-container .emojis-container {
+/* Emojis and add one button container */
+.preview-main {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
 }
-.preview-container .emojis-container p {
+.preview-main .emojis-container {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.preview-main .emojis-container p {
     cursor: pointer;
+    font-size: 2.2rem;
 }
-.preview-container button {
+/* Add one button */
+.preview-main button {
     outline: none;
     border: none;
-    background: none;
-    font-family: 'Raleway', sans-serif;
+    border: 2px solid #623AA2;
+    border-radius: 2px;
     font-size: 1rem;
+    padding: 0.8rem;
+    margin: 0 0.8rem;
+    background-color: #623AA2;
+    color: #fefefe;
+    font-family: 'Raleway', sans-serif;
     cursor: pointer;
+    width: 120px;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+    .preview-main button:hover {
+        background-color: #F97794;
+        border-color: #F97794;
+    }
+    .preview-main button:active,
+    .preview-main button:focus {
+        outline: none;
+    }
+/* Single emoji */
+.emojis-container .emoji-div p {
+    padding: 0.6rem;
 }
 
 /*---------------------------*/
@@ -51,4 +101,37 @@
 /*---------------------------*/
 .customize-submit-container {
     padding-top: calc(32px + 1.2rem);
+}
+
+@media screen and (max-width: 800px) {
+    .preview-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .preview-container {
+        width: 92%;
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+        .preview-container:last-child {
+            margin-bottom: 0.6rem;
+        }
+    .preview-container h1 {
+        font-size: 1.4rem;
+        padding: 0.2rem;
+    }
+    .preview-main {
+        flex-direction: column;
+    }
+    .preview-main .emojis-container {
+        width: 100%;
+    }
+        .preview-main .emojis-container .emoji-div p {
+            padding: 0.2rem;
+        }
+    .preview-main button {
+        margin: 0.8rem;
+    }
 }

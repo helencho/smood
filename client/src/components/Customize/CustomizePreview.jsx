@@ -5,6 +5,7 @@ import { getMoods } from '../../actions/mood_actions'
 import { getActivities } from '../../actions/activity_actions'
 import Modal from 'react-modal'
 import EditEmojiModal from './EditEmojiModal'
+import { capitalize } from '../../utils/capitalize'
 
 class CustomizePreview extends Component {
     constructor(props) {
@@ -39,24 +40,26 @@ class CustomizePreview extends Component {
 
         return (
             <div className="preview-container">
-                <h1>{customType}</h1>
-                <div className="emojis-container">
-                    {emojis.map((emoji, index) => (
-                        <div key={index}>
-                            <p onClick={() => this.toggleModal(emoji)}>{emoji.img}</p>
-                            <Modal
-                                isOpen={modalOpen}
-                                onRequestClose={this.toggleModal}
-                                contentLabel="Edit Emoji Modal"
-                                className="edit-emoji-modal"
-                            >
-                                <EditEmojiModal
-                                    emoji={chosenEmoji}
-                                    linkTo={linkTo} />
-                            </Modal>
-                        </div>
-                    ))}
-                    <Link to={`/custom/${linkTo}`}><button><i className="fas fa-plus fa-fw" /></button></Link>
+                <h1>{capitalize(customType)}</h1>
+                <div className="preview-main">
+                    <div className="emojis-container">
+                        {emojis.map((emoji, index) => (
+                            <div key={index} className="emoji-div">
+                                <p onClick={() => this.toggleModal(emoji)}>{emoji.img}</p>
+                                <Modal
+                                    isOpen={modalOpen}
+                                    onRequestClose={this.toggleModal}
+                                    contentLabel="Edit Emoji Modal"
+                                    className="edit-emoji-modal"
+                                >
+                                    <EditEmojiModal
+                                        emoji={chosenEmoji}
+                                        linkTo={linkTo} />
+                                </Modal>
+                            </div>
+                        ))}
+                    </div>
+                    <Link to={`/custom/${linkTo}`}><button>Add one</button></Link>
                 </div>
             </div>
         )
