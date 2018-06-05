@@ -1,23 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Modal from 'react-modal'
-
-class EditEmojiModal extends Component {
-    render() {
-        const { emoji, linkTo } = this.props
-
-        return (
-            <div>
-                <p>X</p>
-                <h1>Edit Emoji</h1>
-                <p>{emoji.img}</p>
-                <p>{emoji[`${linkTo}_name`]}</p>
-                <button>Save</button>
-                <button><i className="fas fa-trash fa-fw"></i></button>
-            </div>
-        )
-    }
-}
+import EditEmojiModal from './EditEmojiModal'
 
 class CustomizePreview extends Component {
     constructor() {
@@ -57,7 +41,9 @@ class CustomizePreview extends Component {
                                 contentLabel="Edit Emoji Modal"
                                 className="edit-emoji-modal"
                             >
-                                <EditEmojiModal emoji={chosenEmoji} linkTo={linkTo} />
+                                <EditEmojiModal
+                                    emoji={chosenEmoji}
+                                    linkTo={linkTo} />
                             </Modal>
                         </div>
                     ))}
