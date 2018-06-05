@@ -8,12 +8,12 @@ For now, please check out the [project plans](./docs/README.md).
 
 ## Technologies 
 
-[Passport](http://www.passportjs.org/)
+[Passport](http://www.passportjs.org/) - authentication for Node.js
 
-[React](https://reactjs.org/)
+[React](https://reactjs.org/) - JavaScript library for UI
 
-[Redux](https://redux.js.org/)
+[Redux](https://redux.js.org/) - state container 
 
-[Recharts](http://recharts.org/#/en-US/)
+[Recharts](http://recharts.org/#/en-US/) - charting library 
 
-[EmojiCopy](https://www.emojicopy.com/)
+[EmojiCopy](https://www.emojicopy.com/) - copy and paste emoji library
