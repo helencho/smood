@@ -95,11 +95,13 @@
     flex-direction: column;
     height: 100%;
 }
+/* Title */ 
 .edit-emoji-modal .edit-container .top {
     display: flex;
     height: 12%;
     background-color: rgba(255, 0, 0, 0.2);
 }
+/* Form */
 .edit-emoji-modal .edit-container form {
     display: flex;
     flex-direction: column;
@@ -110,6 +112,37 @@
         font-size: 6rem;
         text-align: center;
     }
+    .edit-emoji-modal .edit-container form .button-container {
+        display: flex;
+    }
+        .edit-emoji-modal .edit-container form .button-container input {
+            outline: none;
+            border: none;
+            border: 2px solid #623AA2;
+            background-color: #623AA2;
+            font-size: 1rem;
+            font-family: 'Raleway', sans-serif;
+            padding: 0.8rem;
+            width: 120px;
+            border-radius: 2px;
+            color: #fefefe;
+            -moz-transition: 0.2s all;
+            -ms-transition: 0.2s all;
+            -webkit-transition: 0.2s all;
+            transition: 0.2s all;
+        }
+        .edit-emoji-modal .edit-container form .button-container input:hover {
+            background-color: #F97794;
+            border-color: #F97794;
+        }
+        .edit-emoji-modal .edit-container form .button-container .cancel {
+            background: none;
+            color: #623AA2;
+        }
+        .edit-emoji-modal .edit-container form .button-container .cancel:hover {
+            background-color: rgba(98, 58, 162, 0.2);
+            border-color: #623AA2;
+        }
 /* Trashcan button */
 .edit-emoji-modal .edit-container .bottom {
     height: 12%;

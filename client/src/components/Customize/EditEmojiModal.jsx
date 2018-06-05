@@ -94,8 +94,10 @@ class EditEmojiModal extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <p>{emoji.img}</p>
                         <input type="text" value={this.state.input} onChange={this.handleInput} />
-                        <input type="submit" value="Save" />
-                        <input type="button" value="Cancel" onClick={this.props.toggleModal} />
+                        <div className="button-container">
+                            <input type="submit" value="Save" className="save" />
+                            <input type="button" value="Cancel" className="cancel" onClick={this.props.toggleModal} />
+                        </div>
                     </form>
                     <div className="bottom">
                         <button onClick={this.handleDelete}><i className="fas fa-trash fa-fw fa-2x" /></button>

@@ -165,6 +165,9 @@
             background-color: #F97794;
             border-color: #F97794;
         }
+        .auth-container form .button:focus {
+            border-color: #623AA2;
+        }
     /* Error message container */
     .auth-container .auth-message-container {
         /* background-color: lawngreen; */
