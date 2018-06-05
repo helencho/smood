@@ -66,6 +66,12 @@ class EditEmojiModal extends Component {
         }
     }
 
+    // !!! 
+    // Deleting moods or activities that have been used in an entry before causes an ERROR 
+    // Deleting these moods or activities means also deleting all the entries as well 
+    // Create new query 
+    // !!! 
+
     render() {
         const { emoji } = this.props
 
