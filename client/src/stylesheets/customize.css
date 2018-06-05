@@ -81,6 +81,16 @@
 }
 
 /*---------------------------*/
+/*         Edit Modal        */
+/*---------------------------*/
+.edit-emoji-modal {
+    background-color: salmon;
+    height: 200px;
+    width: 300px;
+}
+
+
+/*---------------------------*/
 /*       Customize Form      */
 /*---------------------------*/
 .customize-form-container {
@@ -102,6 +112,11 @@
 .customize-submit-container {
     padding-top: calc(32px + 1.2rem);
 }
+
+
+/*---------------------------*/
+/*         Responsive        */
+/*---------------------------*/
 
 @media screen and (max-width: 800px) {
     .preview-container {

@@ -7,6 +7,15 @@ import Modal from 'react-modal'
 import EditEmojiModal from './EditEmojiModal'
 import { capitalize } from '../../utils/capitalize'
 
+const customStyle = {
+    overlay: {
+        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
+}
+
 class CustomizePreview extends Component {
     constructor(props) {
         super(props)
@@ -46,19 +55,20 @@ class CustomizePreview extends Component {
                         {emojis.map((emoji, index) => (
                             <div key={index} className="emoji-div">
                                 <p onClick={() => this.toggleModal(emoji)}>{emoji.img}</p>
-                                <Modal
-                                    isOpen={modalOpen}
-                                    onRequestClose={this.toggleModal}
-                                    contentLabel="Edit Emoji Modal"
-                                    className="edit-emoji-modal"
-                                >
-                                    <EditEmojiModal
-                                        emoji={chosenEmoji}
-                                        linkTo={linkTo} />
-                                </Modal>
                             </div>
                         ))}
                     </div>
+                    <Modal
+                        isOpen={modalOpen}
+                        onRequestClose={this.toggleModal}
+                        contentLabel="Edit Emoji Modal"
+                        className="edit-emoji-modal"
+                        style={customStyle}
+                    >
+                        <EditEmojiModal
+                            emoji={chosenEmoji}
+                            linkTo={linkTo} />
+                    </Modal>
                     <Link to={`/custom/${linkTo}`}><button>Add one</button></Link>
                 </div>
             </div>
