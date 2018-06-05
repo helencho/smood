@@ -12,6 +12,7 @@ class CustomizePreview extends Component {
         }
     }
 
+    // https://github.com/reactjs/react-modal/issues/133 
     componentWillMount() {
         Modal.setAppElement('body');
     }
