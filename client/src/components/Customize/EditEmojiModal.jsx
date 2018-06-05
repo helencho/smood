@@ -4,8 +4,8 @@ import { editMood, deleteMood } from '../../actions/mood_actions'
 import { editActivity, deleteActivity } from '../../actions/activity_actions'
 
 class EditEmojiModal extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             input: '',
             message: ''
@@ -26,6 +26,13 @@ class EditEmojiModal extends Component {
         })
     }
 
+    // Set message in state 
+    setMessage = (message) => {
+        this.setState({
+            message
+        })
+    }
+
     // When user hits save, update mood/activity table 
     handleSubmit = (e) => {
         e.preventDefault()
@@ -37,14 +44,15 @@ class EditEmojiModal extends Component {
         switch (this.props.linkTo) {
             case 'mood':
                 this.props.editMood(updatedEmoji)
+                this.setMessage('Saved mood!')
                 break
             case 'activity':
                 this.props.editActivity(updatedEmoji)
+                this.setMessage('Saved mood!')
                 break
             default:
-                this.setState({
-                    message: 'Error updating'
-                })
+                this.setMessage('Error updating :(')
+                break
         }
     }
 
@@ -52,17 +60,18 @@ class EditEmojiModal extends Component {
     handleDelete = () => {
         const id = this.props.emoji[`${this.props.linkTo}_id`]
 
-        switch(this.props.linkTo) {
-            case 'mood': 
+        switch (this.props.linkTo) {
+            case 'mood':
                 this.props.deleteMood(id)
-                break 
+                this.setMessage('Deleted mood')
+                break
             case 'activity':
                 this.props.deleteActivity(id)
-                break 
+                this.setMessage('Deleted activity')
+                break
             default:
-                this.setState({
-                    message: 'Error deleting'
-                })
+                this.setMessage('Error deleting')
+                break
         }
     }
 
@@ -78,7 +87,7 @@ class EditEmojiModal extends Component {
         const renderPage = this.props.currentUser.id === emoji.user_id ?
             (
                 <div>
-                    <p>X</p>
+                    <i className="fas fa-times fa-fw"></i>
                     <h1>Edit Emoji</h1>
                     <form onSubmit={this.handleSubmit}>
                         <p>{emoji.img}</p>
@@ -89,7 +98,7 @@ class EditEmojiModal extends Component {
                 </div>
             ) : (
                 <div>
-                    <p>X</p>
+                    <i className="fas fa-times fa-fw"></i>
                     <p>{emoji.img}</p>
                     <p>{this.state.input}</p>
                 </div>

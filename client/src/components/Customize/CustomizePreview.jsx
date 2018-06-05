@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { getMoods } from '../../actions/mood_actions'
+import { getActivities } from '../../actions/activity_actions'
 import Modal from 'react-modal'
 import EditEmojiModal from './EditEmojiModal'
 
 class CustomizePreview extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             modalOpen: false,
             chosenEmoji: null
@@ -23,12 +26,12 @@ class CustomizePreview extends Component {
             modalOpen: !this.state.modalOpen,
             chosenEmoji: emoji
         })
-    }
 
-    // !!! 
-    // When user updates mood and activity name 
-    // Rerender the emoji with new name here 
-    // !!! 
+        // HERE! Forcefully getting new moods and activities. There is a better way to do this, but it's brute force for now. 
+        // June 5, 2018 
+        this.props.getMoods()
+        this.props.getActivities()
+    }
 
     render() {
         const { customType, emojis, linkTo } = this.props
@@ -60,4 +63,11 @@ class CustomizePreview extends Component {
     }
 }
 
-export default CustomizePreview
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getMoods: () => dispatch(getMoods()),
+        getActivities: () => dispatch(getActivities())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CustomizePreview)

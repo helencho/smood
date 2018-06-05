@@ -7,7 +7,6 @@ import '../../stylesheets/customize.css'
 
 // Smart (intelligent, sentient, all-knowing...)
 class Customize extends Component {
-
     // Mount user's moods and activities from state 
     componentDidMount() {
         this.props.getMoods()
