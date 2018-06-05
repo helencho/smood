@@ -84,11 +84,45 @@
 /*         Edit Modal        */
 /*---------------------------*/
 .edit-emoji-modal {
-    background-color: salmon;
-    height: 200px;
-    width: 300px;
+    background-color: skyblue;
+    height: 400px;
+    width: 420px;
+    outline: none;
+    border: none;
 }
-
+.edit-emoji-modal .edit-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.edit-emoji-modal .edit-container .top {
+    display: flex;
+    height: 12%;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.edit-emoji-modal .edit-container form {
+    display: flex;
+    flex-direction: column;
+    height: 76%;
+    background-color: rgba(255, 0, 0, 0.4);
+}
+    .edit-emoji-modal .edit-container form p {
+        font-size: 6rem;
+        text-align: center;
+    }
+/* Trashcan button */
+.edit-emoji-modal .edit-container .bottom {
+    height: 12%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+    .edit-emoji-modal .edit-container .bottom button {
+        outline: none;
+        border: none;
+        background: none;
+        color: rgba(0, 0, 0, 0.4);
+    }
 
 /*---------------------------*/
 /*       Customize Form      */

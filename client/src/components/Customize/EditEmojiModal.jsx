@@ -86,19 +86,24 @@ class EditEmojiModal extends Component {
 
         const renderPage = this.props.currentUser.id === emoji.user_id ?
             (
-                <div>
-                    <i className="fas fa-times fa-fw"></i>
-                    <h1>Edit Emoji</h1>
+                <div className="edit-container">
+                    <div className="top">
+                        <h1>Edit</h1>
+                        {/* <i className="fas fa-times fa-fw fa-2x" /> */}
+                    </div>
                     <form onSubmit={this.handleSubmit}>
                         <p>{emoji.img}</p>
                         <input type="text" value={this.state.input} onChange={this.handleInput} />
                         <input type="submit" value="Save" />
+                        <input type="button" value="Cancel" onClick={this.props.toggleModal} />
                     </form>
-                    <button onClick={this.handleDelete}><i className="fas fa-trash fa-fw" /></button>
+                    <div className="bottom">
+                        <button onClick={this.handleDelete}><i className="fas fa-trash fa-fw fa-2x" /></button>
+                    </div>
                 </div>
             ) : (
-                <div>
-                    <i className="fas fa-times fa-fw"></i>
+                <div className="no-edit-container">
+                    <i className="fas fa-times fa-fw fa-2x" />
                     <p>{emoji.img}</p>
                     <p>{this.state.input}</p>
                 </div>

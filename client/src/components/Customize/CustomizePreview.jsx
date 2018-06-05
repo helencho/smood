@@ -67,7 +67,9 @@ class CustomizePreview extends Component {
                     >
                         <EditEmojiModal
                             emoji={chosenEmoji}
-                            linkTo={linkTo} />
+                            linkTo={linkTo} 
+                            toggleModal={this.toggleModal}
+                            />
                     </Modal>
                     <Link to={`/custom/${linkTo}`}><button>Add one</button></Link>
                 </div>
