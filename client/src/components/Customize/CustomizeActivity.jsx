@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { newActivity } from '../../actions/activity_actions'
-import SearchBar from './SearchBar'
 import CustomizeForm from './CustomizeForm'
 import CustomizeSubmit from './CustomizeSubmit'
 import activities from '../../utils/activities.json'

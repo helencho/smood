@@ -5,7 +5,14 @@ import Modal from 'react-modal'
 class EditEmojiModal extends Component {
     render() {
         return (
-            <h1>Edit Emoji</h1>
+            <div>
+                <p>X</p>
+                <h1>Edit Emoji</h1>
+                <p>Emoji image</p>
+                <p>Emoji name</p>
+                <p>Save button</p>
+                <p>Delete button</p>
+            </div>
         )
     }
 }
@@ -33,12 +40,13 @@ class CustomizePreview extends Component {
                 <h1>{customType}</h1>
                 <div className="emojis-container">
                     {emojis.map((emoji, index) => (
-                        <div>
-                            <p onClick={this.toggleModal} key={index}>{emoji.img}</p>
+                        <div key={index}>
+                            <p onClick={this.toggleModal}>{emoji.img}</p>
                             <Modal
                                 isOpen={modalOpen}
                                 onRequestClose={this.toggleModal}
                                 contentLabel="Edit Emoji Modal"
+                                className="edit-emoji-modal"
                             >
                                 <EditEmojiModal />
                             </Modal>
