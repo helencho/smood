@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { login } from '../../actions/session_actions'
 import SplashTitle from '../Splash/SplashTitle'
 import AOS from 'aos'
+import { capitalize } from '../../utils/capitalize'
 
 class AuthLogin extends Component {
     constructor() {
@@ -56,16 +57,11 @@ class AuthLogin extends Component {
         }
     }
 
-    // Capitalize the first letter of the string 
-    capitalize = (str) => {
-        return str[0].toUpperCase() + str.slice(1)
-    }
-
     render() {
         const { email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
-            <p class="auth-message">{this.capitalize(message.join(' & '))}</p>
+            <p class="auth-message">{capitalize(message.join(' & '))}</p>
             :
             null
 
