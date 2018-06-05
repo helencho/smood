@@ -25,6 +25,11 @@ class CustomizePreview extends Component {
         })
     }
 
+    // !!! 
+    // When user updates mood and activity name 
+    // Rerender the emoji with new name here 
+    // !!! 
+
     render() {
         const { customType, emojis, linkTo } = this.props
         const { modalOpen, chosenEmoji } = this.state

@@ -12,41 +12,40 @@ class EditEmojiModal extends Component {
         }
     }
 
+    // Mount mood/activity name to use as input value 
     componentDidMount() {
         this.setState({
             input: this.props.emoji[`${this.props.linkTo}_name`]
         })
     }
 
+    // Handles text input 
     handleInput = (e) => {
         this.setState({
             input: e.target.value
         })
     }
 
-    // On save, the new mood/activity gets saved to backend 
-    // Update database 
+    // When user hits save, update mood/activity table 
     handleSubmit = (e) => {
         e.preventDefault()
         const updatedEmoji = {
             name: this.state.input,
             id: this.props.emoji[`${this.props.linkTo}_id`]
         }
+
         switch (this.props.linkTo) {
             case 'mood':
-                // update mood 
                 this.props.editMood(updatedEmoji)
                 break
             case 'activity':
-                // update activity 
                 this.props.editActivity(updatedEmoji)
-                break 
+                break
             default:
                 this.setState({
                     message: 'Error'
                 })
         }
-        // console.log(updatedEmoji)
     }
 
     // When user clicks on trash can button 
@@ -57,18 +56,35 @@ class EditEmojiModal extends Component {
     render() {
         const { emoji } = this.props
 
-        return (
-            <div>
-                <p>X</p>
-                <h1>Edit Emoji</h1>
-                <form onSubmit={this.handleSubmit}>
+        const renderPage = this.props.currentUser.id === emoji.user_id ?
+            (
+                <div>
+                    <p>X</p>
+                    <h1>Edit Emoji</h1>
+                    <form onSubmit={this.handleSubmit}>
+                        <p>{emoji.img}</p>
+                        <input type="text" value={this.state.input} onChange={this.handleInput} />
+                        <input type="submit" value="Save" />
+                    </form>
+                    <button onClick={this.handleDelete}><i className="fas fa-trash fa-fw" /></button>
+                </div>
+            ) : (
+                <div>
+                    <p>X</p>
                     <p>{emoji.img}</p>
-                    <input type="text" value={this.state.input} onChange={this.handleInput} />
-                    <input type="submit" value="Save" />
-                </form>
-                <button><i className="fas fa-trash fa-fw"></i></button>
-            </div>
+                    <p>{this.state.input}</p>
+                </div>
+            )
+
+        return (
+            renderPage
         )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.session.currentUser
     }
 }
 
@@ -79,4 +95,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(EditEmojiModal)
+export default connect(mapStateToProps, mapDispatchToProps)(EditEmojiModal)
