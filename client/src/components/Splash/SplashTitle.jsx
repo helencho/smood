@@ -7,14 +7,27 @@ const slogans = [
 ]
 
 class SplashTitle extends Component {
+    constructor() {
+        super()
+        this.state = {
+            slogan: ''
+        }
+    }
+
+    componentDidMount() {
+        this.getSlogan()
+    }
 
     // Grab random element from array 
-    randomOne = (array) => {
-        return array[Math.floor(Math.random() * array.length)]
+    getSlogan = () => {
+        let slogan = slogans[Math.floor(Math.random() * slogans.length)]
+        this.setState({
+            slogan
+        })
     }
-    
+
     render() {
-        const slogan = this.randomOne(slogans)
+        const { slogan } = this.state
 
         return (
             <div className="splash-title" data-aos="fade-up">
