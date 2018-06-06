@@ -241,9 +241,19 @@
 }
 
 @media screen and (max-width: 430px) {
+    .auth-container {
+        height: 100%;
+    }
+    .splash-title h1 {
+        margin: 0.6rem 0;
+    }
+    .splash-title p {
+        margin: 0.6rem 0;
+    }
     .auth-container form {
         width: 88%;
-        height: 68%;
+        /* height: 68%; */
+        height: 440px;
     }
     .auth-container .input-container {
         height: 50%;
@@ -259,5 +269,6 @@
     }
     .auth-container .account-message {
         height: 10%;
+        padding-bottom: 0.8rem;
     }
 }
