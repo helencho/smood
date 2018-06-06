@@ -279,7 +279,7 @@
         border: none;
         background: none;
         font-family: 'Raleway', sans-serif;
-        border-bottom: 2px solid #fefefe;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         font-size: 1.2rem;
         text-align: center;
         color: #fefefe;
@@ -289,6 +289,16 @@
         -ms-transition: 0.2s all;
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
+    }
+    .customize-form-container .chosen-container .inputs input::placeholder {
+        color: rgba(255, 255, 255, 0.1);
+        -moz-transition: 0.2s all;
+        -ms-transition: 0.2s all;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+    .customize-form-container .chosen-container .inputs input:focus::placeholder {
+        color: rgba(255, 255, 255, 0.4);
     }
     .customize-form-container .chosen-container .inputs input[type='submit'] {
         color: #fefefe;

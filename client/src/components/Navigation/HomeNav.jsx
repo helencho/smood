@@ -35,7 +35,7 @@ class HomeNav extends Component {
                         <Link to="/" onClick={this.handleSlideout}><i className="fas fa-book fa-fw fa-3x" /><p>Log</p></Link>
                         <Link to="/dashboard" onClick={this.handleSlideout}><i className="fas fa-tachometer-alt fa-fw fa-3x" /><p>Dashboard</p></Link>
                         <Link to="/custom" onClick={this.handleSlideout}><i className="fas fa-cog fa-fw fa-3x" /><p>Customize</p></Link>
-                        <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x" /><p>Profile</p></Link>
+                        {/* <Link to="/profile" onClick={this.handleSlideout}><i className="fas fa-user-alt fa-fw fa-3x" /><p>Profile</p></Link> */}
                         <Link to="/logout" onClick={this.handleSlideout}><i className="fas fa-sign-out-alt fa-fw fa-3x" /><p>Signout</p></Link>
                     </div>
                 </div>
