@@ -34,6 +34,7 @@
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
     padding: 0.6rem 0;
+    margin: 0.8rem;
     cursor: pointer;
     -moz-transition: 0.2s all;
     -ms-transition: 0.2s all;
@@ -60,6 +61,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #fefefe;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
+    width: 800px;
 }
 .mood-button-container .mood-button,
 .activity-button-container .activity-button {
@@ -83,20 +88,23 @@
         outline: none;
         border: none;
     }
-    .mood-button-container .mood-button:hover,
-    .activity-button-container .activity-button:hover {
-        transform: scale(1.4);
-    }
+/* Activity names */
+.activity-button-container .activity-button p {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
 /* Button that's been clicked on */
-.mood-button-container .mood-button-active {
+.mood-button-container .mood-button-active,
+.activity-button-container .activity-button-active {
     transform: scale(1.4);
 }
 /* Emojis */
 .mood-button-container .mood-button p.emoji {
     font-size: 4rem;
 }
-.activity-button p.emoji {
-    font-size: 2.6rem;
+.activity-button-container .activity-button p.emoji {
+    color: rgba(0, 0, 0, 1);
+    font-size: 4rem;
 }
 
 /*---------------------------*/
@@ -139,21 +147,28 @@
 /*       Responsiveness      */
 /*---------------------------*/
 @media screen and (max-width: 800px) {
-    .mood-form {
-        height: 100%;
+    .mood-button-container,
+    .activity-button-container {
+        width: 98%;
     }
+    
 }
 
 @media screen and (max-width: 430px) {
-    .mood-form,
-    .activity-form {
-        padding-bottom: 1.6rem;
-    }
-    .mood-form h1 {
+    .mood-form h1,
+    .activity-form h1 {
         font-size: 1.8rem;
     }
+    .mood-button-container,
+    .activity-button-container {
+        padding: 0.6rem 0;
+        margin: 0.6rem 0;
+    }
     .mood-button-container .mood-button {
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
+    }
+    .activity-button-container .activity-button {
+        margin: 0.6rem;
     }
 }
