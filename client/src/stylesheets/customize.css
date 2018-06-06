@@ -93,13 +93,15 @@
     border-radius: 2px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
 }
-.edit-emoji-modal .edit-container {
+.edit-emoji-modal .edit-container,
+.edit-emoji-modal .no-edit-container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 /* Title */ 
-.edit-emoji-modal .edit-container .top {
+.edit-emoji-modal .edit-container .top,
+.edit-emoji-modal .no-edit-container .top {
     display: flex;
     height: 12%;
     align-items: center;
@@ -107,9 +109,50 @@
     margin: 0 0.8rem;
     /* background-color: rgba(255, 0, 0, 0.2); */
 }
-    .edit-emoji-modal .edit-container .top .exit {
+    .edit-emoji-modal .edit-container .top .exit,
+    .edit-emoji-modal .no-edit-container .top .exit {
         cursor: pointer;
     }
+/* Body */
+.edit-emoji-modal .no-edit-container .body {
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 0, 0, 0.2); */
+}
+    /* Emoji name */
+    .edit-emoji-modal .no-edit-container .body p {
+        height: 40%;
+        /* display: flex; */
+        /* align-items: center; */
+        font-size: 1.2rem;
+        color: rgba(0, 0, 0, 0.7);
+        /* background-color: rgba(255, 0, 0, 0.4); */
+    }
+    /* Huge emoji */
+    .edit-emoji-modal .no-edit-container .body .text {
+        font-size: 6rem;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        /* opacity: 1; */
+        color: rgba(0, 0, 0, 1);
+        /* background-color: rgba(255, 0, 0, 0.3); */
+    }
+.edit-emoji-modal .no-edit-container .bottom {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(255, 0, 255, 0.2); */
+}
+    .edit-emoji-modal .no-edit-container .bottom p {
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
 
 /* Form */
 .edit-emoji-modal .edit-container form {

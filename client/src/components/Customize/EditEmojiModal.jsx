@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editMood, deleteMood } from '../../actions/mood_actions'
 import { editActivity, deleteActivity } from '../../actions/activity_actions'
+import { capitalize } from '../../utils/capitalize'
 
 class EditEmojiModal extends Component {
     constructor(props) {
@@ -105,9 +106,17 @@ class EditEmojiModal extends Component {
                 </div>
             ) : (
                 <div className="no-edit-container">
-                    <i className="fas fa-times fa-fw fa-2x" />
-                    <p>{emoji.img}</p>
-                    <p>{this.state.input}</p>
+                    <div className="top">
+                        <h1>{capitalize(linkTo)}</h1>
+                        <i className="fas fa-times fa-fw fa-2x exit" onClick={toggleModal} />
+                    </div>
+                    <div className="body">
+                        <p className="text">{emoji.img}</p>
+                        <p>{this.state.input}</p>
+                    </div>
+                    <div className="bottom">
+                        <p>This is a default {linkTo}. It cannot be customized.</p>
+                    </div>
                 </div>
             )
 
