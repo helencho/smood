@@ -53,7 +53,7 @@ class MoodPerMonth extends Component {
         }
 
         return (
-            <div>
+            <div className="moods-per-month-container">
                 <h3>Your most popular moods by month</h3>
                 <ResponsiveContainer width="100%" height={400}>
                     <BarChart data={data} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
@@ -62,7 +62,7 @@ class MoodPerMonth extends Component {
                         <YAxis />
                         <Tooltip content={<CustomTooltip data={data} />} />
                         <Legend />
-                        <Bar dataKey="count" fill="#8884d8" />
+                        <Bar dataKey="count" fill="#F97794" />
                     </BarChart>
                 </ResponsiveContainer>
             </div>

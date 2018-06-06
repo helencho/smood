@@ -27,27 +27,38 @@
 }
 
 /*---------------------------*/
-/*        Moods By Year      */
+/*     Data Visualization    */
 /*---------------------------*/
-.moods-by-year-container {
+.moods-by-year-container,
+.month-moods-container,
+.moods-per-month-container,
+.activities-by-mood-container {
     width: 900px;
     background-color: #fefefe;
     color: rgba(0, 0, 0, 0.7);
+    margin: 0.8rem 0;
     border-radius: 2px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
 
 }
-.moods-by-year-container h3 {
+.moods-by-year-container h3,
+.month-moods-container h3,
+.moods-per-month-container h3,
+.activities-by-mood-container .title h3 {
     font-size: 1.2rem;
     margin: 0.8rem;
 }
-
 
 /*---------------------------*/
 /*     Activities By Mood    */
 /*---------------------------*/
 .activities-by-mood-container .title {
     display: flex;
+    color: rgba(0, 0, 0, 0.7);
+}
+.activities-by-mood-container .title select {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 430px) {
@@ -55,7 +66,10 @@
     .dashboard-container .title select {
         font-size: 1.4rem;
     }
-    .moods-by-year-container {
+    .moods-by-year-container,
+    .month-moods-container,
+    .moods-per-month-container,
+    .activities-by-mood-container {
         width: 98%;
     }
 }

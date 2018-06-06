@@ -31,7 +31,7 @@ class MonthInMoods extends Component {
         let today = new Date()
         let month = today.getMonth()
 
-        // Monthly moods counted as an object 
+        // Count moods in the month as an object  
         const moodsTable = countAllMoods(year - 1, month + 2)
 
         // Populate moods from the object as a dataset 
@@ -43,7 +43,7 @@ class MonthInMoods extends Component {
         const colors = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658']
 
         return (
-            <div>
+            <div className="month-moods-container">
                 <h3>Moods of the month</h3>
                 <ResponsiveContainer height={400} width="100%">
                     <PieChart>
