@@ -254,27 +254,27 @@
         padding: 0.8rem 0;
     }
 .customize-form-container .chosen-container {
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    height: 240px;
+    height: 320px;
     width: 800px;
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
 }
     .customize-form-container .chosen-container p {
-        height: 70%;
+        height: 60%;
         font-size: 6rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-color: rgba(255, 255, 255, 0.8); */
     }
+    /* Inputs container */
     .customize-form-container .chosen-container .inputs {
-        height: 30%;
+        height: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
+    /* Text input and save button */
     .customize-form-container .chosen-container .inputs input {
         outline: none;
         border: none;
@@ -285,7 +285,8 @@
         text-align: center;
         color: #fefefe;
         padding: 0.6rem;
-        width: 60%;
+        margin: 0.8rem 0;
+        width: 120px;
         -moz-transition: 0.2s all;
         -ms-transition: 0.2s all;
         -webkit-transition: 0.2s all;
