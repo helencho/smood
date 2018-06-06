@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import AOS from 'aos'
 
 // Presentational 
 class CustomizeForm extends Component {
+    componentDidMount() {
+        AOS.init()
+    }
     render() {
         const { customType, emojis, input, chosenEmoji, chosenName, handleSubmit, handleInput, handleClick } = this.props
 
@@ -15,7 +19,7 @@ class CustomizeForm extends Component {
                         <input type="submit" value="Save" disabled={!chosenEmoji || !chosenName} />
                     </div>
                 </form>
-                <div className="emojis-container">
+                <div className="emojis-container" data-aos="fade-up">
                     {emojis.map((mood, index) => (
                         <p key={index}><span role="img" aria-label="smiley" onClick={() => handleClick(mood)}>{mood}</span></p>
                     ))}
