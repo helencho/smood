@@ -63,8 +63,8 @@
 }
 .mood-button-container .mood-button,
 .activity-button-container .activity-button {
-    height: 160px;
-    width: 160px;
+    height: 120px;
+    width: 120px;
     outline: none;
     border: none;
     background: none;
@@ -85,25 +85,16 @@
     }
     .mood-button-container .mood-button:hover,
     .activity-button-container .activity-button:hover {
-        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
-        -moz-transition: 0.2s all;
-        -ms-transition: 0.2s all;
-        -webkit-transition: 0.2s all;
-        transition: 0.2s all;
+        transform: scale(1.4);
     }
 /* Button that's been clicked on */
 .mood-button-container .mood-button-active {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
-    -moz-transition: 0.2s all;
-    -ms-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+    transform: scale(1.4);
 }
 /* Emojis */
 .mood-button-container .mood-button p.emoji {
     font-size: 4rem;
 }
-
 .activity-button p.emoji {
     font-size: 2.6rem;
 }

@@ -15,8 +15,8 @@ class MoodForm extends Component {
             <div className="mood-form">
                 <h1>How are you feeling?</h1>
                 <div className="mood-button-container">
-                    {moods.map((md) =>
-                        <MoodButton md={md} key={md.mood_id} handleButton={this.props.handleButton} mood={mood} />
+                    {moods.map((md, index) =>
+                        <MoodButton md={md} key={md.mood_id} handleButton={this.props.handleButton} mood={mood} index={index} />
                     )}
                 </div>
                 <button disabled={!mood} onClick={() => this.props.setPage('activity')}>Next <i className="fas fa-chevron-right fa-fw"></i></button>
