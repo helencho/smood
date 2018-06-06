@@ -23,12 +23,14 @@ class Customize extends Component {
                     customType="moods"
                     linkTo="mood"
                     emojis={this.props.moods}
+                    index={1}
                 />
 
                 <CustomizePreview
                     customType="activities"
                     linkTo="activity"
                     emojis={this.props.activities}
+                    index={2}
                 />
 
             </div>

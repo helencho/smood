@@ -6,6 +6,7 @@ import { getActivities } from '../../actions/activity_actions'
 import Modal from 'react-modal'
 import EditEmojiModal from './EditEmojiModal'
 import { capitalize } from '../../utils/capitalize'
+import AOS from 'aos'
 
 const customStyle = {
     overlay: {
@@ -23,6 +24,10 @@ class CustomizePreview extends Component {
             modalOpen: false,
             chosenEmoji: null
         }
+    }
+
+    componentDidMount() {
+        AOS.init()
     }
 
     // https://github.com/reactjs/react-modal/issues/133 
@@ -44,11 +49,12 @@ class CustomizePreview extends Component {
     }
 
     render() {
-        const { customType, emojis, linkTo } = this.props
+        const { customType, emojis, linkTo, index } = this.props
         const { modalOpen, chosenEmoji } = this.state
+        const delay = index * 100
 
         return (
-            <div className="preview-container">
+            <div className="preview-container" data-aos="fade-up" data-aos-delay={delay}>
                 <h1>{capitalize(customType)}</h1>
                 <div className="preview-main">
                     <div className="emojis-container">
