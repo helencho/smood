@@ -66,6 +66,9 @@
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
     width: 800px;
 }
+    .activity-button-container {
+        margin: 2.2rem 0;
+    }
 .mood-button-container .mood-button,
 .activity-button-container .activity-button {
     height: 120px;
