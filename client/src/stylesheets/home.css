@@ -169,15 +169,29 @@
 }
 
 @media screen and (max-width: 430px) {
+    .mood-form {
+        height: 100%;
+    }
     .mood-form h1,
     .activity-form h1 {
         font-size: 1.8rem;
     }
-    .mood-button-container .mood-button {
+    .activity-button-container {
+        padding-bottom: 1.2rem;
+    }
+    .mood-button-container .mood-button, 
+    .activity-button-container .activity-button {
         height: 100px;
         width: 100px;
     }
+    /* .mood-button-container .mood-button {
+        height: 100px;
+        width: 100px;
+    } */
     .activity-button-container .activity-button {
         margin: 0.6rem;
+    }
+    .mood-button-container .mood-button p.emoji {
+        font-size: 3.2rem;
     }
 }
