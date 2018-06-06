@@ -34,10 +34,10 @@
     padding: 0.6rem;
     padding-top: 0;
     z-index: 10;
-    -moz-transition: 0.2s all;
-    -ms-transition: 0.2s all;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+    -moz-transition: 0.2s all ease-in-out;
+    -ms-transition: 0.2s all ease-in-out;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
     overflow: hidden;
 }
     .navigation a {
@@ -55,9 +55,9 @@
         overflow: hidden;
     }
 .navigation-hidden {
-    width: 0;
     padding: 0;
     overflow: hidden;
+    transform: translateX(-100%);
 }
     .navigation-hidden a,
     .navgiation-hidden p {
