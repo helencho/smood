@@ -45,7 +45,7 @@
 .month-moods-container h3,
 .moods-per-month-container h3,
 .activities-by-mood-container .title h3 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin: 0.8rem;
 }
 
@@ -57,16 +57,52 @@
     color: rgba(0, 0, 0, 0.7);
 }
 .activities-by-mood-container .title select {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    width: 160px;
     color: rgba(0, 0, 0, 0.7);
 }
 
+/*---------------------------*/
+/*      Recharts Styles       */
+/*---------------------------*/
+.custom-tooltip .label {
+    font-size: 1rem;
+    background-color: #fefefe;
+    padding: 0.6rem;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
+    color: rgba(0, 0, 0, 0.7);
+}
+/* Legend line */
+.recharts-legend-item {
+    margin: 0.6rem;
+}
+/* Legend line text */
+.recharts-legend-item-text {
+    font-size: 1rem;
+}
+/* .recharts-surface {
+    margin-left: -2%;
+} */
+
+/*---------------------------*/
+/*         Responsive        */
+/*---------------------------*/
 @media screen and (max-width: 800px) {
     .moods-by-year-container,
     .month-moods-container,
     .moods-per-month-container,
     .activities-by-mood-container {
         width: 98%;
+    }
+    .moods-by-year-container h3,
+    .month-moods-container h3,
+    .moods-per-month-container h3,
+    .activities-by-mood-container .title h3 {
+        font-size: 1.2rem;
+    }
+    .activities-by-mood-container .title select {
+        font-size: 1.2rem;
     }
 }
 
@@ -75,10 +111,18 @@
     .dashboard-container .title select {
         font-size: 1.4rem;
     }
+    .activities-by-mood-container .title select {
+        font-size: 1.2rem;
+    }
     .moods-by-year-container,
     .month-moods-container,
     .moods-per-month-container,
     .activities-by-mood-container {
         width: 98%;
+    }
+
+    .recharts-text,
+    .recharts-cartesian-axis-tick-value {
+        font-size: 0.8rem;
     }
 }

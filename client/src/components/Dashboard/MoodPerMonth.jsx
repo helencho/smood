@@ -54,12 +54,12 @@ class MoodPerMonth extends Component {
 
         return (
             <div className="moods-per-month-container">
-                <h3>Your most popular moods by month</h3>
-                <ResponsiveContainer width="100%" height={400}>
-                    <BarChart data={data} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                <h3>Most popular moods by month</h3>
+                <ResponsiveContainer width="100%" height={400} >
+                    <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                        <XAxis dataKey="name" tick={{ fontSize: "1rem", fill: "rgba(0, 0, 0, 0.7)" }} />
+                        <YAxis tick={{ fontSize: "1rem", fill: "rgba(0, 0, 0, 0.7)" }} />
                         <Tooltip content={<CustomTooltip data={data} />} />
                         <Legend />
                         <Bar dataKey="count" fill="#F97794" />

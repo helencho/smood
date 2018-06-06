@@ -42,6 +42,14 @@ class MonthInMoods extends Component {
 
         const colors = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658']
 
+        const style = {
+            backgroundColor: '#fefefe',
+            fontSize: '1rem',
+            borderRadius: '2px',
+            border: 'none',
+            color: 'rgba(0, 0, 0, 0.7) !important',
+            boxShadow: '3px 3px 10px rgba(0, 0, 0, 0.02)'
+        }
         return (
             <div className="month-moods-container">
                 <h3>Moods of the month</h3>
@@ -59,7 +67,7 @@ class MonthInMoods extends Component {
                         >
                             {data.map((entry, index) => <Cell key={index} fill={colors[index]} />)}
                         </Pie>
-                        <Tooltip />
+                        <Tooltip wrapperStyle={style} />
                     </PieChart>
                 </ResponsiveContainer>
             </div>

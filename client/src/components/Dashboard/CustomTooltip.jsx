@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../../stylesheets/dashboard.css'
 
 class CustomTooltip extends Component {
     render() {
@@ -19,8 +20,10 @@ class CustomTooltip extends Component {
             return (
                 <div className="custom-tooltip">
                     {moodLabel ?
-                        <p className="label">{`${moodLabel} : ${payload[0].value}`}</p>
-                        : 'Nothing :('}
+                        <p className="label">{`${moodLabel}: ${payload[0].value}`}</p>
+                        :
+                        <p className="label">No feelings here</p>
+                    }
                 </div>
             );
         }
