@@ -45,7 +45,7 @@ app.use('/entries', entries)
 
 // Ensures frontend routes will lead to the right pages
 app.get('*', (req, res) => {
-  const index = path.join(__dirname, 'build', 'index.html');
+  const index = path.join(__dirname, 'client/build', 'index.html');
   res.sendFile(index);
   // res.sendFile(__dirname + 'client/build/index.html')
 })
