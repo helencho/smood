@@ -36,13 +36,6 @@ class ActivitiesByMood extends Component {
         }
 
         // Bar chart styles 
-        // const style = {
-        //     top: 0,
-        //     left: 350,
-        //     lineHeight: '24px',
-            
-        // };
-
         const style = {
             top: '-100%',
             left: '4%',

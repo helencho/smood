@@ -61,6 +61,15 @@
     color: rgba(0, 0, 0, 0.7);
 }
 
+@media screen and (max-width: 800px) {
+    .moods-by-year-container,
+    .month-moods-container,
+    .moods-per-month-container,
+    .activities-by-mood-container {
+        width: 98%;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .dashboard-container .title h1,
     .dashboard-container .title select {
