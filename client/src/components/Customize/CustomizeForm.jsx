@@ -9,7 +9,7 @@ class CustomizeForm extends Component {
             <div className="customize-form-container">
                 <h1>Add new {customType}</h1>
                 <form className="chosen-container" onSubmit={handleSubmit}>
-                    <p>{chosenEmoji}</p>
+                    <p>{chosenEmoji || '❔'}</p>
                     <div className="inputs">
                         <input type="text" placeholder="Name" name="chosenName" value={chosenName} onChange={handleInput} />
                         <input type="submit" value="Save" disabled={!chosenEmoji || !chosenName} />

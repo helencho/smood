@@ -247,6 +247,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
     .customize-form-container h1 {
         font-size: 2.2rem;
@@ -316,13 +317,18 @@
 .customize-form-container .emojis-container {
     display: flex;
     flex-wrap: wrap;
-    font-size: 2.2rem;
-    width: 800px;
-    background-color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    width: 900px;
+    margin: 0.8rem 0;
+    background-color: #fefefe;
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
 }
 .customize-form-container .emojis-container p {
     padding: 0.6rem;
     cursor: pointer;
+    font-size: 4rem;
+    margin: 0.2rem 0.8rem;
 }
 
 /*---------------------------*/
