@@ -41,8 +41,16 @@
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-    .mood-form button:disabled,
-    .activity-form button:disabled {
+    .mood-form button:disabled {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    /* Submit button at the bottom */
+    .activity-form button.submit {
+        border: 2px solid #fefefe;
+        padding: 0.6rem;
+    }
+    .activity-form button.submit:disabled {
+        border: 2px solid rgba(255, 255, 255, 0.4);
         color: rgba(255, 255, 255, 0.4);
     }
     .mood-form button:active,
