@@ -9,7 +9,7 @@ class CustomizeSubmit extends Component {
         return (
             <div className="customize-submit-container">
                 <h1>Saved {customType}!</h1>
-                <Link to="/custom">Return to Customize Home</Link>
+                <Link to="/custom"><button>Return to Customize Home</button></Link>
             </div>
         )
     }

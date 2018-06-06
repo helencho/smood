@@ -33,7 +33,7 @@
     background: none;
     font-size: 1.2rem;
     font-family: 'Raleway', sans-serif;
-    padding: 0.6rem 0;
+    padding: 0.8rem;
     margin: 0.8rem;
     cursor: pointer;
     -moz-transition: 0.2s all;
@@ -48,6 +48,10 @@
     .activity-form button.submit {
         border: 2px solid #fefefe;
         padding: 0.6rem;
+    }
+    .activity-form button.submit:hover {
+        background-color: #fefefe;
+        color: #f97794;
     }
     .activity-form button.submit:disabled {
         border: 2px solid rgba(255, 255, 255, 0.4);
@@ -132,14 +136,17 @@
     justify-content: center;
     color: #fefefe;
 }
-
+.submission-page h1 {
+    font-size: 2.2rem;
+    margin: 0.8rem;
+}
 .submission-page button {
     outline: none;
     border: none;
     border: 2px solid #fefefe;
     background: none;
     color: #fefefe;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 2px;
     width: 220px;
     cursor: pointer;

@@ -8,7 +8,7 @@
     align-items: center;
     padding: 0.6rem;
     z-index: 11;
-    border-bottom: 1px solid rgba(254, 254, 254, 0.22);
+    /* border-bottom: 1px solid rgba(254, 254, 254, 0.22); */
     position: fixed;
     color: #fefefe;
 }
