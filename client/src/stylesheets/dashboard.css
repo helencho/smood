@@ -11,18 +11,36 @@
 }
 .dashboard-container .title {
     display: flex;
-    font-size: 1.2rem;
+}
+.dashboard-container .title h1 {
+    font-size: 2.2rem;
+    padding: 0.8rem 0;
 }
 .dashboard-container select {
     outline: none;
     border: none;
-    width: 180px;
+    width: 120px;
     background: none;
     color: #fefefe;
     font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
 }
 
+/*---------------------------*/
+/*        Moods By Year      */
+/*---------------------------*/
+.moods-by-year-container {
+    width: 900px;
+    background-color: #fefefe;
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
+
+}
+.moods-by-year-container h3 {
+    font-size: 1.2rem;
+    margin: 0.8rem;
+}
 
 
 /*---------------------------*/
@@ -30,4 +48,14 @@
 /*---------------------------*/
 .activities-by-mood-container .title {
     display: flex;
+}
+
+@media screen and (max-width: 430px) {
+    .dashboard-container .title h1,
+    .dashboard-container .title select {
+        font-size: 1.4rem;
+    }
+    .moods-by-year-container {
+        width: 98%;
+    }
 }
