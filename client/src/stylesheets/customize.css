@@ -311,6 +311,7 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 .customize-form-container .emojis-container p {
+    padding: 0.6rem;
     cursor: pointer;
 }
 

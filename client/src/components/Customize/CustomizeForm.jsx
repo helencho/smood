@@ -7,7 +7,7 @@ class CustomizeForm extends Component {
 
         return (
             <div className="customize-form-container">
-                <h1>Customize your {customType}</h1>
+                <h1>Add new {customType}</h1>
                 <form className="chosen-container" onSubmit={handleSubmit}>
                     <p>{chosenEmoji}</p>
                     <div className="inputs">
