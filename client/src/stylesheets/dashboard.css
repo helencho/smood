@@ -1,8 +1,13 @@
-/* Dashboard Container */
+/*---------------------------*/
+/*         Dashboard         */
+/*---------------------------*/
 .dashboard-container {
-    padding-top: 51.2px;
+    padding-top: calc(32px + 1.2rem);
     color: #fefefe;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .dashboard-container .title {
     display: flex;
@@ -14,13 +19,15 @@
     width: 180px;
     background: none;
     color: #fefefe;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     font-family: 'Raleway', sans-serif;
 }
 
 
 
-/* Activities By Mood */
+/*---------------------------*/
+/*     Activities By Mood    */
+/*---------------------------*/
 .activities-by-mood-container .title {
     display: flex;
 }

@@ -64,7 +64,9 @@
     background-color: #fefefe;
     border-radius: 2px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
-    width: 800px;
+    width: 900px;
+    padding: 0.8rem;
+    align-items: center;
 }
     .activity-button-container {
         margin: 2.2rem 0;
@@ -153,19 +155,15 @@
     .mood-button-container,
     .activity-button-container {
         width: 98%;
+        padding: 0.6rem 0;
+        margin: 0.6rem 0;
     }
-    
 }
 
 @media screen and (max-width: 430px) {
     .mood-form h1,
     .activity-form h1 {
         font-size: 1.8rem;
-    }
-    .mood-button-container,
-    .activity-button-container {
-        padding: 0.6rem 0;
-        margin: 0.6rem 0;
     }
     .mood-button-container .mood-button {
         height: 100px;
