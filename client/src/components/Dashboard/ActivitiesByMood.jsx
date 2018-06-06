@@ -36,11 +36,18 @@ class ActivitiesByMood extends Component {
         }
 
         // Bar chart styles 
+        // const style = {
+        //     top: 0,
+        //     left: 350,
+        //     lineHeight: '24px',
+            
+        // };
+
         const style = {
-            top: 0,
-            left: 350,
-            lineHeight: '24px'
-        };
+            top: '-100%',
+            left: '4%',
+            position: 'relative'
+        }
 
         return (
             <div className="activities-by-mood-container">
