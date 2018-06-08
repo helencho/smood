@@ -38,7 +38,7 @@ Smood is a mood tracker and visualizer. Feeling some type of way? Track your moo
 
 ## Acknowledgements 
 
-* [Kelvin]() - Thank you for putting together one hell of a `json` file for easy emoji rendering. Check out his project [here]() 
+* [Kelvin](https://github.com/kelvinrod9331) - Thank you for putting together one hell of a `json` file for easy emoji rendering. Check out his project [UChat](https://github.com/KelvinRod9331/uchat) 
 
 
 ## Future Features 
