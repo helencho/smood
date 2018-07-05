@@ -51,6 +51,8 @@ Customize your moods and activities to fit your needs. Mix and match with our av
 
 ## Future Features 
 
+* Complete emoji library 
+
 * Calendar tracking 
 
 * Push notifications for reminders 
