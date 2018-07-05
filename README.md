@@ -1,26 +1,30 @@
 # Smood
 
-Smood is a mood tracker and visualizer. Feeling some type of way? Track your mood. 
+Smood is a mood tracker and visualizer. It's easy to let our emotions get lost in the blur of a day. We run from our homes to subways to meetings to coffee runs to fixing bugs to catching up with friends. We could have felt a dozen emotions in between and not have realized it. Smood was built for you to capture exactly how you feel, easily and on the go. 
 
 ![Signup](./assets/register-screely.png)
 
 ## Features 
 
-* Aesthetically pleasing UI upon landing 
+**Design**
+Aesthetically pleasing UI upon landing 
 
-* ![Home](./assets/home.gif)
+![Home](./assets/home.gif)
 
-* Log your moods on your laptop or on the go 
+**Flexibility**
+Log your moods on your laptop or on your phone 
 
-* <img src="./assets/home-mobile.png" width=260/>
+<img src="./assets/home-mobile.png" width=260/>
 
-* Keep track of your moods throughout the year on the dashboard 
+**Personable**
+Keep track and look back on your moods throughout the year on the dashboard 
 
-* ![Dashboard](./assets/dashboard.gif)
+![Dashboard](./assets/dashboard.gif)
 
-* Customize your moods and activities to fit your needs. Mix and match with our available emojis 
+**Customizable**
+Customize your moods and activities to fit your needs. Mix and match with our available emojis 
 
-* ![Customize](./assets/customize.gif)
+![Customize](./assets/customize.gif)
 
 ## Technologies 
 
