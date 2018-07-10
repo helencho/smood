@@ -6,6 +6,38 @@ It's easy to let our emotions get lost in the blur of a day. We run from our hom
 
 ![Signup](./assets/register-screely.png)
 
+## Getting Started 
+
+#### Live
+
+**[smood.herokuapp.com](https://smood.herokuapp.com/)**
+
+Demo login information 
+
+```
+Email: demo@gmail.com
+Password: 123456
+```
+
+<!-- #### Running Locally 
+
+Clone this repo and follow the instructions below to get the application running locally. 
+
+In root folder: 
+
+```
+npm install
+npm start 
+```
+
+Open a second terminal window: 
+
+```
+cd client
+npm install
+npm start
+``` -->
+
 ## Features 
 
 **Design**
@@ -53,9 +85,11 @@ Customize your moods and activities to fit your needs. Mix and match with our av
 
 ## Future Features 
 
+* Delete customized moods even if they've been used in a mood log 
+
 * Complete emoji library 
 
-* Demo user login 
+* Demo user login on browser 
 
 * Calendar tracking 
 
