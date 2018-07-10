@@ -1,6 +1,8 @@
 # Smood
 
-Smood is a mood tracker and visualizer. It's easy to let our emotions get lost in the blur of a day. We run from our homes to subways to meetings to coffee runs to fixing bugs to catching up with friends. We could have felt a dozen emotions in between and not have realized it. Smood was built for you to capture exactly how you feel, easily and on the go. 
+Smood is a mood tracker and visualizer. 
+
+It's easy to let our emotions get lost in the blur of a day. We run from our homes to subways to meetings to coffee runs to fixing bugs to catching up with friends. We could have felt a dozen emotions in between and not have realized it. Smood was built for you to capture exactly how you feel, easily and on the go. 
 
 ![Signup](./assets/register-screely.png)
 
@@ -8,11 +10,11 @@ Smood is a mood tracker and visualizer. It's easy to let our emotions get lost i
 
 **Design**
 
-Aesthetically pleasing UI upon landing 
+Aesthetically pleasing UI upon logging in 
 
 ![Home](./assets/home.gif)
 
-**Flexibility**
+**Flexible**
 
 Log your moods on your laptop or on your phone 
 
@@ -32,11 +34,11 @@ Customize your moods and activities to fit your needs. Mix and match with our av
 
 ## Technologies 
 
-**Smood** was built using [ReactJS](https://reactjs.org/) / [Redux](https://redux.js.org/), HTML / CSS, and the following packages and resources: 
+**Smood** was built on Postgres, Express, [ReactJS](https://reactjs.org/)/[Redux](https://redux.js.org/), Node.js, HTML/CSS, and the following packages and resources: 
 
 * [Passport](http://www.passportjs.org/) - authentication for Node.js
 
-* [Recharts](http://recharts.org/#/en-US/) - charting library 
+* [Recharts](http://recharts.org/#/en-US/) - D3.js charting library 
 
 * [AOS](https://michalsnik.github.io/aos/) - animate on scroll library 
 
@@ -52,6 +54,8 @@ Customize your moods and activities to fit your needs. Mix and match with our av
 ## Future Features 
 
 * Complete emoji library 
+
+* Demo user login 
 
 * Calendar tracking 
 
