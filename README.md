@@ -38,7 +38,7 @@ Customize your moods and activities to fit your needs. Mix and match with our av
 
 * [Passport](http://www.passportjs.org/) - authentication for Node.js
 
-* [Recharts](http://recharts.org/#/en-US/) - D3.js charting library 
+* [Recharts](https://github.com/recharts/recharts/) - D3.js charting library 
 
 * [AOS](https://michalsnik.github.io/aos/) - animate on scroll library 
 
