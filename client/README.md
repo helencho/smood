@@ -1,6 +1,6 @@
 # Client 
 
-This holds the frontend of [mood](https://github.com/helencho/mood)'s full stack application. 
+This holds the frontend of [smood](https://github.com/helencho/smood)'s full stack application. 
 
 
 ## Getting Started
