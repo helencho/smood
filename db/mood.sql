@@ -48,9 +48,7 @@ CREATE TABLE entries (
 -- Seed data
 INSERT INTO users (username, password_digest, first_name)
 VALUES 
-    ('helen@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Helen'),
-    ('michelle@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Michelle'),
-    ('david@gmail.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'David')
+    ('demo@email.com', '$2a$10$brAZfSmByFeZmPZ/MH5zne9YDhugjW9CtsBGgXqGfix0g1tcooZWq', 'Demo')
 ;
 
 INSERT INTO moods (user_id, mood_name, img)
@@ -59,10 +57,7 @@ VALUES
     (0, 'calm', '😌'),
     (0, 'upset', '😡'),
     (0, 'sad', '😔'),
-    (0, 'meh', '😒'),
-    (1, 'silly', '🤪'),
-    (2, 'hyper', '🤩'),
-    (3, 'sick', '🤒 ')
+    (0, 'meh', '😒')
 ;
 
 INSERT INTO activities (user_id, activity_name, img)
@@ -89,6 +84,6 @@ VALUES
 INSERT INTO entries (user_id, mood_id, activity_id, entry_date, note)
 VALUES 
     (1, 1, 1, '2018-04-30', 'I love dancing'),
-    (2, 2, 4, '2018-05-05', 'I LOVE RUNNING'),
-    (3, 3, 8, '2018-05-08', 'I hate shopping')
+    (1, 2, 12, '2018-10-10', 'Did some local sightseeing!'),
+    (1, 1, 15, '2018-10-22', 'Had a really productive day at work today')
 ;
