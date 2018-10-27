@@ -61,7 +61,7 @@ class AuthLogin extends Component {
         const { email, password, message } = this.state
         const errorMessage = message.length > 0
             ?
-            <p class="auth-message">{capitalize(message.join(' & '))}</p>
+            <p className="auth-message">{capitalize(message.join(' & '))}</p>
             :
             null
 
