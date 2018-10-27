@@ -230,6 +230,9 @@
     .auth-container form {
         width: 80%;
     }
+    .auth-container form .button {
+        width: 165px;
+    }
 }
 
 @media screen and (max-width: 430px) {
