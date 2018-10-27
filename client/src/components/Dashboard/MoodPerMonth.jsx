@@ -54,7 +54,7 @@ class MoodPerMonth extends Component {
 
         return (
             <div className="moods-per-month-container">
-                <h3>Most popular moods by month</h3>
+                <h3>Your most populate moods by month</h3>
                 <ResponsiveContainer width="100%" height={400} >
                     <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
