@@ -66,7 +66,7 @@ class AuthLogin extends Component {
 
     render() {
         const { email, password, message } = this.state
-        const errorMessage = message.length > 0
+        const errorMessage = message.length
             ?
             <p class="auth-message">{capitalize(message.join(' & '))}</p>
             :
@@ -77,7 +77,7 @@ class AuthLogin extends Component {
         }
 
         return (
-            <div className="auth-container gradient-warm">
+            <div className="auth-container auth-login gradient-warm">
                 <SplashTitle />
                 <form onSubmit={this.handleSubmit} data-aos="fade-up">
                     {/* https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md */}
