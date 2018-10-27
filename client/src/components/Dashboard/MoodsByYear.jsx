@@ -32,7 +32,7 @@ class MoodsByYear extends Component {
 
         return (
             <div className="moods-by-year-container">
-                <h3>Moods of {year - 1}</h3>
+                <h3>Here's how you felt in {year - 1}</h3>
                 <ResponsiveContainer width="100%" height={380}>
                     <RadarChart data={moodData}>
                         <PolarGrid />

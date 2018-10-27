@@ -52,7 +52,7 @@ class MonthInMoods extends Component {
         }
         return (
             <div className="month-moods-container">
-                <h3>Moods of the month</h3>
+                <h3>Here's how you felt this month</h3>
                 <ResponsiveContainer height={400} width="100%">
                     <PieChart>
                         <Pie
