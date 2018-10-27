@@ -94,34 +94,26 @@
     background-color: #fefefe;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.02);
     width: 800px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1.2rem;
-    /* height: 460px; */
     border-radius: 2px;
-    /* margin-bottom: 0.8rem; */
     -moz-transition: 0.2s all;
     -ms-transition: 0.2s all;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    height: 62%;
 }
-    /* Form header */
-    .auth-container form h1 {
-        /* background-color: skyblue; */
-        height: 10%;
-    }
     /* Contains text fields */
     .auth-container .input-container {
-        /* background-color: salmon; */
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 222px;
         align-items: center;
         justify-content: center;
-        height: 60%;
     }
     .auth-container form input {
         outline: none;
@@ -139,17 +131,19 @@
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
     }
-        .auth-container form input::placeholder {
+        .auth-container form .input-container input::placeholder {
             color: rgba(0, 0, 0, 0.6);
         }
-        .auth-container form input:focus {
+        .auth-container form .input-container input:focus {
             border: 2px solid #F97794;
             color: #F97794;
         }
     /* Login Register buttons */
     .auth-container .submit-container {
-        /* background-color: peru; */
-        height: 20%;
+        width: 100%;
+    }
+    .auth-container .submit-container input {
+        margin: 0 0.8rem;
     }
     .auth-container form .button {
         background-color: #623AA2;
@@ -166,12 +160,11 @@
             border-color: #F97794;
         }
         .auth-container form .button:focus {
-            border-color: #623AA2;
+            color: #fefefe;
         }
     /* Error message container */
     .auth-container .auth-message-container {
-        /* background-color: lawngreen; */
-        height: 10%;
+        min-height: 38px;
     }
     .auth-container .auth-message {
         background-color: rgba(255, 0, 0, 0.3);
@@ -185,7 +178,6 @@
     margin-top: 0.8rem;
     color: #fefefe;
     height: 16%;
-    /* background-color: lightskyblue; */
 }
 .auth-container a {
     padding-bottom: 2.2px;
@@ -238,6 +230,9 @@
     .auth-container form {
         width: 80%;
     }
+    .auth-container form .button {
+        width: 165px;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -252,17 +247,22 @@
     }
     .auth-container form {
         width: 88%;
-        /* height: 68%; */
-        height: 440px;
-    }
-    .auth-container .input-container {
-        height: 50%;
+        height: 480px;
     }
     .auth-container form input {
         width: 90%;
     }
+    .auth-container form .button {
+        width: 100%;
+    }
+    .auth-container .submit-container input {
+        margin: 0.4rem 0;
+    }
     .auth-container .auth-message-container {
-        height: 20%;
+        height: 76.2px;
+    }
+    .auth-login .auth-message-container {
+        height: 57.2px;
     }
     .splash-container .auth-choices {
         flex-direction: column;
