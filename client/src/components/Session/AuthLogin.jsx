@@ -57,6 +57,13 @@ class AuthLogin extends Component {
         }
     }
 
+    handleDemoClick = () => {
+        this.setState({
+            email: 'demo@email.com',
+            password: '123456'
+        })
+    }
+
     render() {
         const { email, password, message } = this.state
         const errorMessage = message.length > 0
@@ -83,6 +90,7 @@ class AuthLogin extends Component {
                         {errorMessage}
                     </div>
                     <div className="submit-container">
+                        <input type="button" value="Demo" className="button" onClick={this.handleDemoClick} />
                         <input type="submit" value="Login" className="button" />
                     </div>
                 </form>
