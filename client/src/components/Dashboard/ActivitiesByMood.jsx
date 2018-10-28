@@ -7,8 +7,8 @@ class ActivitiesByMood extends Component {
         const { selectedMood, handleSelectChange, year, entries } = this.props
 
         // Get all the entries in the target year and filter by selected mood 
-        const lowTarget = new Date((year - 1).toString())
-        const target = new Date(year)
+        const lowTarget = new Date((year).toString())
+        const target = new Date((parseInt(year) + 1).toString())
         const filteredEntries = entries.filter(entry => {
             const compare = new Date(entry.entry_date)
             return compare > lowTarget && compare <= target
