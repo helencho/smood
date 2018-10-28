@@ -18,13 +18,6 @@
   font-size: 2.2rem;
   padding: 0;
 }
-/* .dashboard-container .title {
-    display: flex;
-}
-.dashboard-container .title h1 {
-    font-size: 2.2rem;
-    padding: 0.8rem 0;
-} */
 .dashboard-container select {
     outline: none;
     border: none;
