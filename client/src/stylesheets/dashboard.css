@@ -9,12 +9,14 @@
     flex-direction: column;
     align-items: center;
 }
-.dashboard-container .title {
-    display: flex;
+.dashboard-container .title-container {
+  position: relative;
+  display: flex;
+  width: 360px;
 }
-.dashboard-container .title h1 {
-    font-size: 2.2rem;
-    padding: 0.8rem 0;
+.dashboard-container .title-container h1 {
+  font-size: 2.2rem;
+  padding: 0;
 }
 .dashboard-container select {
     outline: none;

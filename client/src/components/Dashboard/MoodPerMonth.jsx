@@ -49,7 +49,7 @@ class MoodPerMonth extends Component {
         const months = moment.monthsShort()
         for (let i = 0; i < months.length; i++) {
             let month = i + 2
-            data.push(getMostFeltMood(countAllMoods(year - 1, month), months[i]))
+            data.push(getMostFeltMood(countAllMoods(year, month), months[i]))
         }
 
         return (
