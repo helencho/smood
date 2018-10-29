@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import '../../stylesheets/Dropdown.css'
 
 class Dropdown extends Component {
-  componentWillMount() {
-    // mount parent node for handling outside click
-  }
-
-  componentWillUnmount() {
-    // unmount parent node
-  }
-
   renderItems() {
     const { handleClick, items } = this.props
     return items.map((item, index) => {
@@ -33,11 +25,15 @@ class Dropdown extends Component {
     return (
       <div className="dropdown-container">
         <div
-          className="dropdown-header"
+          className={`dropdown-header header-${isOpen ? 'active' : ''}`}
+          id="dropdown"
           onClick={handleClick}
         >
           {activeItem}
-          <i className="fas fa-sort-down" />
+          <i
+            className="fas fa-sort-down"
+            id="dropdown-arrow"
+          />
         </div>
         <div
           className={`dropdown-items-container-${isOpen ? 'auto' : 'hidden'}`}

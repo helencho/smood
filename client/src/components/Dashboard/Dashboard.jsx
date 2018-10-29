@@ -36,14 +36,25 @@ class Dashboard extends Component {
 
   handleClick = (e) => {
     const { activeIndex, isOpen } = this.state.dropdown
-    const id = e.target.id ? e.target.id : activeIndex
-    this.setState({
-      dropdown: {
-        ...this.state.dropdown,
-        activeIndex: id,
-        isOpen: !isOpen
-      }
-    })
+    const id = e.target.id && !isNaN(parseInt(e.target.id)) ? e.target.id : activeIndex
+
+    // check that id exists 
+    if (e.target.id) {
+      this.setState({
+        dropdown: {
+          ...this.state.dropdown,
+          activeIndex: id,
+          isOpen: !isOpen
+        }
+      })
+    } else {
+      this.setState({
+        dropdown: {
+          ...this.state.dropdown,
+          isOpen: false
+        }
+      })
+    }
   }
 
   render() {
@@ -52,7 +63,10 @@ class Dashboard extends Component {
     const activeYear = items[activeIndex]
 
     return (
-      <div className="dashboard-container">
+      <div
+        className="dashboard-container"
+        onClick={this.handleClick}
+      >
         <div className="title-container">
           <h1>Dashboard for</h1>
           <Dropdown
