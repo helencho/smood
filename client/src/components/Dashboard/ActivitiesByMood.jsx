@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { ResponsiveContainer, RadialBarChart, RadialBar, Legend } from 'recharts'
+import Dropdown from '../Dropdown/Dropdown'
+import { toggleClose, setMoodIndex } from '../../actions/dropdown_actions'
 
 class ActivitiesByMood extends Component {
-
   render() {
-    const { selectedMood, handleSelectChange, year, entries } = this.props
+    const { moods, year, entries } = this.props
+
+    const moodsArray = moods.map(mood => mood.mood_name)
+    const selectedMood = moodsArray[this.props.activeMoodIndex]
 
     // Get all the entries in the target year and filter by selected mood 
     const lowTarget = new Date((year).toString())
@@ -46,13 +51,12 @@ class ActivitiesByMood extends Component {
       <div className="activities-by-mood-container">
         <div className="title">
           <h3>Things you did when you were</h3>
-          <select value={selectedMood} name='selectedMood' onChange={handleSelectChange}>
-            {this.props.moods.map((mood, index) => {
-              return (
-                <option key={index} value={mood.mood_name}>{mood.mood_name}</option>
-              )
-            })}
-          </select>
+          <Dropdown
+            handleClick={this.props.setMoodIndex}
+            index={this.props.activeMoodIndex}
+            items={moodsArray}
+            className="small"
+          />
         </div>
         <ResponsiveContainer width="100%" height={400}>
           <RadialBarChart cx="50%" cy="50%" outerRadius="80%" barSize={10} data={data}>
@@ -65,4 +69,17 @@ class ActivitiesByMood extends Component {
   }
 }
 
-export default ActivitiesByMood
+const mapStateToProps = (state) => {
+  return {
+    activeMoodIndex: state.dropdown.activeMoodIndex
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setMoodIndex: (id) => dispatch(setMoodIndex(id)),
+    toggleClose: () => dispatch(toggleClose())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ActivitiesByMood)

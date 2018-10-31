@@ -5,6 +5,7 @@ import userReducer from './session_reducer'
 import entryReducer from './entry_reducer'
 import moodReducer from './mood_reducer'
 import activityReducer from './activity_reducer'
+import dropdownReducer from './dropdown_reducer'
 
 const rootReducer = combineReducers(
     {
@@ -12,7 +13,8 @@ const rootReducer = combineReducers(
         users: userReducer,
         entries: entryReducer,
         moods: moodReducer,
-        activities: activityReducer
+        activities: activityReducer,
+        dropdown: dropdownReducer,
     }
 )
 

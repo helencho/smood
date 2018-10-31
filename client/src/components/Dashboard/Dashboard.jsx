@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getEntries } from '../../actions/entry_actions'
 import { getMoods } from '../../actions/mood_actions'
+import { toggleClose, setYearIndex } from '../../actions/dropdown_actions'
 import MoodsByYear from './MoodsByYear'
 import ActivitiesByMood from './ActivitiesByMood'
 import MoodPerMonth from './MoodPerMonth'
@@ -9,17 +10,11 @@ import MonthInMoods from './MonthInMoods'
 import Dropdown from '../Dropdown/Dropdown'
 import '../../stylesheets/dashboard.css'
 
-// Smart 
 class Dashboard extends Component {
   constructor() {
     super()
     this.state = {
-      selectedMood: 'happy',
-      dropdown: {
-        activeIndex: 1,
-        isOpen: false,
-        items: ['2017', '2018']
-      }
+      years: ['2017', '2018']
     }
   }
 
@@ -34,57 +29,47 @@ class Dashboard extends Component {
     })
   }
 
-  handleClick = (e) => {
-    const { activeIndex, isOpen } = this.state.dropdown
-    const id = e.target.id && !isNaN(parseInt(e.target.id)) ? e.target.id : activeIndex
-
-    // check that id exists 
-    if (e.target.id) {
-      this.setState({
-        dropdown: {
-          ...this.state.dropdown,
-          activeIndex: id,
-          isOpen: !isOpen
-        }
-      })
-    } else {
-      this.setState({
-        dropdown: {
-          ...this.state.dropdown,
-          isOpen: false
-        }
-      })
+  handleClose = (e) => {
+    if (e.target.id !== 'dropdown') {
+      this.props.toggleClose()
     }
   }
 
   render() {
-    const { selectedMood } = this.state
-    const { items, activeIndex } = this.state.dropdown
-    const activeYear = items[activeIndex]
+    const { activeYearIndex } = this.props
+
+    const activeYear = this.state.years[activeYearIndex]
 
     return (
       <div
         className="dashboard-container"
-        onClick={this.handleClick}
+        onClick={this.handleClose}
       >
         <div className="title-container">
           <h1>Dashboard for</h1>
           <Dropdown
-            activeIndex={this.state.dropdown.activeIndex}
-            isOpen={this.state.dropdown.isOpen}
-            items={this.state.dropdown.items}
-            handleClick={this.handleClick}
+            handleClick={this.props.setYearIndex}
+            index={activeYearIndex}
+            items={this.state.years}
           />
         </div>
-        <MoodsByYear entries={this.props.entries} year={activeYear} />
-        <MonthInMoods entries={this.props.entries} year={activeYear} />
-        <MoodPerMonth entries={this.props.entries} year={activeYear} />
+        <MoodsByYear
+          entries={this.props.entries}
+          year={activeYear}
+        />
+        <MonthInMoods
+          entries={this.props.entries}
+          year={activeYear}
+        />
+        <MoodPerMonth
+          entries={this.props.entries}
+          year={activeYear}
+        />
         <ActivitiesByMood
           entries={this.props.entries}
           year={activeYear}
-          selectedMood={selectedMood}
           moods={this.props.moods}
-          handleSelectChange={this.handleSelectChange} />
+        />
       </div>
     )
   }
@@ -93,14 +78,17 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
   return {
     entries: state.entries.entries,
-    moods: state.moods.moods
+    moods: state.moods.moods,
+    activeYearIndex: state.dropdown.activeYearIndex
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getEntries: () => dispatch(getEntries()),
-    getMoods: () => dispatch(getMoods())
+    getMoods: () => dispatch(getMoods()),
+    setYearIndex: (id) => dispatch(setYearIndex(id)),
+    toggleClose: () => dispatch(toggleClose())
   }
 }
 
